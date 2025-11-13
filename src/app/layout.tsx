@@ -4,6 +4,7 @@ import "./globals.css";
 import TopNavbar from "./components/top-navbar";
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,23 +19,27 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Mega Foundries",
   description: "Mega Foundries Product Landing Page",
+  icons: {
+    icon: "/logo.jpeg", // <-- ✅ Add favicon here
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <TopNavbar />
-      <Navbar />
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <head>
+        <link rel="icon" href="/logo.jpeg" />
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <TopNavbar />
+        <Navbar />
         {children}
+        <Footer />
       </body>
-      <Footer />
     </html>
   );
 }

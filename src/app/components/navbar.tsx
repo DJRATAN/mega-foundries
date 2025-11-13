@@ -5,15 +5,15 @@ import Link from 'next/link';
 import React from 'react'
 
 const topMenuItems = [
-    { label: 'Became a', href: '#', cotent: 'Supplier', icon: UserCheck2Icon },
-    { label: 'Request for', href: '#', cotent: 'Quotations', icon: BookAIcon },
-    { label: 'Welcome', href: '#', cotent: 'Sign In/Register', icon: User }
+    { label: 'Became a', href: '#', content: 'Supplier', icon: UserCheck2Icon },
+    { label: 'Request for', href: '#', content: 'Quotations', icon: BookAIcon },
+    { label: 'Welcome', href: '#', content: 'Sign In/Register', icon: User }
 ];
 const Navbar = () => {
     return (
         <div>
             <header className="bg-white shadow-md    sticky top-0  ">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between md:space-y-0">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between md:space-y-0">
 
                     {/* 1. Logo Section */}
                     {/* //                 <LogoSection /> */}
@@ -52,18 +52,18 @@ const Navbar = () => {
                                 <div className=''><item.icon size={32} /></div>
                                 <div>
                                     <p className='text-[11px]'>{item.label}</p>
-                                    <p className='text-[11px] font-bold'>{item.cotent}</p>
+                                    <p className='text-[11px] font-bold'>{item.content}</p>
                                 </div>
                             </Link>))}
                     </div>
                 </div>
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between    ">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-14 flex flex-col md:flex-row items-center justify-between    ">
 
                     {/* 1. Logo Section */}
                     {/* //                 <LogoSection /> */}
                     {/* <Link href={'/'}><Image src={'/logo.jpeg'} alt='Logo' height={100} width={100} /></Link> */}
-                    <div className='gap-4 flex text-[11px]'> <p className={'flex gap-2'}><FireExtinguisherIcon className='h-3 w-3'/> Energy</p>
-                        <p className={'flex gap-2'}><Power className='h-3 w-3'/> Power Generation</p></div>
+                    <div className='gap-4 flex text-[11px]'> <p className={'flex gap-2'}><FireExtinguisherIcon className='h-3 w-3' /> Energy</p>
+                        <p className={'flex gap-2'}><Power className='h-3 w-3' /> Power Generation</p></div>
                     {/* 2. Search Bar Section (Flex-grow ensures it takes available space) */}
                     <div className="w-full md:w-auto md:grow h-8 flex justify-center">
 
@@ -72,7 +72,7 @@ const Navbar = () => {
                     {/* 3. Utility Links Section */}
                     <div className="flex shrink-0 space-x-2 lg:space-x-6">
 
-                        <p className='text-[11px] flex gap-2 align-center'> <Menu className='h-3 w-3'/> View All Categories</p>
+                        <p className='text-[11px] flex gap-2 align-center'> <Menu className='h-3 w-3' /> View All Categories</p>
 
                     </div>
                 </div>

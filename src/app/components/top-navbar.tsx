@@ -14,7 +14,7 @@ const TopNavbar = () => {
     <div>
       <nav className="bg-neutral-800 text-neutral-200 shadow-md">
         <div className="container mx-auto px-4 sm:px-6 lg:px-14">
-          <div className="flex justify-between items-stretch h-[36px]">
+          <div className="flex justify-between items-stretch h-9">
 
             <div className="flex space-x-1 gap-6 hover: sm:space-x-4 items-center">
               {topMenuItems.map((item) => (
