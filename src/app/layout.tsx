@@ -19,9 +19,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Mega Foundries",
   description: "Mega Foundries Product Landing Page",
-  icons: {
-    icon: "/logo.jpeg", // <-- ✅ Add favicon here
-  },
 };
 
 export default function RootLayout({
@@ -32,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/logo.jpeg" />
+        <link rel="icon" type="image/png" href="/apple-touch-icon.png" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <TopNavbar />
