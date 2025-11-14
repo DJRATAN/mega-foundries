@@ -6,23 +6,23 @@ const BusinessSolutions = () => {
     const services = [
         {
             icon: TowerControl,
-            title: "Energy",
-            description: "Power Cozmo connects businesses with innovative energy solutions, from renewable energy technologies to power storage systems. Our platform facilitates trade to meet the growing demand for sustainable and efficient energy across industries.",
+            title: "Metals & Foundry",
+            description: "Mega Foundries connects businesses with premium foundry metals, castings, and alloy products. Our platform enables seamless sourcing for automotive, construction, engineering, and large-scale industrial manufacturing.",
         },
         {
             icon: Factory,
-            title: "Power Generation",
-            description: "Power Cozmo offers a diverse range of products for the power generation sector, including turbines and grid infrastructure, helping businesses source reliable solutions to enhance efficiency and meet global power demands.",
+            title: "Industrial Machinery",
+            description: "We provide access to high-performance industrial machinery—from heavy equipment and CNC machines to material handling systems—helping industries scale operations with reliable and quality-certified products.",
         },
         {
             icon: Amphora,
-            title: "Oil & Gas",
-            description: "Power Cozmo supports the oil & gas industry with a comprehensive marketplace for equipment, pipelines, and safety systems, enabling businesses to optimize operations and meet industry challenges with trusted partners.",
+            title: "Oil, Gas & Petrochemicals",
+            description: "Mega Foundries supports the oil, gas, and petrochemical sectors with equipment, pipelines, valves, and safety systems, ensuring industries meet operational standards and project demands with trusted suppliers.",
         },
         {
             icon: Droplets,
-            title: "Water Management",
-            description: "Power Cozmo connects businesses with advanced water management solutions, from wastewater treatment to desalination technologies, ensuring efficient water distribution and sustainable practices for industrial and municipal applications.",
+            title: "Water & Infrastructure",
+            description: "Our platform connects industries with advanced water management, treatment, and infrastructure solutions—supporting sustainable operations for manufacturing plants, municipalities, and engineering projects.",
         },
     ];
 

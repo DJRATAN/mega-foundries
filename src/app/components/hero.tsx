@@ -1,5 +1,5 @@
 import React from 'react'
- 
+
 // --- HERO SECTION COMPONENT (Composer) ---
 const HeroSection = () => {
     // Note: The image URL is a placeholder. Replace it with your actual image path.
@@ -21,15 +21,14 @@ const HeroSection = () => {
             <div className="relative z-10 text-center max-w-4xl px-4">
 
                 <p className="text-[24px]   font-medium text-white/90 mb-3 tracking-widest uppercase">
-                    Buy and Sell Machinery Online
+                    Buy and Sell Industrial Machinery Online with Ease.
                 </p>
                 <h1 className="text-[40px]   text-white leading-tight mb-6 drop-shadow-lg">
 
-                    Empowering Global Trade Across Energy, Power, Oil & Gas, and Water Sectors
+                    Transforming Global Trade in Foundry Metals, Smart Manufacturing, and Industrial Engineering
                 </h1>
                 <p className="text-[16px]   text-white/90 leading-relaxed font-light mx-auto max-w-3xl">
-
-                    We provide a wide range of products, from turbines and oil & gas equipment to water management and power systems. Our platform also connects businesses with FPC services for large-scale industrial projects.
+                    Mega Foundries delivers a comprehensive portfolio of products, including turbines, oil & gas equipment, water management technologies, and power generation systems. We also enable seamless access to FPC services, empowering businesses to execute large-scale industrial projects with confidence.
                 </p>
             </div>
         </div>
