@@ -21,7 +21,7 @@ const Navbar = () => {
 
                     {/* 2. Search Bar Section (Flex-grow ensures it takes available space) */}
                     <div className="w-full md:w-auto md:grow h-8 flex justify-center">
-                        <div className="grow max-w-2xl flex items-center border border-red-300 rounded overflow-hidden shadow-lg">
+                        <div className="grow max-w-4xl flex items-center border border-red-300 rounded overflow-hidden shadow-lg">
                             <div className="relative grow">
                                 <input
                                     type="text"
