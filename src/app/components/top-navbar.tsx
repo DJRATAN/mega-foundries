@@ -11,9 +11,10 @@ const topMenuItems = [
 ];
 const TopNavbar = () => {
   return (
-    <div>
-      <nav className="bg-neutral-800 text-neutral-200 shadow-md">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-14">
+    <div className='w-full '>
+      <nav className="bg-neutral-800 text-neutral-200 w-full mx-auto  shadow-md">
+
+        <div className="mx-auto px-4 sm:px-6 lg:px-30">
           <div className="flex justify-between items-stretch h-9">
 
             <div className="flex space-x-1 gap-6 hover: sm:space-x-4 items-center">

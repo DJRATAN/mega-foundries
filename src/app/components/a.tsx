@@ -26,17 +26,17 @@ const MetricSection = () => {
                 </h2>
 
                 {/* Metrics Grid */}
-                <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-4 py-8">
+                <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-4">
                     {metrics.map((metric, index) => (
                         <div key={index} className="flex flex-col items-center p-4">
                             <div className="relative p-3 rounded-full bg-neutral-100/50 mb-3">
                                 {/* The icon in the image uses a black container/base */}
-                                <metric.icon className="w-6 h-6 text-neutral-800" />
+                                <metric.icon className="w-8 h-8 text-neutral-800" />
                                 {/* Simulated border matching the source image aesthetic */}
                                 <div className="absolute inset-0 border border-neutral-300 rounded-full"></div>
                             </div>
 
-                            <div className="text-[14px] font-extrabold text-[#cc2221] mb-1">{metric.value}</div>
+                            <div className="text-[22px] font-extrabold text-[#cc2221] mb-1">{metric.value}</div>
                             <p className="text-[10px] text-neutral-600 text-center">{metric.label}</p>
                         </div>
                     ))}
@@ -51,8 +51,8 @@ const MetricSection = () => {
 const ProductItemCard = ({ count, label }: ProductItemCardProps) => (
     <div
         className={`
-            shrink-0 border border-gray-200 rounded-xl p-4 transition-shadow duration-300 hover:shadow-lg bg-white
-            w-[220px] h-[100px] flex flex-col justify-center items-center shadow-sm  cursor-pointer
+            shrink-0 border max-w-xl border-gray-200 rounded-xl p-4 transition-shadow duration-300 hover:shadow-lg bg-white
+            w-[220px] h-[100px] flex flex-col justify-center items-center shadow-sm   cursor-pointer
         `}
     >
         <p className={`font-extrabold text-[#cc2221] text-[16px] mb-1`}>{count}</p>
@@ -105,7 +105,7 @@ const ProductCarousel = () => {
     );
 
     return (
-        <section className="py-10 bg-gray-50 ">
+        <section className="py-10 bg-gray-50 border-t border-gray-200">
             <MetricSection />
             <div className="space-y-4">
                 {/* Carousel container with overflow-hidden and the mask */}

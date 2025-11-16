@@ -28,13 +28,12 @@ const BusinessSolutions = () => {
 
     return (
         <section className="py-12 bg-white">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
-                {/* Title Section */}
-                <h2 className="text-xl  font-extrabold text-neutral-800 text-center mb-12 mx-auto">
-                    Connecting Businesses Worldwide Through B2B Solutions
-                </h2>
-
+            {/* Title Section */}
+            <h2 className="text-xl  font-extrabold text-neutral-800 text-center mb-12 mx-auto">
+                Connecting Businesses Worldwide Through B2B Solutions
+            </h2>
+            <div className="mx-auto px-4 sm:px-6 lg:px-26 flex flex-col md:flex-row items-center justify-between md:space-y-0">
                 {/* Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {services.map((service, index) => (
@@ -43,12 +42,9 @@ const BusinessSolutions = () => {
                                 {/* The icon in the image uses a red container/base */}
                                 <div className="relative p-2 rounded-full  ">
                                     <div className="w-8 h-8 text-[#cc2221]"><service.icon size={32} /></div>
-
                                 </div>
                             </div>
-
                             <h3 className="text-[11px] font-bold text-neutral-800 mb-3">{service.title}</h3>
-
                             <p className="text-[11px] text-neutral-600 mb-4 h-20 overflow-hidden">
                                 {service.description}
                             </p>

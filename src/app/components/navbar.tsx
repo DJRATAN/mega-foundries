@@ -13,7 +13,7 @@ const Navbar = () => {
     return (
         <div>
             <header className="bg-white shadow-md    sticky top-0  ">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between md:space-y-0">
+                <div className=" mx-auto px-4 sm:px-6 lg:px-26 flex flex-col md:flex-row items-center justify-between md:space-y-0">
 
                     {/* 1. Logo Section */}
                     {/* //                 <LogoSection /> */}
@@ -57,7 +57,7 @@ const Navbar = () => {
                             </Link>))}
                     </div>
                 </div>
-                <div className="container mx-auto px-4 sm:px-6 lg:px-14 flex flex-col md:flex-row items-center justify-between    ">
+                <div className=" mx-auto px-4 sm:px-6 lg:px-30 flex flex-col md:flex-row items-center justify-between    ">
 
                     {/* 1. Logo Section */}
                     {/* //                 <LogoSection /> */}
