@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Star, Users, Globe } from "lucide-react"; 
-import Image from "next/image"; 
+import { Star, Users, Globe } from "lucide-react";
+import Image from "next/image";
 
 
 const features = [
@@ -31,21 +31,21 @@ const AboutSection = () => {
   return (
     <section className="relative w-full py-16 sm:py-24 bg-white">
 
-    
-      <div className="absolute inset-0 z-0 h-[45%] w-full">
+
+      <div className="absolute inset-0 z-0 h-[25%] w-full">
         <Image
           src={'/assets/image2.png'}
           alt="Industrial background image"
-          layout="fill" 
-          objectFit="cover" 
-          priority 
+          layout="fill"
+          objectFit="cover"
+          priority
         />
         <div className="absolute inset-0 bg-black/60"></div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 text-center text-white">
+      <div className="relative z-10 container mx-auto px-4 text-center">
 
-        <h2 className="text-[40px] font-extrabold tracking-tight  mb-8">
+        <h2 className="text-[40px] pb-12 font-extrabold tracking-tight text-white mb-8">
           About Us
         </h2>
 
