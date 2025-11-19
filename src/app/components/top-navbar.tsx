@@ -25,7 +25,7 @@ const TopNavbar = () => {
                 <Link className='text-[11px] hover:text-[#cc2221] transition-colors' key={item.label} href={item.href}>{item.label}</Link>))}
             </div>
             {/* <Link className='text-[11px] hover:text-[#cc2221] transition-colors' href={'#'}  > <DropdownMenuDemo /></Link> */}
-            <Link className='text-[11px] hover:text-[#cc2221] transition-colors' href={'#'}  > <NavigationMenuDemo /></Link>
+            {/* <Link className='text-[11px] hover:text-[#cc2221] transition-colors' href={'#'}  > <NavigationMenuDemo /></Link> */}
             <div className="flex items-center space-x-1 sm:space-x-4">
 
               <Link href={''} className='flex items-center justify-center gap-1.5 text-[11px] hover:text-[#cc2221] transition-colors'>English-USD  <ChevronDown className="w-3 h-3" /></Link>
