@@ -4,12 +4,12 @@ import Link from 'next/link';
 import React from 'react'
 
 const topMenuItems = [
-  { label: 'Government Affairs', href: '#' },
-  { label: 'Acquisitions', href: '#' },
-  { label: 'Ventures', href: '#' },
-  { label: 'HR', href: '#' },
-  { label: 'Mega Foundation', href: '#' },
-  { label: 'Metal Price Index', href: '#' },
+  { label: 'Government Affairs', href: '/government-affairs' },
+  { label: 'Acquisitions', href: '/acquisitions' },
+  { label: 'Ventures', href: '/ventures' },
+  { label: 'HR', href: '/hr' },
+  { label: 'Mega Foundation', href: '/mega-foundation' },
+  { label: 'Metal Price Index', href: '/metal-price-index' },
 ];
 const TopNavbarr = () => {
   return (
