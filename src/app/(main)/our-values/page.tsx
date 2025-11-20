@@ -1,8 +1,13 @@
 
+import { liveChatData } from "@/app/(main)/our-values/content";
+import { FeatureBlockItem } from "@/app/components/FeatureBlock";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Star, Users, Globe } from "lucide-react";
 import Image from "next/image";
-
+// Combine all blocks into a single array
+const allFeatureBlocks = [
+  liveChatData[0],
+];
 
 const features = [
   {
@@ -25,14 +30,12 @@ const features = [
   },
 ];
 
-
-
 const AboutSection = () => {
   return (
     <section className="relative w-full py-16 sm:py-24 bg-white">
 
 
-      <div className="absolute inset-0 z-0 h-[25%] w-full">
+      <div className="absolute inset-0 z-0 h-[225px] w-full">
         <Image
           src={'/assets/image2.png'}
           alt="Industrial background image"
@@ -49,12 +52,9 @@ const AboutSection = () => {
           About Us
         </h2>
 
-        <div className="relative w-8 h-4 mx-auto mb-10">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1 h-12 border-l-2 border-dashed border-[#cc2221]"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-[#cc2221] shadow-md"></div>
-        </div>
 
-        <p className="text-[20px] font-semibold uppercase tracking-widest text-[#cc2221] mb-2">
+
+        <p className="text-[20px] py-5 font-semibold uppercase tracking-widest text-[#cc2221] mb-2">
           MEGA FOUNDRIES - FOR THE INDUSTRY
         </p>
         <h3 className="text-[25px] sm:text-4xl font-bold max-w-4xl mx-auto mb-16">
@@ -86,6 +86,14 @@ const AboutSection = () => {
           ))}
         </div>
       </div>
+
+      {liveChatData.map((block, index) => (
+        <FeatureBlockItem
+          key={block.id}
+          data={block}
+          imageOnLeft={index % 2 !== 0}
+        />
+      ))}
     </section>
   );
 }

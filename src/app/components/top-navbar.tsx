@@ -4,13 +4,16 @@ import { DropdownMenuDemo } from '@/components/dropdownMenu';
 import { NavigationMenuDemo } from '@/components/navigationMenu';
 import { ChevronDown, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 import Link from 'next/link';
-import React from 'react'
 
 const topMenuItems = [
-  { label: 'Home', href: '/' },
-  { label: 'About Us', href: '/about-us' },
-  { label: 'Our Products', href: '#' },
-  { label: 'Contact Us', href: '/contact-us' },
+  { label: 'OUR VALUES', href: '/our-values' },
+  { label: 'HOME', href: '/' },
+  { label: 'HISTORY', href: '/history' },
+  { label: 'TRANSFORMATION', href: '/transformation' },
+  { label: 'INNOVATIONS', href: '/innovations' },
+  { label: 'MAKING HISTORY', href: '/making-history' },
+  { label: 'ALWAYS FIRST', href: '/always-first' },
+  { label: 'CONTACT', href: '/contact' },
 ];
 const TopNavbar = () => {
   return (
