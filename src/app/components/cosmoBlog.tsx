@@ -29,7 +29,7 @@ const CosmoBlog = () => {
         <div className=' '>
           <div className="relative w-full aspect-video">
             <Image
-              src={'/cosmoBlog.png'}
+              src={'/cosmoBlog.jpg'}
               alt='Live Chat Interface Demonstration'
               fill
               style={{ objectFit: 'contain' }}
