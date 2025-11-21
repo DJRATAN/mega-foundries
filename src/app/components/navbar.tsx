@@ -18,7 +18,7 @@ const Navbar = () => {
     return (
         <div className="w-full relative z-40">
             <header className="bg-white shadow-md sticky top-0">
-                
+
                 {/* === MAIN HEADER SECTION === */}
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
                     <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
@@ -27,17 +27,25 @@ const Navbar = () => {
                         <div className="w-full lg:w-auto flex justify-between items-center">
                             {/* Logo */}
                             <Link href={'/'} className="shrink-0">
-                                <Image 
-                                    src={'/Mega-foundries-logo.PNG'} 
-                                    alt='Logo' 
-                                    height={60} 
-                                    width={60} 
+                                <Image
+                                    src={'/Mega-foundries-logo.PNG'}
+                                    alt='Logo'
+                                    height={60}
+                                    width={60}
                                     className="object-contain h-12 w-12 lg:h-[60px] lg:w-[60px]"
                                 />
                             </Link>
-
+                            <Link href={'/'} className="shrink-0 pl-4 pr-12">
+                                <Image
+                                    src={'/Canada-foundries-logo1.PNG'}
+                                    alt='Logo'
+                                    height={60}
+                                    width={60}
+                                    className="object-contain h-12 w-12 lg:h-[60px] lg:w-[60px]"
+                                />
+                            </Link>
                             {/* Mobile Menu Button (Hidden on Desktop) */}
-                            <button 
+                            <button
                                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                                 className="lg:hidden p-2 text-neutral-600 hover:text-[#cc2221] transition-colors"
                             >
@@ -60,7 +68,7 @@ const Navbar = () => {
                                 <Button
                                     // Note: Ensure you have 'bg-[#cc2221]' or similar defined if 'variant="newColor"' is custom
                                     className="h-10 lg:h-12 rounded-none px-4 lg:px-8 bg-[#cc2221] hover:bg-red-700 text-white font-semibold text-sm lg:text-lg"
-                                > 
+                                >
                                     <span className="hidden lg:inline">Search</span>
                                 </Button>
                             </div>
@@ -104,15 +112,15 @@ const Navbar = () => {
                 {/* === SUB-HEADER (Categories & Info) === */}
                 <div className="border-t border-neutral-100 bg-neutral-50/50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-col md:flex-row items-start md:items-center justify-between gap-2 md:gap-0">
-                        
+
                         {/* Left Side: Categories */}
                         <div className='flex flex-wrap gap-4 text-xs text-neutral-600 font-medium'>
                             <div className='flex items-center gap-2 hover:text-[#cc2221] cursor-pointer transition-colors'>
-                                <FireExtinguisherIcon className='h-3.5 w-3.5 text-[#cc2221]' /> 
+                                <FireExtinguisherIcon className='h-3.5 w-3.5 text-[#cc2221]' />
                                 Energy
                             </div>
                             <div className='flex items-center gap-2 hover:text-[#cc2221] cursor-pointer transition-colors'>
-                                <Power className='h-3.5 w-3.5 text-[#cc2221]' /> 
+                                <Power className='h-3.5 w-3.5 text-[#cc2221]' />
                                 Power Generation
                             </div>
                         </div>
@@ -120,7 +128,7 @@ const Navbar = () => {
                         {/* Right Side: View All */}
                         <div className="flex items-center">
                             <Link href="#" className='text-xs font-semibold text-neutral-700 flex items-center gap-2 hover:text-[#cc2221] transition-colors'>
-                                <Menu className='h-3.5 w-3.5' /> 
+                                <Menu className='h-3.5 w-3.5' />
                                 View All Categories
                             </Link>
                         </div>

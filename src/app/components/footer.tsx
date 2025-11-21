@@ -68,12 +68,14 @@ const Footer = () => {
               <Link href={'/'}><Image src={'/Mega-foundries-logo.PNG'} alt='Logo' height={100} width={100} /></Link>
             </div>
             <p className="transition-colors text-[11px] leading-relaxed max-w-xs">
-              105 Maxes road
+              105 MAXES ROAD
             </p>
             <p className="transition-colors text-[11px] leading-relaxed max-w-xs">
               Melville, NY 11737
             </p>
-
+            <p className="transition-colors text-[11px] leading-relaxed max-w-xs">
+              USA
+            </p>
             <a href="mailto:info@megafoundries.com" className="text-[#cc2221] pt-3 hover:text-[#cc2221] text-[11px] font-medium transition-colors">
               info@megafoundries.com
             </a>
@@ -129,10 +131,13 @@ const Footer = () => {
               <Link href={'/'}><Image src={'/Canada-foundries-logo1.PNG'} alt='Logo' height={100} width={100} /></Link>
             </div>
             <p className="transition-colors text-[11px] leading-relaxed max-w-xs">
-              One Younge street
+              ONE YOUNGE STREET
             </p>
             <p className="transition-colors text-[11px] leading-relaxed max-w-xs">
-              Toronto,Ontario M5E
+              TORONTO, ONTARIO M5E 1R4
+            </p>
+            <p className="transition-colors text-[11px] leading-relaxed max-w-xs">
+              CANADA
             </p>
             <h4 className="text-xl font-semibold mb-5 relative pt-3 pb-3">
               Subscribe
