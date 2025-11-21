@@ -59,34 +59,36 @@ const Footer = () => {
     { lable: 'Design Resources', href: "/" }
   ]
   return (
-    <footer className="bg-neutral-800 text-white relative">
+    <footer className="bg-neutral-200 relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-14 pt-12 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
 
           <div className='flex flex-col'>
-            <div className="mb-4">
-              <Link href={'/'}><Image src={'/logo.jpeg'} alt='Logo' height={100} width={100} /></Link>
-
+            <div className="mb-2">
+              <Link href={'/'}><Image src={'/Mega-foundries-logo.PNG'} alt='Logo' height={100} width={100} /></Link>
             </div>
-
-            <p className="pb-3 transition-colors text-[11px] mb-4 leading-relaxed max-w-xs">
-              Our company's founders & CEO are electrical and mechanical engineers and businessman
+            <p className="transition-colors text-[11px] leading-relaxed max-w-xs">
+              105 Maxes road
             </p>
-            <a href="mailto:info@megafoundries.com" className="text-[#cc2221] hover:text-[#cc2221] text-[11px] font-medium transition-colors">
+            <p className="transition-colors text-[11px] leading-relaxed max-w-xs">
+              Melville, NY 11737
+            </p>
+
+            <a href="mailto:info@megafoundries.com" className="text-[#cc2221] pt-3 hover:text-[#cc2221] text-[11px] font-medium transition-colors">
               info@megafoundries.com
             </a>
 
             {/* Social Icons */}
 
-            <div className="flex space-x-0.5 mt-6   gap-2">
-              <Link href={'/'} className='p-2 border rounded-3xl'><Linkedin className='w-4 h-4' /></Link>
-              <Link href={'/'} className='p-2 border rounded-3xl'><Facebook className='w-4 h-4' /></Link>
-              <Link href={'/'} className='p-2 border rounded-3xl'><Instagram className='w-4 h-4' /></Link>
-              <Link href={'/'} className='p-2 border rounded-3xl'><Twitter className='w-4 h-4' /></Link>
+            <div className="flex space-x-0.5 mt-2   gap-2">
+              <Link href={'/'} className='p-2 border-[#cc2221] border rounded-3xl'><Linkedin className='w-4 h-4 hover:text-[#cc2221]' /></Link>
+              <Link href={'/'} className='p-2 border-[#cc2221] border rounded-3xl'><Facebook className='w-4 h-4 hover:text-[#cc2221]' /></Link>
+              <Link href={'/'} className='p-2 border-[#cc2221] border rounded-3xl'><Instagram className='w-4 h-4 hover:text-[#cc2221]' /></Link>
+              <Link href={'/'} className='p-2 border-[#cc2221] border rounded-3xl'><Twitter className='w-4 h-4 hover:text-[#cc2221]' /></Link>
             </div>
           </div>
           <div className='flex flex-col'>
-            <h4 className="text-xl font-semibold mb-5 text-white relative pb-3">
+            <h4 className="text-xl font-semibold mb-5  relative pb-3">
               Products
               {/* Red underline accent */}
               <span className="absolute left-0 bottom-0 h-0.5 w-1/4 bg-[#cc2221]"></span>
@@ -96,7 +98,7 @@ const Footer = () => {
             ))}
 
           </div>
-          <div className='flex flex-col'>  <h4 className="text-xl font-semibold mb-5 text-white relative pb-3">
+          <div className='flex flex-col'>  <h4 className="text-xl font-semibold mb-5 relative pb-3">
             Markets
             {/* Red underline accent */}
             <span className="absolute left-0 bottom-0 h-0.5 w-1/4 bg-[#cc2221]"></span>
@@ -105,7 +107,7 @@ const Footer = () => {
               <Link key={index} href={'/'} className="pb-3 hover:text-[#cc2221] transition-colors text-[11px]"> {item.lable} </Link>
             ))}
           </div>
-          <div className='flex flex-col'>  <h4 className="text-xl font-semibold mb-5 text-white relative pb-3">
+          <div className='flex flex-col'>  <h4 className="text-xl font-semibold mb-5  relative pb-3">
             Resource Center
             {/* Red underline accent */}
             <span className="absolute left-0 bottom-0 h-0.5 w-1/4 bg-[#cc2221]"></span>
@@ -122,31 +124,43 @@ const Footer = () => {
             <Link href={'/'} className="pb-3 hover:text-[#cc2221] transition-colors text-sm"> Sitemap </Link>
           </div>
           <div>
-            <h4 className="text-xl font-semibold mb-5 text-white relative pb-3">
+
+            <div className="mb-2">
+              <Link href={'/'}><Image src={'/Canada-foundries-logo1.PNG'} alt='Logo' height={100} width={100} /></Link>
+            </div>
+            <p className="transition-colors text-[11px] leading-relaxed max-w-xs">
+              One Younge street
+            </p>
+            <p className="transition-colors text-[11px] leading-relaxed max-w-xs">
+              Toronto,Ontario M5E
+            </p>
+            <h4 className="text-xl font-semibold mb-5 relative pt-3 pb-3">
               Subscribe
               {/* Red underline accent */}
               <span className="absolute left-0 bottom-0 h-0.5 w-1/4 bg-[#cc2221]"></span>
             </h4>
 
             <div className="flex w-full">
-              {/* Using mock Input component */}
-              <Input
-                type="email"
-                placeholder="Enter Email"
-                // value={email}
-                // onChange={(e) => setEmail(e.target.value)}
-                className="rounded-r-none border-[#cc2221] focus-visible:ring-[#cc2221] text-neutral-800 w-2/3"
-              />
-              {/* Reusing mock Button component */}
-              <Button
-                variant="newColor"
-                // onClick={handleSubscribe}
-                className="rounded-l-none text-base font-semibold transition-colors w-1/3"
-              >
-                Submit
-              </Button>
+
             </div>
+            {/* Using mock Input component */}
+            <Input
+              type="email"
+              placeholder="Enter Email"
+              // value={email}
+              // onChange={(e) => setEmail(e.target.value)}
+              className="rounded-r-none border-[#cc2221] focus-visible:ring-[#cc2221] text-neutral-800 w-2/3"
+            />
+            {/* Reusing mock Button component */}
+            <Button
+              variant="newColor"
+              // onClick={handleSubscribe}
+              className="rounded-l-none text-base font-semibold transition-colors w-1/3"
+            >
+              Submit
+            </Button>
           </div>
+
         </div>
       </div>
 

@@ -1,3 +1,4 @@
+'use client'
 
 import { ChevronDown, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 import Link from 'next/link';
@@ -11,28 +12,40 @@ const topMenuItems = [
   { label: 'Mega Foundation', href: '/mega-foundation' },
   { label: 'Metal Price Index', href: '/metal-price-index' },
 ];
+
 const TopNavbarr = () => {
   return (
-    <div className='w-full border-t border-gray-100 '>
-      <nav className="bg-neutral-800 text-neutral-200 w-full mx-auto  shadow-md">
+    <div className='w-full border-t border-gray-100'>
+      <nav className="bg-neutral-800 text-neutral-200 w-full shadow-md">
+        
+        {/* Use max-w-7xl for consistent width with other navbars */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Layout Logic: 
+             - Mobile: Flex column (or wrapped row), centered, auto height 
+             - Desktop (sm+): Single row, right aligned, fixed height look 
+          */}
+          <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center min-h-[36px] py-2 sm:py-0">
+            
+            {/* Left Side (Currently empty/commented out in your code) */}
+            {/* Keeping this div ensures 'justify-between' pushes the links to the right on desktop */}
+            <div className="hidden sm:flex items-center space-x-4">
+               {/* Uncomment here if you ever need the left icons back */}
+            </div>
 
-        <div className="mx-auto px-4 sm:px-6 lg:px-30">
-          <div className="flex justify-between items-stretch h-9">
-            <div className="flex items-center space-x-1 sm:space-x-4">
-              {/* <Link href={''} className='flex items-center justify-center gap-1.5 text-[11px] hover:text-[#cc2221] transition-colors'>English-USD  <ChevronDown className="w-3 h-3" /></Link>
-              <Link href={''} className='flex items-center justify-center gap-1.5 text-[11px] hover:text-[#cc2221] transition-colors'>Country  <ChevronDown className="w-3 h-3" /></Link>
-              <div className="flex space-x-0.5 ml-2 gap-2">
-                <Link href={'/'} className='p-1 border-1 rounded-2xl'><Linkedin className='w-3 h-3' /></Link>
-                <Link href={'/'} className='p-1 border-1 rounded-2xl'><Facebook className='w-3 h-3' /></Link>
-                <Link href={'/'} className='p-1 border-1 rounded-2xl'><Instagram className='w-3 h-3' /></Link>
-                <Link href={'/'} className='p-1 border-1 rounded-2xl'><Twitter className='w-3 h-3' /></Link>
-              </div> */}
-            </div>
-            <div className="flex space-x-1 gap-6 hover: sm:space-x-4 items-center">
+            {/* Right Side Links */}
+            <div className="flex flex-wrap justify-center sm:justify-end items-center gap-x-4 gap-y-2 sm:gap-6">
               {topMenuItems.map((item) => (
-                <Link className='text-[11px] hover:text-[#cc2221] transition-colors'
-                  key={item.label} href={item.href}>{item.label}</Link>))}
+                <Link 
+                  className='text-[11px] hover:text-[#cc2221] transition-colors whitespace-nowrap'
+                  key={item.label} 
+                  href={item.href}
+                >
+                  {item.label}
+                </Link>
+              ))}
             </div>
+
           </div>
         </div>
       </nav>
