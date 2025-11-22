@@ -154,13 +154,13 @@ const Footer = () => {
               placeholder="Enter Email"
               // value={email}
               // onChange={(e) => setEmail(e.target.value)}
-              className="rounded-r-none border-[#cc2221] focus-visible:ring-[#cc2221] text-neutral-800 w-2/3"
+              className="rounded-r-none border-[#cc2221]  text-neutral-800 w-2/3"
             />
             {/* Reusing mock Button component */}
             <Button
-              variant="newColor"
+              variant="outline"
               // onClick={handleSubscribe}
-              className="rounded-l-none text-base font-semibold transition-colors w-1/3"
+              className="rounded-l-none text-base border-[#cc2221] text-[#cc2221] hover:bg-red-50 hover:text-[#cc2221] font-semibold transition-colors w-1/3"
             >
               Submit
             </Button>
