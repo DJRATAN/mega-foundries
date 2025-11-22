@@ -59,13 +59,14 @@ const Footer = () => {
     { lable: 'Design Resources', href: "/" }
   ]
   return (
-    <footer className="bg-neutral-200 relative">
+    // <footer className="bg-neutral-200 relative">
+    <footer className="bg-neutral-800 text-white relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-14 pt-12 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
 
           <div className='flex flex-col'>
             <div className="mb-2">
-              <Link href={'/'}><Image src={'/Mega-foundries-logo.PNG'} alt='Logo' height={100} width={100} /></Link>
+              <Link href={'/'}><Image src={'/Mega-foundries-logo.PNG'} alt='Logo' height={150} width={150} /></Link>
             </div>
             <p className="transition-colors text-[11px] leading-relaxed max-w-xs">
               105 MAXES ROAD
@@ -128,7 +129,7 @@ const Footer = () => {
           <div>
 
             <div className="mb-2">
-              <Link href={'/'}><Image src={'/Canada-foundries-logo1.PNG'} alt='Logo' height={100} width={100} /></Link>
+              <Link href={'/'}><Image src={'/Canada-foundries-logo1.PNG'} alt='Logo' height={150} width={150} /></Link>
             </div>
             <p className="transition-colors text-[11px] leading-relaxed max-w-xs">
               ONE YOUNGE STREET
