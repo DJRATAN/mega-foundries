@@ -65,7 +65,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
 
           <div className='flex flex-col'>
-            <div className="mb-2">
+            <div className="mb-2 bg-white w-[70%] h-36 flex">
               <Link href={'/'}><Image src={'/Mega-foundries-logo.PNG'} alt='Logo' height={150} width={150} /></Link>
             </div>
             <p className="transition-colors text-[11px] leading-relaxed max-w-xs">
@@ -128,7 +128,7 @@ const Footer = () => {
           </div>
           <div>
 
-            <div className="mb-2">
+            <div className="mb-2 bg-white w-[70%] h-36 flex">
               <Link href={'/'}><Image src={'/Canada-foundries-logo1.PNG'} alt='Logo' height={150} width={150} /></Link>
             </div>
             <p className="transition-colors text-[11px] leading-relaxed max-w-xs">
