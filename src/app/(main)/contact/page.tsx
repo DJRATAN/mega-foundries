@@ -36,12 +36,11 @@ const OfficeCard = ({
                 </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">{title}</h3>
-            <p className="text-gray-500 text-sm mb-8 leading-relaxed max-w-sm mx-auto">
+            <h3 className="text-[30px] font-semibold text-gray-800 mt-8 mb-4">{title}</h3>
+            <p className="text-gray-500 text-[13px] mb-8 leading-relaxed max-w-sm mx-auto">
                 {description}
             </p>
-
-            <div className="w-full space-y-4 text-left mb-8 text-gray-600 text-sm">
+            <div className="w-full space-y-4 text-[15px] text-left mb-8 text-gray-600 text-sm">
                 <div className="flex items-start gap-3">
                     <MapPin className="w-5 h-5 text-gray-400 mt-0.5 shrink-0" />
                     <span>{address}</span>
@@ -125,7 +124,7 @@ const ContactUs = () => {
                 <p className="text-[20px] py-5 font-semibold uppercase tracking-widest text-[#cc2221] mb-2">
                     MEGA FOUNDRIES | the best industry services
                 </p>
-                <p className="text-[18px] text-gray-700 max-w-4xl mx-auto mb-16">
+                <p className="text-[15px] text-gray-700 max-w-4xl mx-auto mb-16">
                     You can talk to our online representative at any time. Please use our
                     Live Chat System on our website or fill up below instant messaging programs.
                 </p>
@@ -139,23 +138,23 @@ const ContactUs = () => {
                     </div>
                     {/* Section 2: Form Header Text */}
                     <div className="text-center mb-12">
-                        <h4 className="text-[#cc2221] font-bold uppercase tracking-wider mb-3">
+                        <h4 className="text-[#cc2221] text-[20px] font-bold uppercase tracking-wider mb-3">
                             MEGA FOUNDRIES | SEND US A MESSAGE
                         </h4>
-                        <p className="text-gray-500">
+                        <p className="text-gray-500 text-[15px]">
                             The next-generation platform for industrial trade.
                         </p>
                     </div>
                     {/* Section 3: Contact Form Container */}
-                    <div className="bg-white shadow-[0_8px_30px_rgba(0,0,0,0.06)] rounded-3xl p-8 md:p-12 lg:p-16 max-w-6xl mx-auto">
+                    <div className="bg-white shadow-[0_8px_30px_rgba(0,0,0,0.06)] rounded-3xl p-8 md:p-12 lg:p-16 max-w-7xl mx-auto">
                         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
 
                             {/* Left Side Text Content (takes 2/5 columns on large screens) */}
                             <div className="lg:col-span-2 space-y-6">
-                                <h2 className="text-3xl md:text-4xl text-gray-800">
+                                <h2 className="text-[40px] md:text-4xl text-gray-800">
                                     Send Your Inquiry. <span className="font-bold block mt-2">We Will Respond Shortly.</span>
                                 </h2>
-                                <p className="text-gray-500 leading-relaxed">
+                                <p className="leading-relaxed text-[15px]">
                                     We are committed to exceeding your expectations. Feel free to send us your questions or suggestions—we are here to listen and assist.
                                 </p>
                             </div>
@@ -203,7 +202,7 @@ const ContactUs = () => {
                                         <Button
                                             type="submit"
                                             variant="outline"
-                                            className="h-auto py-2 px-4 border border-[#cc2221] text-[#cc2221] hover:bg-red-50 hover:text-[#cc2221] font-semibold text-base transition-all duration-300"
+                                            className="h-auto py-2 px-4 border border-[#cc2221] text-[#cc2221]  hover:bg-[#cc2221] hover:text-white font-semibold text-base transition-all duration-300"
                                         >
                                             Submit Request!
                                         </Button>
