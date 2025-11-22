@@ -2,6 +2,9 @@ import Image from "next/image";
 // Combine all blocks into a single array
 import { MapPin, Phone, Mail } from 'lucide-react';
 import { title } from "process";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
 // 1. Define the Interface
 interface OfficeCardProps {
     title: string;
@@ -162,46 +165,48 @@ const ContactUs = () => {
                                 <form className="space-y-6">
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                         <div>
-                                            <input
+                                            <Input
                                                 type="text"
                                                 id="name"
                                                 placeholder="Name"
-                                                className="w-full bg-gray-50 border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-[#cc2221] focus:border-[#cc2221] block p-3.5 outline-none transition-colors"
+                                                className="bg-gray-50 border-gray-200"
                                             />
                                         </div>
                                         <div>
-                                            <input
+                                            <Input
                                                 type="email"
                                                 id="email"
                                                 placeholder="Email"
-                                                className="w-full bg-gray-50 border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-[#cc2221] focus:border-[#cc2221] block p-3.5 outline-none transition-colors"
+                                                className="bg-gray-50 border-gray-200"
                                             />
                                         </div>
                                     </div>
+
                                     <div>
-                                        <input
+                                        <Input
                                             type="text"
                                             id="subject"
                                             placeholder="Subject"
-                                            className="w-full bg-gray-50 border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-[#cc2221] block p-3.5 outline-none transition-colors"
+                                            className="bg-gray-50 border-gray-200 "
                                         />
                                     </div>
+
                                     <div>
-                                        <textarea
+                                        <Textarea
                                             id="message"
-                                            rows="6"
                                             placeholder="Your Message"
-                                            className="w-full bg-gray-50 border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-[#cc2221] focus:border-[#cc2221] block p-3.5 outline-none transition-colors resize-none"
-                                        ></textarea>
+                                            className="min-h-[150px] bg-gray-50 border-gray-200  resize-none"
+                                        />
                                     </div>
 
                                     <div className="flex justify-center pt-4">
-                                        <button
+                                        <Button
                                             type="submit"
-                                            className="py-3 px-10 border-2 border-[#cc2221] text-[#cc2221] font-semibold rounded-lg hover:bg-red-50 focus:ring-4 focus:outline-none focus:ring-red-300 transition-all duration-300"
+                                            variant="outline"
+                                            className="h-auto py-2 px-4 border border-[#cc2221] text-[#cc2221] hover:bg-red-50 hover:text-[#cc2221] font-semibold text-base transition-all duration-300"
                                         >
                                             Submit Request!
-                                        </button>
+                                        </Button>
                                     </div>
                                 </form>
                             </div>
