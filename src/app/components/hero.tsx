@@ -1,9 +1,8 @@
 import React from 'react'
 
-// --- HERO SECTION COMPONENT (Composer) ---
 const HeroSection = () => {
     // Note: The image URL is a placeholder. Replace it with your actual image path.
-    const imageUrl = "hero.avif";
+    const imageUrl = "/assets/image8.jpg";
 
     return (
         <div

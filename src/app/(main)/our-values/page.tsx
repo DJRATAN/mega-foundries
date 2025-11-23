@@ -4,11 +4,9 @@ import { FeatureBlockItem } from "@/app/components/FeatureBlock";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Star, Users, Globe } from "lucide-react";
 import Image from "next/image";
-// Combine all blocks into a single array
 const allFeatureBlocks = [
   liveChatData[0],
 ];
-
 const features = [
   {
     icon: Star,
@@ -29,15 +27,12 @@ const features = [
       "With a globally connected network and strong partnerships across government, commercial, and industrial sectors, Mega Foundries delivers end-to-end foundry, fabrication, and engineering solutions. We supply, manufacture, and support our clients at scale, ensuring seamless delivery from raw material sourcing to final deployment.",
   },
 ];
-
 const AboutSection = () => {
   return (
     <section className="relative w-full py-16 sm:py-24 bg-white">
-
-
       <div className="absolute inset-0 z-0 h-[225px] w-full">
         <Image
-          src={'/assets/image2.png'}
+          src={'/assets/image2.jpeg'}
           alt="Industrial background image"
           layout="fill"
           objectFit="cover"
@@ -45,15 +40,10 @@ const AboutSection = () => {
         />
         <div className="absolute inset-0 bg-black/60"></div>
       </div>
-
       <div className="relative z-10 container mx-auto px-4 text-center">
-
         <h2 className="text-[40px] pb-12 font-extrabold tracking-tight text-white mb-8">
-          About Us
+          Our Values
         </h2>
-
-
-
         <p className="text-[20px] py-5 font-semibold uppercase tracking-widest text-[#cc2221] mb-2">
           MEGA FOUNDRIES - FOR THE INDUSTRY
         </p>
@@ -61,7 +51,6 @@ const AboutSection = () => {
           Streamline your entire material procurement process with intelligent AI automation
         </h3>
       </div>
-
       <div className="relative z-10  mx-auto px-10">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
           {features.map((feature, index) => (

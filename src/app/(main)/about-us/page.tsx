@@ -32,7 +32,7 @@ const AboutSection = () => {
     <section className="relative w-full py-16 sm:py-24 bg-white">
       <div className="absolute inset-0 z-0 h-[225px] w-full">
         <Image
-          src={'/assets/image16.jpg'}
+          src={'/assets/image8.jpg'}
           alt="Industrial background image"
           layout="fill"
           objectFit="cover"
@@ -42,7 +42,7 @@ const AboutSection = () => {
       </div>
       <div className="relative z-10 container mx-auto px-4 text-center">
         <h2 className="text-[40px] pb-12 font-extrabold tracking-tight text-white mb-8">
-          Making History
+          About US
         </h2>
         <p className="text-[20px] py-5 font-semibold uppercase tracking-widest text-[#cc2221] mb-2">
           MEGA FOUNDRIES - FOR THE INDUSTRY

@@ -47,7 +47,7 @@ const Navbar = () => {
                             {/* --- COUNTRY DROPDOWN --- */}
                             <DropdownMenu>
                                 <DropdownMenuTrigger className="flex items-center justify-center gap-1.5 text-[11px] hover:text-[#cc2221] transition-colors outline-none">
-                                    <span className="text-sm">{selectedCountry.flag}</span>
+                                    <span className="text-lg">{selectedCountry.flag}</span>
                                     {selectedCountry.label}
                                     <ChevronDown className="w-3 h-3 opacity-50" />
                                 </DropdownMenuTrigger>
@@ -59,7 +59,7 @@ const Navbar = () => {
                                             onClick={() => setSelectedCountry(option)}
                                             className="text-xs cursor-pointer gap-2"
                                         >
-                                            <span className="text-sm">{option.flag}</span> {option.label}
+                                            <span className="text-lg">{option.flag}</span> {option.label}
                                         </DropdownMenuItem>
                                     ))}
                                 </DropdownMenuContent>
