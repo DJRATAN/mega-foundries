@@ -1,6 +1,7 @@
 'use client'
 
 import { Button } from '@/components/ui/button';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { BookAIcon, BookCopy, ChevronDown, CirclePower, FireExtinguisherIcon, Menu, Power, Search, User, UserCheck2Icon, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -11,10 +12,18 @@ const topMenuItems = [
     { label: 'Request for', href: '#', content: 'Quotations', icon: BookAIcon },
     { label: 'Welcome', href: '#', content: 'Sign In/Register', icon: User }
 ];
-
+const countryOptions = [
+    { label: "USA", flag: "🇺🇸", id: "us" },
+    { label: "Canada", flag: "🇨🇦", id: "ca" },
+    { label: "Latin America", flag: "🇧🇷", id: "lat" }, // Used Brazil as a representative flag
+    { label: "North America", flag: "🌎", id: "na" },  // Changed "America" to "North America" or use 🌎
+    { label: "Caribbean", flag: "🇯🇲", id: "car" },    // Used Jamaica as a representative flag
+    { label: "Europe", flag: "🇪🇺", id: "eu" },        // EU Flag
+]
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+    const [selectedCountry, setSelectedCountry] = useState(countryOptions[0])
     return (
         <div className="w-full relative z-40">
             <header className="bg-white shadow-md sticky top-0">
@@ -26,7 +35,7 @@ const Navbar = () => {
                         {/* 1. Logo & Mobile Toggle Row */}
                         <div className="w-full lg:w-auto flex justify-between items-center">
                             {/* Logo */}
-                            <Link href={'/'} className="shrink-0">
+                            <Link href={'/'} className="shrink-0 pr-5">
                                 <Image
                                     src={'/Mega-foundries-logo.PNG'}
                                     alt='Logo'
@@ -35,15 +44,27 @@ const Navbar = () => {
                                     className="object-contain h-12 w-12 lg:h-[60px] lg:w-[60px]"
                                 />
                             </Link>
-                            <Link href={'/'} className="shrink-0 pl-4 pr-12">
-                                <Image
-                                    src={'/Canada-foundries-logo1.PNG'}
-                                    alt='Logo'
-                                    height={60}
-                                    width={60}
-                                    className="object-contain h-12 w-12 lg:h-[60px] lg:w-[60px]"
-                                />
-                            </Link>
+                            {/* --- COUNTRY DROPDOWN --- */}
+                            <DropdownMenu>
+                                <DropdownMenuTrigger className="flex items-center justify-center gap-1.5 text-[11px] hover:text-[#cc2221] transition-colors outline-none">
+                                    <span className="text-sm">{selectedCountry.flag}</span>
+                                    {selectedCountry.label}
+                                    <ChevronDown className="w-3 h-3 opacity-50" />
+                                </DropdownMenuTrigger>
+
+                                <DropdownMenuContent align="end" className="min-w-[120px]">
+                                    {countryOptions.map((option) => (
+                                        <DropdownMenuItem
+                                            key={option.id}
+                                            onClick={() => setSelectedCountry(option)}
+                                            className="text-xs cursor-pointer gap-2"
+                                        >
+                                            <span className="text-sm">{option.flag}</span> {option.label}
+                                        </DropdownMenuItem>
+                                    ))}
+                                </DropdownMenuContent>
+                            </DropdownMenu>
+
                             {/* Mobile Menu Button (Hidden on Desktop) */}
                             <button
                                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -55,7 +76,7 @@ const Navbar = () => {
 
                         {/* 2. Search Bar Section */}
                         {/* On mobile: Full width. On desktop: Grows to fill space */}
-                        <div className="w-full lg:grow lg:mx-8 flex justify-center">
+                        <div className="w-full pl-5 lg:grow lg:mx-8 flex justify-center">
                             <div className="w-full max-w-3xl flex items-center border border-red-200 rounded-md overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
                                 <div className="relative grow">
                                     <input
@@ -88,6 +109,16 @@ const Navbar = () => {
                                     </div>
                                 </Link>
                             ))}
+
+                            <Link href={'/'} className="shrink-0 pl-4 pr-12">
+                                <Image
+                                    src={'/Canada-foundries-logo1.PNG'}
+                                    alt='Logo'
+                                    height={60}
+                                    width={60}
+                                    className="object-contain h-12 w-12 lg:h-[60px] lg:w-[60px]"
+                                />
+                            </Link>
                         </div>
                     </div>
                 </div>

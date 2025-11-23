@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { ChevronDown, Facebook, Instagram, Linkedin, Twitter, Menu, X } from 'lucide-react';
 import Link from 'next/link';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 
 const topMenuItems = [
   { label: 'OUR VALUES', href: '/our-values' },
@@ -14,14 +15,29 @@ const topMenuItems = [
   { label: 'ALWAYS FIRST', href: '/always-first' },
   { label: 'CONTACT', href: '/contact' },
 ];
+// 1. Define Options Data
+const languageOptions = [
+  { label: "English-USD", flag: "🇺🇸", id: "en" },
+  { label: "Arabic-JOD", flag: "🇯🇴", id: "ar" },
+  { label: "French-EUR", flag: "🇫🇷", id: "fr" },
+]
 
+const countryOptions = [
+  { label: "USA", flag: "🇺🇸", id: "us" },
+  { label: "Canada", flag: "🇨🇦", id: "ca" },
+  { label: "Latin America", flag: "🇧🇷", id: "lat" }, // Used Brazil as a representative flag
+  { label: "North America", flag: "🌎", id: "na" },  // Changed "America" to "North America" or use 🌎
+  { label: "Caribbean", flag: "🇯🇲", id: "car" },    // Used Jamaica as a representative flag
+  { label: "Europe", flag: "🇪🇺", id: "eu" },        // EU Flag
+]
 const TopNavbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+  const [selectedLang, setSelectedLang] = useState(languageOptions[0])
+  const [selectedCountry, setSelectedCountry] = useState(countryOptions[0])
   return (
     <div className='w-full relative z-50'>
       <nav className="bg-neutral-800 text-neutral-200 w-full mx-auto shadow-md">
-        
+
         {/* Corrected lg:px-30 to lg:px-8 or standard container usage */}
         <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           <div className="flex justify-between items-center h-9">
@@ -30,9 +46,9 @@ const TopNavbar = () => {
             {/* Added 'hidden lg:flex' to hide this long list on mobile */}
             <div className="hidden lg:flex space-x-1 gap-6 items-center">
               {topMenuItems.map((item) => (
-                <Link 
-                  className='text-[11px] hover:text-[#cc2221] transition-colors whitespace-nowrap' 
-                  key={item.label} 
+                <Link
+                  className='text-[11px] hover:text-[#cc2221] transition-colors whitespace-nowrap'
+                  key={item.label}
                   href={item.href}
                 >
                   {item.label}
@@ -43,7 +59,7 @@ const TopNavbar = () => {
             {/* --- MOBILE: Hamburger Button --- */}
             {/* Visible only on mobile/tablet (lg:hidden) */}
             <div className="lg:hidden flex items-center">
-              <button 
+              <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="text-neutral-200 hover:text-[#cc2221] focus:outline-none"
               >
@@ -54,19 +70,50 @@ const TopNavbar = () => {
 
             {/* --- DESKTOP: Right Side Icons --- */}
             <div className="hidden lg:flex items-center space-x-4">
-              <Link href={''} className='flex items-center justify-center gap-1.5 text-[11px] hover:text-[#cc2221] transition-colors'>
-                English-USD <ChevronDown className="w-3 h-3" />
-              </Link>
-              <Link href={''} className='flex items-center justify-center gap-1.5 text-[11px] hover:text-[#cc2221] transition-colors'>
-                Country <ChevronDown className="w-3 h-3" />
-              </Link>
 
-              <div className="flex space-x-2 ml-2">
-                <Link href={'/'} className='p-1 border rounded-2xl hover:border-[#cc2221] hover:text-[#cc2221] transition-colors'><Linkedin className='w-3 h-3' /></Link>
-                <Link href={'/'} className='p-1 border rounded-2xl hover:border-[#cc2221] hover:text-[#cc2221] transition-colors'><Facebook className='w-3 h-3' /></Link>
-                <Link href={'/'} className='p-1 border rounded-2xl hover:border-[#cc2221] hover:text-[#cc2221] transition-colors'><Instagram className='w-3 h-3' /></Link>
-                <Link href={'/'} className='p-1 border rounded-2xl hover:border-[#cc2221] hover:text-[#cc2221] transition-colors'><Twitter className='w-3 h-3' /></Link>
-              </div>
+              {/* --- LANGUAGE DROPDOWN --- */}
+              <DropdownMenu>
+                <DropdownMenuTrigger className="flex items-center justify-center gap-1.5 text-[11px] hover:text-[#cc2221] transition-colors outline-none">
+                  {/* Shows the SELECTED flag and label */}
+                  <span className="text-sm">{selectedLang.flag}</span>
+                  {selectedLang.label}
+                  <ChevronDown className="w-3 h-3 opacity-50" />
+                </DropdownMenuTrigger>
+
+                <DropdownMenuContent align="end" className="min-w-[120px]">
+                  {languageOptions.map((option) => (
+                    <DropdownMenuItem
+                      key={option.id}
+                      onClick={() => setSelectedLang(option)}
+                      className="text-xs cursor-pointer gap-2"
+                    >
+                      <span className="text-sm">{option.flag}</span> {option.label}
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+
+              {/* --- COUNTRY DROPDOWN --- */}
+              <DropdownMenu>
+                <DropdownMenuTrigger className="flex items-center justify-center gap-1.5 text-[11px] hover:text-[#cc2221] transition-colors outline-none">
+                  <span className="text-sm">{selectedCountry.flag}</span>
+                  {selectedCountry.label}
+                  <ChevronDown className="w-3 h-3 opacity-50" />
+                </DropdownMenuTrigger>
+
+                <DropdownMenuContent align="end" className="min-w-[120px]">
+                  {countryOptions.map((option) => (
+                    <DropdownMenuItem
+                      key={option.id}
+                      onClick={() => setSelectedCountry(option)}
+                      className="text-xs cursor-pointer gap-2"
+                    >
+                      <span className="text-sm">{option.flag}</span> {option.label}
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+
             </div>
 
           </div>
@@ -76,14 +123,14 @@ const TopNavbar = () => {
         {/* Renders conditionally based on state */}
         {isMobileMenuOpen && (
           <div className="lg:hidden bg-neutral-900 border-t border-neutral-700 absolute w-full left-0 top-9 shadow-xl py-4 px-4 flex flex-col gap-4">
-            
+
             {/* Mobile Links Grid */}
             <div className="grid grid-cols-2 gap-3">
               {topMenuItems.map((item) => (
-                <Link 
+                <Link
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className='text-xs text-neutral-300 hover:text-[#cc2221] transition-colors' 
-                  key={item.label} 
+                  className='text-xs text-neutral-300 hover:text-[#cc2221] transition-colors'
+                  key={item.label}
                   href={item.href}
                 >
                   {item.label}
@@ -95,17 +142,17 @@ const TopNavbar = () => {
 
             {/* Mobile Settings & Socials */}
             <div className="flex flex-col gap-3">
-               <div className="flex justify-between">
-                  <Link href={''} className='flex items-center gap-1.5 text-xs hover:text-[#cc2221]'>English-USD <ChevronDown className="w-3 h-3" /></Link>
-                  <Link href={''} className='flex items-center gap-1.5 text-xs hover:text-[#cc2221]'>Country <ChevronDown className="w-3 h-3" /></Link>
-               </div>
-               
-               <div className="flex gap-4 justify-start mt-2">
-                  <Link href={'/'}><Linkedin className='w-4 h-4 hover:text-[#cc2221]' /></Link>
-                  <Link href={'/'}><Facebook className='w-4 h-4 hover:text-[#cc2221]' /></Link>
-                  <Link href={'/'}><Instagram className='w-4 h-4 hover:text-[#cc2221]' /></Link>
-                  <Link href={'/'}><Twitter className='w-4 h-4 hover:text-[#cc2221]' /></Link>
-               </div>
+              <div className="flex justify-between">
+                <Link href={''} className='flex items-center gap-1.5 text-xs hover:text-[#cc2221]'>English-USD <ChevronDown className="w-3 h-3" /></Link>
+                <Link href={''} className='flex items-center gap-1.5 text-xs hover:text-[#cc2221]'>Country <ChevronDown className="w-3 h-3" /></Link>
+              </div>
+
+              <div className="flex gap-4 justify-start mt-2">
+                <Link href={'/'}><Linkedin className='w-4 h-4 hover:text-[#cc2221]' /></Link>
+                <Link href={'/'}><Facebook className='w-4 h-4 hover:text-[#cc2221]' /></Link>
+                <Link href={'/'}><Instagram className='w-4 h-4 hover:text-[#cc2221]' /></Link>
+                <Link href={'/'}><Twitter className='w-4 h-4 hover:text-[#cc2221]' /></Link>
+              </div>
             </div>
           </div>
         )}

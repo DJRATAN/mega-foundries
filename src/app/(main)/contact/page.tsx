@@ -93,7 +93,7 @@ const ContactUs = () => {
         title: "USA Office",
         flagSrc: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/320px-Flag_of_the_United_States.svg.png",
         description: "We are dedicated to providing excellent service. Contact us anytime; we look forward to assisting you",
-        address: "105 MAXES ROAD Melville, NY 11737 USA",
+        address: "105 MAXES ROAD MELVILE, NY 11737 USA",
         phone: "+1 (516) 252 1111",
         email: "info@megafoundries.com",
         // Google Map Embed for New York

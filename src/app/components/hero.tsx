@@ -21,11 +21,11 @@ const HeroSection = () => {
             <div className="relative z-10 text-center max-w-4xl px-4">
 
                 <p className="text-[16px]   font-medium text-white/90 mb-3 tracking-widest uppercase">
-                    Buy and Sell Industrial Machinery Online with Ease.
+                    From your desk to your dock complete undertaking by Team Mega
                 </p>
-                <h1 className="text-[30px]   text-white leading-tight mb-6 drop-shadow-lg">
+                <h1 className="text-[30px]  font-extrabold text-white leading-tight mb-6 drop-shadow-lg">
 
-                    Transforming Global Trade in Foundry Metals, Smart Manufacturing, and Industrial Engineering
+                    The Largest group of Foundries & Forge Shop
                 </h1>
                 <p className="text-[11px]   text-white/90 leading-relaxed font-light mx-auto max-w-3xl">
                     Mega Foundries delivers a comprehensive portfolio of products, including turbines, oil & gas equipment, water management technologies, and power generation systems. We also enable seamless access to FPC services, empowering businesses to execute large-scale industrial projects with confidence.
