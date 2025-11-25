@@ -11,7 +11,7 @@ export default function CatalogPage() {
         <div className="flex flex-col items-center justify-center mb-16 text-center space-y-4">
  
            
-           <h1 className="text-3xl font-bold text-slate-900 tracking-tight">Forge Shop</h1>
+           <h1 className="text-3xl font-bold text-slate-900 tracking-tight">Our Product Category</h1>
            <p className="text-[#cc2221] font-bold tracking-widest text-sm">JUST HIGHER STANDARDS</p>
    
         </div>
