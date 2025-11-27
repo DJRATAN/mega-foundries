@@ -1,0 +1,147 @@
+import React from 'react';
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Anvil, Globe2, BarChart3, Factory } from 'lucide-react';
+import AnimatedCounter from '@/components/ui/animated-counter';
+
+export default function PartnerProgramPage() {
+  return (
+    <div className="min-h-screen bg-white">
+       
+      <section className="relative w-full bg-slate-50 overflow-hidden ">
+        <div className="grid grid-cols-1 md:grid-cols-2 min-h-[600px]">
+           
+          <div className="flex flex-col justify-center px-6 py-16 md:px-16 lg:px-24 z-10">
+            <span className="text-neutral-500 font-bold tracking-widest uppercase text-xs mb-4">
+              MEGA FOUNDRIES PARTNER PROGRAM
+            </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-neutral-900 mb-6 leading-tight">
+              Scale Your <br />
+              <span className="text-[#cc2221]">Manufacturing Reach</span> <br />
+              Globally
+            </h1>
+            <p className="text-neutral-600 text-lg mb-8 max-w-lg leading-relaxed">
+              Join our integrated supply chain network. Leverage our advanced digital infrastructure to distribute high-grade castings to infrastructure projects across continents.
+            </p>
+            <div className="flex gap-4">
+              <Button className="bg-[#cc2221] hover:bg-red-800 text-white px-8 py-6 text-lg shadow-lg">
+                Become a Partner
+              </Button>
+              <Button variant="outline" className="px-8 py-6 text-lg border-neutral-300">
+                Learn More
+              </Button>
+            </div>
+          </div>
+ 
+          <div className="relative h-[400px] md:h-full w-full"> 
+            <div className="absolute inset-0 bg-neutral-200">
+               <Image
+                src="/assets/image8.jpg"  
+                alt="Global Industrial Logistics"
+                fill
+                className="object-cover"
+                priority
+              /> 
+              <div className="absolute inset-0 bg-linear-to-r from-slate-50 via-slate-50/20 to-transparent md:bg-transparent"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+ 
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+             
+            <div className="flex flex-col items-center space-y-2 group">
+              <div className="p-4 bg-red-50 rounded-full mb-2 group-hover:scale-110 transition-transform">
+                <Anvil className="w-8 h-8 text-[#cc2221]" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-4xl font-extrabold text-neutral-900">
+                <AnimatedCounter end={2500} suffix="+" />
+              </h3>
+              <p className="text-neutral-500 font-medium text-sm uppercase tracking-wide">Alloy Grades</p>
+            </div>
+ 
+            <div className="flex flex-col items-center space-y-2 group">
+              <div className="p-4 bg-red-50 rounded-full mb-2 group-hover:scale-110 transition-transform">
+                <Factory className="w-8 h-8 text-[#cc2221]" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-4xl font-extrabold text-neutral-900">
+                <AnimatedCounter end={850} />
+              </h3>
+              <p className="text-neutral-500 font-medium text-sm uppercase tracking-wide">Partner Foundries</p>
+            </div>
+ 
+            <div className="flex flex-col items-center space-y-2 group">
+              <div className="p-4 bg-red-50 rounded-full mb-2 group-hover:scale-110 transition-transform">
+                <BarChart3 className="w-8 h-8 text-[#cc2221]" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-4xl font-extrabold text-neutral-900">
+                <AnimatedCounter end={12} suffix="M+" />
+              </h3>
+              <p className="text-neutral-500 font-medium text-sm uppercase tracking-wide">Tons Shipped</p>
+            </div>
+ 
+            <div className="flex flex-col items-center space-y-2 group">
+              <div className="p-4 bg-red-50 rounded-full mb-2 group-hover:scale-110 transition-transform">
+                <Globe2 className="w-8 h-8 text-[#cc2221]" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-4xl font-extrabold text-neutral-900">
+                <AnimatedCounter end={45} />
+              </h3>
+              <p className="text-neutral-500 font-medium text-sm uppercase tracking-wide">Export Countries</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+ 
+      <section className="py-20 pb-32 bg-neutral-50 border-t border-neutral-100">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          
+          <h4 className="text-[#cc2221] font-bold text-sm uppercase tracking-wider mb-3">
+            Mega Foundries Digital Portal
+          </h4>
+          <h2 className="text-3xl md:text-5xl font-bold text-neutral-900 mb-6">
+            Digitize Your Inventory & Streamline Procurement
+          </h2>
+          <p className="text-neutral-500 mb-16 max-w-2xl mx-auto text-lg">
+            Manage multiple alloy specifications, track CAD revisions, and monitor global shipments in real-time with our integrated foundry management tool.
+          </p>
+ 
+          <div className="relative mx-auto max-w-5xl group cursor-pointer">
+             
+            <div className="absolute -inset-1 bg-linear-to-r from-red-600 to-red-400 rounded-3xl opacity-20 group-hover:opacity-40 blur-xl transition duration-500"></div>
+ 
+            <div className="relative bg-neutral-900 rounded-t-3xl p-[3%] shadow-2xl border-b border-neutral-800"> 
+               <div className="absolute top-3 left-1/2 -translate-x-1/2 w-2 h-2 bg-neutral-700 rounded-full z-20 shadow-inner"></div>
+                
+               <div className="relative bg-white rounded-md overflow-hidden aspect-16/10 border border-neutral-800"> 
+                  <Image 
+                    src="/assets/dashboard-screenshot.jpg" 
+                    alt="Foundry Management Dashboard"
+                    fill
+                    className="object-cover object-top"
+                  />
+                   
+                  <div className="absolute inset-0 bg-slate-50/50 flex items-center justify-center">
+                    <Button variant="secondary" className="shadow-lg">
+                        View Live Demo
+                    </Button>
+                  </div>
+               </div>
+            </div>
+             
+            <div className="relative bg-neutral-300 h-6 md:h-4 w-full rounded-b-3xl shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] mx-auto border-t border-neutral-400">
+               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[15%] h-2 bg-neutral-400 rounded-b-md"></div>
+            </div>
+            
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  );
+}
