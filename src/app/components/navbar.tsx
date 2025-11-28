@@ -33,7 +33,7 @@ const loginOptions = [
 
 // 2. MARK THE LOGIN ITEM
 const topMenuItems = [
-    { label: 'Became a', href: '#', content: 'Supplier', icon: UserCheck2Icon },
+    { label: 'Became a', href: '/sellerHomepage', content: 'Supplier', icon: UserCheck2Icon },
     { label: 'Request for', href: '#', content: 'Quotations', icon: BookAIcon },
     { label: 'Welcome', href: '#', content: 'Sign In/Register', icon: User, isLogin: true } // Added flag
 ];

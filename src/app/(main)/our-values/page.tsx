@@ -48,7 +48,7 @@ const AboutSection = () => {
           MEGA FOUNDRIES - FOR THE INDUSTRY
         </p>
         <h3 className="text-[25px] sm:text-4xl font-bold max-w-4xl mx-auto mb-16">
-          Streamline your entire material procurement process with intelligent AI automation
+          Foundries begin with us: Innovation, Optimization, and Cost Reduction. All Mega Moves
         </h3>
       </div>
       <div className="relative z-10  mx-auto px-10">

@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Anvil, Globe2, BarChart3, Factory } from 'lucide-react';
 import AnimatedCounter from '@/components/ui/animated-counter';
+import SellerTools from './SellerTools';
+import HowItWorks from './HowItWorks';
 
 export default function PartnerProgramPage() {
   return (
@@ -144,7 +146,8 @@ export default function PartnerProgramPage() {
 
         </div>
       </section>
-
+      <SellerTools />
+      <HowItWorks />
     </div>
   );
 }
