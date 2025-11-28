@@ -16,14 +16,13 @@ import {
   Briefcase, 
   Store 
 } from 'lucide-react';
-
-// --- 1. CONFIGURATION: MAP URL SLUGS TO TEXT/ICONS ---
+ 
 const loginConfig: Record<string, any> = {
   "team": {
     title: "Team Mega Login",
     description: "Internal portal for Mega Foundries employees and administrators.",
     icon: Users,
-    roleId: "admin" // You can send this to your backend
+    roleId: "admin"  
   },
   "engineer": {
     title: "Engineer / Architect",

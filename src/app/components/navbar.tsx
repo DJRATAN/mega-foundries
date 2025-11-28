@@ -23,24 +23,23 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 
-// 1. UPDATED LOGIN OPTIONS (Added new vendor types)
+// 1. UPDATED LOGIN OPTIONS
 const loginOptions = [
     { label: "Team Mega Login", href: "/login/team" },
     { label: "Engineers/Architect Login", href: "/login/engineer" },
     { label: "Customer Login", href: "/login/customer" },
     { label: "Logistics Login", href: "/login/logistics" },
-    // New Additions:
     { label: "Foundries Login", href: "/login/foundry" },
     { label: "Forge Shops Login", href: "/login/forge" },
     { label: "Fabricators Login", href: "/login/fabricator" },
     { label: "Other Vendors Login", href: "/login/vendor" },
 ]
 
-// 2. MARK THE LOGIN ITEM
+// 2. MENU ITEMS
 const topMenuItems = [
-    { label: 'Became a', href: '/sellerHomepage', content: 'Supplier', icon: UserCheck2Icon },
+    { label: 'Become a', href: '/sellerHomepage', content: 'Supplier', icon: UserCheck2Icon },
     { label: 'Request for', href: '#', content: 'Quotations', icon: BookAIcon },
-    { label: 'Welcome', href: '#', content: 'Sign In/Register', icon: User, isLogin: true } // Added flag
+    { label: 'Welcome', href: '#', content: 'Sign In/Register', icon: User, isLogin: true }
 ];
 
 const countryOptions = [
@@ -64,62 +63,73 @@ const Navbar = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
                     <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
 
-                        {/* 1. Logo & Mobile Toggle Row */}
-                        <div className="w-full lg:w-auto flex justify-between items-center">
-                            {/* Logo */}
-                            <Link href={'/'} className="shrink-0 pr-5">
-                                <Image
-                                    src={'/Mega-foundries-logo.PNG'}
-                                    alt='Logo'
-                                    height={100}
-                                    width={100}
-                                    className="object-contain h-12 w-12 lg:h-24 lg:w-24"
-                                />
-                            </Link>
-                            
-                            {/* --- COUNTRY DROPDOWN --- */}
-                            <DropdownMenu>
-                                <DropdownMenuTrigger className="flex w-32 items-center justify-center gap-1.5 text-[11px] hover:text-[#cc2221] transition-colors outline-none">
-                                    <span className="text-lg">{selectedCountry.flag}</span>
-                                    {selectedCountry.label}
-                                    <ChevronDown className="w-3 h-3 opacity-50" />
-                                </DropdownMenuTrigger>
+                        {/* ================= LEFT SIDE: LOGOS & MOBILE TOGGLE ================= */}
+                        <div className="w-full lg:w-auto flex justify-between items-center gap-4">
 
-                                <DropdownMenuContent align="end" className="min-w-[120px]">
-                                    {countryOptions.map((option) => (
-                                        <DropdownMenuItem
-                                            key={option.id}
-                                            onClick={() => setSelectedCountry(option)}
-                                            className="text-xs cursor-pointer gap-2"
-                                        >
-                                            <span className="text-lg">{option.flag}</span> {option.label}
-                                        </DropdownMenuItem>
-                                    ))}
-                                </DropdownMenuContent>
-                            </DropdownMenu>
+                            {/* Grouping Left Logos (Desktop Only - Mobile shows only Main) */}
+                            <div className="flex items-center gap-3">
+                                {/* Main Logo */}
+                                <Link href={'/'} className="shrink-0 hidden lg:block">
+                                    <Image
+                                        src={'/Mega-foundries-logo.PNG'}
+                                        alt='Mega Foundries'
+                                        height={80}
+                                        width={80}
+                                        className="object-contain h-14 w-14 lg:h-20 lg:w-20"
+                                    />
+                                </Link>
 
-                            {/* Mobile Menu Button (Hidden on Desktop) */}
-                            <button
-                                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                                className="lg:hidden p-2 text-neutral-600 hover:text-[#cc2221] transition-colors"
-                            >
-                                {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-                            </button>
+                                {/* Secondary Logo (Fabricator) - Desktop Only */}
+                                <Link href={'/'} className="shrink-0 hidden lg:block">
+                                    <Image
+                                        src={'/logo fabricator.jfif'}
+                                        alt='Fabricator'
+                                        height={80}
+                                        width={80}
+                                        className="object-contain h-14 w-14 lg:h-20 lg:w-20"
+                                    />
+                                </Link>
+                            </div>
+                            <div className="pt-2">
+                                <div className="grid grid-cols-4 gap-4 items-center justify-items-center">
+                                    {/* Logo 1: Mega */}
+                                    <Image src={'/Mega-foundries-logo.PNG'} alt='Mega' width={60} height={60} className="object-contain h-12 w-12" />
+                                    {/* Logo 2: Fabricator */}
+                                    <Image src={'/logo fabricator.jfif'} alt='Fabricator' width={60} height={60} className="object-contain h-12 w-12" />
+                                    {/* Logo 3: Forge */}
+                                    <Image src={'/logo forge.jfif'} alt='Forge' width={60} height={60} className="object-contain h-12 w-12" />
+                                    {/* Logo 4: Canada */}
+                                    <Image src={'/Canada-foundries-logo1.PNG'} alt='Canada' width={60} height={60} className="object-contain h-12 w-12" />
+                                </div>
+                            </div>
+
+                            {/* Mobile Controls */}
+                            <div className="flex items-center gap-2 lg:hidden">
+
+
+                                {/* Hamburger Toggle */}
+                                <button
+                                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                                    className="p-2 text-neutral-600 hover:text-[#cc2221] transition-colors"
+                                >
+                                    {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+                                </button>
+                            </div>
                         </div>
 
-                        {/* 2. Search Bar Section */}
-                        <div className="w-full pl-0 lg:pl-5 lg:grow lg:mx-8 flex justify-center">
-                            <div className="w-full max-w-3xl flex items-center border border-red-200 rounded-md overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
-                                <div className="relative grow">
+                        {/* ================= MIDDLE: SEARCH BAR ================= */}
+                        <div className="w-full lg:grow lg:mx-6 flex justify-center">
+                            <div className="w-full max-w-3xl flex items-center border border-red-200 rounded-md overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white h-10 lg:h-12">
+                                <div className="relative grow h-full">
                                     <input
                                         type="text"
                                         placeholder="Enter a keyword to search products"
-                                        className="w-full h-10 lg:h-12 pl-4 pr-10 text-sm lg:text-base text-neutral-700 focus:outline-none placeholder:text-neutral-400"
+                                        className="w-full h-full pl-4 pr-10 text-sm lg:text-base text-neutral-700 focus:outline-none placeholder:text-neutral-400"
                                     />
                                     <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 lg:w-5 lg:h-5 text-gray-400" />
                                 </div>
                                 <Button
-                                    className="h-10 lg:h-12 rounded-none px-4 lg:px-8 bg-[#cc2221] hover:bg-red-700 text-white font-semibold text-sm lg:text-lg"
+                                    className="h-full rounded-none px-4 lg:px-8 bg-[#cc2221] hover:bg-red-700 text-white font-semibold text-sm lg:text-lg"
                                 >
                                     <span className="hidden lg:inline">Search</span>
                                     <Search className="lg:hidden w-4 h-4" />
@@ -127,10 +137,10 @@ const Navbar = () => {
                             </div>
                         </div>
 
-                        {/* 3. Utility Links (Desktop) */}
-                        <div className="hidden lg:flex shrink-0 space-x-6">
+                        {/* ================= RIGHT SIDE: UTILITY LINKS & RIGHT LOGOS (DESKTOP) ================= */}
+                        <div className="hidden lg:flex shrink-0 items-center space-x-6">
+
                             {topMenuItems.map((item) => {
-                                // === HANDLE LOGIN DROPDOWN ===
                                 if (item.isLogin) {
                                     return (
                                         <DropdownMenu key={item.label}>
@@ -143,7 +153,6 @@ const Navbar = () => {
                                                     <p className='text-xs font-bold text-neutral-800 group-hover:text-[#cc2221] transition-colors'>{item.content}</p>
                                                 </div>
                                             </DropdownMenuTrigger>
-                                            
                                             <DropdownMenuContent align="end" className="w-56 p-2 bg-white border border-gray-100 shadow-lg rounded-md">
                                                 {loginOptions.map((opt) => (
                                                     <DropdownMenuItem key={opt.label} asChild>
@@ -157,8 +166,6 @@ const Navbar = () => {
                                         </DropdownMenu>
                                     )
                                 }
-
-                                // === NORMAL LINKS ===
                                 return (
                                     <Link className='flex items-center gap-2 group' key={item.label} href={item.href}>
                                         <div className='text-neutral-600 group-hover:text-[#cc2221] transition-colors'>
@@ -172,26 +179,28 @@ const Navbar = () => {
                                 )
                             })}
 
-                            <Link href={'/'} className="shrink-0 pl-4 pr-12">
-                                <Image
-                                    src={'/Canada-foundries-logo1.PNG'}
-                                    alt='Logo'
-                                    height={100}
-                                    width={100}
-                                    className="object-contain h-12 w-12 lg:h-24 lg:w-24"
-                                />
-                            </Link>
+                            <div className="h-10 w-[1px] bg-gray-200 mx-2"></div>
+
+                            {/* Desktop Right Logos */}
+                            <div className="flex items-center gap-3">
+                                <Link href={'/'} className="shrink-0">
+                                    <Image src={'/logo forge.jfif'} alt='Forge Shop' height={80} width={80} className="object-contain h-14 w-14 lg:h-20 lg:w-20" />
+                                </Link>
+                                <Link href={'/'} className="shrink-0">
+                                    <Image src={'/Canada-foundries-logo1.PNG'} alt='Canada Foundries' height={80} width={80} className="object-contain h-14 w-14 lg:h-20 lg:w-20" />
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                {/* === MOBILE MENU (UPDATED) === */}
                 {isMobileMenuOpen && (
-                    <div className="lg:hidden bg-neutral-50 border-t border-neutral-200 px-4 py-4 shadow-inner space-y-4">
+                    <div className="lg:hidden bg-neutral-50 border-t border-neutral-200 px-4 py-4 shadow-inner space-y-4 h-[calc(100vh-80px)] overflow-y-auto">
+
+                        {/* 1. Main Links */}
                         {topMenuItems.map((item) => (
                             <div key={item.label}>
                                 {item.isLogin ? (
-                                    // Mobile version: Expand login options directly
                                     <div className="space-y-2 bg-white p-2 rounded border border-gray-100">
                                         <div className='flex items-center gap-4 text-[#cc2221] mb-2'>
                                             <item.icon size={24} />
@@ -210,7 +219,6 @@ const Navbar = () => {
                                         </div>
                                     </div>
                                 ) : (
-                                    // Normal Mobile Links
                                     <Link className='flex items-center gap-4 p-2 rounded-lg hover:bg-white hover:shadow-sm transition-all' href={item.href}>
                                         <div className='text-[#cc2221]'>
                                             <item.icon size={24} />
@@ -223,29 +231,41 @@ const Navbar = () => {
                                 )}
                             </div>
                         ))}
+
+                        {/* 2. Divider */}
+                        <div className="h-[1px] w-full bg-gray-200 my-4"></div>
+
+                        {/* 3. MOBILE FOOTER: 4 LOGOS GRID */}
+                        <div className="pt-2">
+                            <p className="text-center text-xs text-neutral-400 font-bold mb-3 uppercase tracking-wider">Our Partners</p>
+                            <div className="grid grid-cols-4 gap-4 items-center justify-items-center">
+                                {/* Logo 1: Mega */}
+                                <Image src={'/Mega-foundries-logo.PNG'} alt='Mega' width={60} height={60} className="object-contain h-12 w-12" />
+                                {/* Logo 2: Fabricator */}
+                                <Image src={'/logo fabricator.jfif'} alt='Fabricator' width={60} height={60} className="object-contain h-12 w-12" />
+                                {/* Logo 3: Forge */}
+                                <Image src={'/logo forge.jfif'} alt='Forge' width={60} height={60} className="object-contain h-12 w-12" />
+                                {/* Logo 4: Canada */}
+                                <Image src={'/Canada-foundries-logo1.PNG'} alt='Canada' width={60} height={60} className="object-contain h-12 w-12" />
+                            </div>
+                        </div>
                     </div>
                 )}
 
-                {/* === SUB-HEADER (Categories & Info) === */}
+                {/* === SUB-HEADER === */}
                 <div className="border-t border-neutral-100 bg-neutral-50/50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-col md:flex-row items-start md:items-center justify-between gap-2 md:gap-0">
-                        {/* Left Side: Categories */}
                         <div className='flex flex-wrap gap-4 text-xs text-neutral-600 font-medium'>
                             <div className='flex items-center gap-2 hover:text-[#cc2221] cursor-pointer transition-colors'>
-                                <FireExtinguisherIcon className='h-3.5 w-3.5 text-[#cc2221]' />
-                                Energy
+                                <FireExtinguisherIcon className='h-3.5 w-3.5 text-[#cc2221]' /> Energy
                             </div>
                             <div className='flex items-center gap-2 hover:text-[#cc2221] cursor-pointer transition-colors'>
-                                <Power className='h-3.5 w-3.5 text-[#cc2221]' />
-                                Power Generation
+                                <Power className='h-3.5 w-3.5 text-[#cc2221]' /> Power Generation
                             </div>
                         </div>
-
-                        {/* Right Side: View All */}
                         <div className="flex items-center">
                             <Link href="#" className='text-xs font-semibold text-neutral-700 flex items-center gap-2 hover:text-[#cc2221] transition-colors'>
-                                <Menu className='h-3.5 w-3.5' />
-                                View All Categories
+                                <Menu className='h-3.5 w-3.5' /> View All Categories
                             </Link>
                         </div>
                     </div>
