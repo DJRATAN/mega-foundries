@@ -50,13 +50,13 @@ export default function SellerTools() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
          
         <div className="text-center mb-16 space-y-4">
-          <span className="text-[#cc2221] font-bold text-xs uppercase tracking-widest">
+          <span className="text-[#cc2221] font-bold text-[11px] uppercase tracking-widest">
             Mega Foundries | PARTNER SUITE
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900">
+          <h2 className="text-[30px] md:text-[40px] font-bold text-gray-900">
             Engineered for <span className="text-[#cc2221]">Modern Foundries</span>
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-500 max-w-2xl mx-auto text-[16px]">
             Transition from traditional job-work to a digitally integrated manufacturing hub. 
             Utilize our specialized tools to optimize your production workflow.
           </p>
@@ -76,7 +76,7 @@ export default function SellerTools() {
                     ${isActive ? 'border-[#cc2221] bg-red-50/30 rounded-r-lg' : 'border-transparent hover:border-red-100'}
                   `}
                 >
-                  <h3 className={`text-lg font-bold transition-colors ${isActive ? 'text-[#cc2221]' : 'text-gray-600 group-hover:text-gray-900'}`}>
+                  <h3 className={`text-[16px] font-bold transition-colors ${isActive ? 'text-[#cc2221]' : 'text-gray-600 group-hover:text-gray-900'}`}>
                     {tool.number} {tool.title}
                   </h3>
                    
@@ -86,7 +86,7 @@ export default function SellerTools() {
                       ${isActive ? 'max-h-40 opacity-100 mt-3' : 'max-h-0 opacity-0'}
                     `}
                   >
-                    <p className="text-sm text-gray-500 leading-relaxed">
+                    <p className="text-[11px] text-gray-500 leading-relaxed">
                       {tool.description}
                     </p>
                   </div>

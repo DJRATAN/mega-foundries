@@ -8,28 +8,28 @@ const steps = [
     title: "Global OEM Access",
     highlight: "Global",
     description: "Upload your capabilities and certifications. We digitize your profile for infrastructure giants worldwide.",
-    position: "top" // Number Top, Line goes Up & Over
+    position: "top"  
   },
   {
     id: 2,
     title: "RFQ Smart Matching",
     highlight: "RFQ",
     description: "Our algorithm matches incoming technical blueprints directly to your machinery specs and metal grades.",
-    position: "bottom" // Number Bottom, Line goes Down & Under
+    position: "bottom"  
   },
   {
     id: 3,
     title: "Digital Contracting",
     highlight: "Close",
     description: "Submit tooling fees and lead times via our portal. Sign secure digital contracts with international buyers.",
-    position: "top" // Number Top, Line goes Up & Over
+    position: "top"  
   },
   {
     id: 4,
     title: "Production Tracking",
     highlight: "Manage",
     description: "Update casting stages virtually. Buyers track progress from pattern making to finishing, reducing email overhead.",
-    position: "bottom" // Number Bottom, Line goes Down & Under
+    position: "bottom"  
   }
 ];
 
@@ -37,34 +37,23 @@ export default function HowItWorks() {
   return (
     <section className="py-20 md:py-32 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* === HEADER === */}
+         
         <div className="text-center mb-24">
           <span className="text-[#cc2221] font-bold text-xs uppercase tracking-widest">
             Mega Foundries Process
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mt-2">
+          <h2 className="text-[30px] md:text-[40px] font-bold text-gray-900 mt-2">
             How It <span className="text-[#cc2221]">Works</span>
           </h2>
         </div>
-
-        {/* === DESKTOP LAYOUT (Rectangular Snake) === */}
+ 
         <div className="hidden lg:block relative h-[500px] w-full max-w-6xl mx-auto">
-          
-          {/* 1. THE SVG PATH (Boxy/Rectangular) */}
+           
           <svg 
             className="absolute top-0 left-0 w-full h-full pointer-events-none z-0" 
             viewBox="0 0 1200 500" 
             preserveAspectRatio="none"
-          >
-            {/* Path Logic (Rectangular with Radius):
-               Uses 'L' (Line) and 'Q' (Quadratic Curve) for corners.
-               1. Start Bottom Left
-               2. Go Up to Top of Col 1
-               3. Go Across Col 1
-               4. Go Down to Bottom of Col 2
-               5. Go Across Col 2... etc.
-            */}
+          > 
             <path 
               d="
                 M -50,400        
@@ -93,39 +82,33 @@ export default function HowItWorks() {
               strokeLinejoin="round"
             />
           </svg>
-
-          {/* 2. THE CONTENT GRID */}
+ 
           <div className="grid grid-cols-4 h-full w-full relative z-10">
             {steps.map((step) => (
               <div key={step.id} className="relative h-full flex justify-center">
-                
-                {/* --- LAYOUT FOR TOP POSITION (1 & 3) --- */}
+                 
                 {step.position === 'top' ? (
-                  <>
-                    {/* Number sits INSIDE the top bend */}
-                    <div className="absolute top-[60px] text-8xl font-black text-[#cc2221] bg-white/80 px-4 rounded-xl backdrop-blur-sm z-20">
+                  <> 
+                    <div className="absolute top-[60px] text-[40px] font-black text-[#cc2221] bg-white/80 px-4 rounded-xl backdrop-blur-sm z-20">
                       {step.id}
                     </div>
-                    
-                    {/* Text sits BELOW the bend */}
+                     
                     <div className="absolute top-[280px] px-4 text-center max-w-[280px]">
-                      <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      <h3 className="text-[16px] font-bold text-gray-900 mb-3">
                         <span className="text-[#cc2221]">{step.highlight}</span> {step.title.replace(step.highlight, "")}
                       </h3>
-                      <p className="text-sm text-gray-600 leading-relaxed font-medium">
+                      <p className="text-[11px] text-gray-600 leading-relaxed font-medium">
                         {step.description}
                       </p>
                     </div>
                   </>
-                ) : (
-                  // --- LAYOUT FOR BOTTOM POSITION (2 & 4) ---
-                  <>
-                    {/* Text sits ABOVE the bend */}
-                    <div className="absolute top-[0px] px-4 text-center max-w-[280px]">
-                      <h3 className="text-xl font-bold text-gray-900 mb-3">
+                ) : ( 
+                  <> 
+                    <div className="absolute top-0 px-4 text-center max-w-[280px]">
+                      <h3 className="text-[16px] font-bold text-gray-900 mb-3">
                         <span className="text-[#cc2221]">{step.highlight}</span> {step.title.replace(step.highlight, "")}
                       </h3>
-                      <p className="text-sm text-gray-600 leading-relaxed font-medium">
+                      <p className="text-[11px] text-gray-600 leading-relaxed font-medium">
                         {step.description}
                       </p>
                     </div>
