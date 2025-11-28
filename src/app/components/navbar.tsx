@@ -23,12 +23,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 
-// 1. DEFINE LOGIN OPTIONS
+// 1. UPDATED LOGIN OPTIONS (Added new vendor types)
 const loginOptions = [
     { label: "Team Mega Login", href: "/login/team" },
     { label: "Engineers/Architect Login", href: "/login/engineer" },
     { label: "Customer Login", href: "/login/customer" },
     { label: "Logistics Login", href: "/login/logistics" },
+    // New Additions:
+    { label: "Foundries Login", href: "/login/foundry" },
+    { label: "Forge Shops Login", href: "/login/forge" },
+    { label: "Fabricators Login", href: "/login/fabricator" },
+    { label: "Other Vendors Login", href: "/login/vendor" },
 ]
 
 // 2. MARK THE LOGIN ITEM
@@ -66,15 +71,15 @@ const Navbar = () => {
                                 <Image
                                     src={'/Mega-foundries-logo.PNG'}
                                     alt='Logo'
-                                    height={60}
-                                    width={60}
-                                    className="object-contain h-12 w-12 lg:h-[60px] lg:w-[60px]"
+                                    height={100}
+                                    width={100}
+                                    className="object-contain h-12 w-12 lg:h-24 lg:w-24"
                                 />
                             </Link>
                             
                             {/* --- COUNTRY DROPDOWN --- */}
                             <DropdownMenu>
-                                <DropdownMenuTrigger className="flex items-center justify-center gap-1.5 text-[11px] hover:text-[#cc2221] transition-colors outline-none">
+                                <DropdownMenuTrigger className="flex w-32 items-center justify-center gap-1.5 text-[11px] hover:text-[#cc2221] transition-colors outline-none">
                                     <span className="text-lg">{selectedCountry.flag}</span>
                                     {selectedCountry.label}
                                     <ChevronDown className="w-3 h-3 opacity-50" />
@@ -171,9 +176,9 @@ const Navbar = () => {
                                 <Image
                                     src={'/Canada-foundries-logo1.PNG'}
                                     alt='Logo'
-                                    height={60}
-                                    width={60}
-                                    className="object-contain h-12 w-12 lg:h-[60px] lg:w-[60px]"
+                                    height={100}
+                                    width={100}
+                                    className="object-contain h-12 w-12 lg:h-24 lg:w-24"
                                 />
                             </Link>
                         </div>
