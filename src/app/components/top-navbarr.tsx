@@ -17,15 +17,10 @@ const TopNavbarr = () => {
   return (
     <div className='w-full border-t border-gray-100'>
       <nav className="bg-neutral-800 text-neutral-200 w-full shadow-md">
-        
-        {/* Use max-w-7xl for consistent width with other navbars */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* Layout Logic: 
-             - Mobile: Flex column (or wrapped row), centered, auto height 
-             - Desktop (sm+): Single row, right aligned, fixed height look 
-          */}
-          <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center min-h-[36px] py-2 sm:py-0">
+         
+        <div className="w-full px-4 sm:px-6 lg:px-10">
+           
+          <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center min-h-9 py-2 sm:py-0">
             
             {/* Left Side (Currently empty/commented out in your code) */}
             {/* Keeping this div ensures 'justify-between' pushes the links to the right on desktop */}

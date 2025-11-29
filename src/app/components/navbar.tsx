@@ -23,7 +23,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 
-// ... (Your loginOptions and topMenuItems arrays remain the same) ...
+// 1. LOGIN OPTIONS
 const loginOptions = [
     { label: "Team Mega Login", href: "/login/team" },
     { label: "Engineers/Architect Login", href: "/login/engineer" },
@@ -35,6 +35,7 @@ const loginOptions = [
     { label: "Other Vendors Login", href: "/login/vendor" },
 ]
 
+// 2. MENU ITEMS
 const topMenuItems = [
     { label: 'Become a', href: '/sellerHomepage', content: 'Supplier', icon: UserCheck2Icon },
     { label: 'Request for', href: '#', content: 'Quotations', icon: BookAIcon },
@@ -58,15 +59,17 @@ const Navbar = () => {
         <div className="w-full relative z-40">
             <header className="bg-white shadow-md sticky top-0">
 
-                <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-3">
-                    <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
+                {/* === MAIN HEADER SECTION === */}
+                {/* Changed max-w to w-full for full width. Added larger horizontal padding (px-8) */}
+                <div className="w-full px-4 sm:px-6 lg:px-10 py-3">
+                    <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
 
                         {/* ================= LEFT SECTION: LOGOS ================= */}
-                        <div className="w-full lg:w-auto flex justify-between items-center gap-6 shrink-0">
+                        {/* 'shrink-0' prevents this section from getting squished */}
+                        <div className="w-full lg:w-auto flex justify-between item-start gap-6 shrink-0">
                             
-                            {/* Logo Group */}
                             <div className="flex items-center gap-4">
-                                <Link href={'/'} className="shrink-0 block">
+                                <Link href={'/'} className="shrink-0 hidden sm:block">
                                     <Image
                                         src={'/Mega-foundries-logo.PNG'}
                                         alt='Mega Foundries'
@@ -76,10 +79,9 @@ const Navbar = () => {
                                     />
                                 </Link>
                                 
-                                {/* Fabricator Logo (Hidden on very small mobile to save space, visible on SM+) */}
                                 <Link href={'/'} className="shrink-0 hidden sm:block">
                                     <Image
-                                        src={'/logo fabricator.jpeg'} // Fixed extension from .jfif to .jpeg based on your code
+                                        src={'/logo fabricator.jpeg'}
                                         alt='Fabricator'
                                         height={80}
                                         width={80}
@@ -87,8 +89,19 @@ const Navbar = () => {
                                     />
                                 </Link>
                             </div>
-
-                            {/* Mobile Toggle (Visible only on LG screens and below) */}
+                             <div className="pt-2 sm:block lg:hidden">
+                                <div className="grid grid-cols-4 gap-4 items-center justify-items-center">
+                                    {/* Logo 1: Mega */}
+                                    <Image src={'/Mega-foundries-logo.PNG'} alt='Mega' width={60} height={60} className="object-contain h-12 w-12" />
+                                    {/* Logo 2: Fabricator */}
+                                    <Image src={'/logo fabricator.jpeg'} alt='Fabricator' width={60} height={60} className="object-contain h-12 w-12" />
+                                    {/* Logo 3: Forge */}
+                                    <Image src={'/logo forge.jpeg'} alt='Forge' width={60} height={60} className="object-contain h-12 w-12" />
+                                    {/* Logo 4: Canada */}
+                                    <Image src={'/Canada-foundries-logo1.PNG'} alt='Canada' width={60} height={60} className="object-contain h-12 w-12" />
+                                </div>
+                            </div>
+                            {/* Mobile Toggle */}
                             <div className="flex items-center gap-2 lg:hidden">
                                 <button
                                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -100,8 +113,8 @@ const Navbar = () => {
                         </div>
 
                         {/* ================= MIDDLE SECTION: SEARCH BAR ================= */}
-                        {/* Added 'w-full' and 'max-w' constraints to prevent overlap */}
-                        <div className="w-full lg:flex-1 lg:px-8 flex justify-center">
+                        {/* flex-1 allows it to take up remaining space. max-w-4xl stops it from getting too wide on huge screens */}
+                        <div className="w-full lg:flex-1 lg:px-8 flex justify-center max-w-5xl">
                             <div className="w-full flex items-center border border-red-200 rounded-md overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white h-10 lg:h-12">
                                 <div className="relative grow h-full">
                                     <input
@@ -118,7 +131,8 @@ const Navbar = () => {
                             </div>
                         </div>
 
-                        {/* ================= RIGHT SECTION: LINKS & LOGOS (Desktop Only) ================= */}
+                        {/* ================= RIGHT SECTION: LINKS & LOGOS ================= */}
+                        {/* shrink-0 fixes it to the right side */}
                         <div className="hidden lg:flex shrink-0 items-center space-x-6">
                             
                             {/* Utility Links */}
@@ -179,12 +193,9 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                {/* ... Mobile Menu and Sub-Header remain unchanged ... */}
-                {/* (I'm omitting the repeating code for brevity, but keep your existing Mobile Menu/Subheader logic here) */}
-                 {isMobileMenuOpen && (
+                {/* === MOBILE MENU (UNCHANGED) === */}
+                {isMobileMenuOpen && (
                     <div className="lg:hidden bg-neutral-50 border-t border-neutral-200 px-4 py-4 shadow-inner space-y-4 h-[calc(100vh-80px)] overflow-y-auto">
-                        
-                        {/* 1. Main Links */}
                         {topMenuItems.map((item) => (
                             <div key={item.label}>
                                 {item.isLogin ? (
@@ -218,30 +229,22 @@ const Navbar = () => {
                                 )}
                             </div>
                         ))}
-
-                        {/* 2. Divider */}
                         <div className="h-[1px] w-full bg-gray-200 my-4"></div>
-
-                        {/* 3. MOBILE FOOTER: 4 LOGOS GRID */}
                         <div className="pt-2">
                             <p className="text-center text-xs text-neutral-400 font-bold mb-3 uppercase tracking-wider">Our Partners</p>
                             <div className="grid grid-cols-4 gap-4 items-center justify-items-center">
-                                {/* Logo 1: Mega */}
                                 <Image src={'/Mega-foundries-logo.PNG'} alt='Mega' width={60} height={60} className="object-contain h-12 w-12" />
-                                {/* Logo 2: Fabricator */}
                                 <Image src={'/logo fabricator.jpeg'} alt='Fabricator' width={60} height={60} className="object-contain h-12 w-12" />
-                                {/* Logo 3: Forge */}
                                 <Image src={'/logo forge.jpeg'} alt='Forge' width={60} height={60} className="object-contain h-12 w-12" />
-                                {/* Logo 4: Canada */}
                                 <Image src={'/Canada-foundries-logo1.PNG'} alt='Canada' width={60} height={60} className="object-contain h-12 w-12" />
                             </div>
                         </div>
                     </div>
                 )}
 
-                {/* === SUB-HEADER === */}
+                {/* === SUB-HEADER (FULL WIDTH) === */}
                 <div className="border-t border-neutral-100 bg-neutral-50/50">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-col md:flex-row items-start md:items-center justify-between gap-2 md:gap-0">
+                    <div className="w-full px-4 sm:px-6 lg:px-10 py-2 flex flex-col md:flex-row items-start md:items-center justify-between gap-2 md:gap-0">
                         <div className='flex flex-wrap gap-4 text-xs text-neutral-600 font-medium'>
                             <div className='flex items-center gap-2 hover:text-[#cc2221] cursor-pointer transition-colors'>
                                 <FireExtinguisherIcon className='h-3.5 w-3.5 text-[#cc2221]' /> Energy

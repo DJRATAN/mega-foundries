@@ -39,7 +39,7 @@ const TopNavbar = () => {
       <nav className="bg-neutral-800 text-neutral-200 w-full mx-auto shadow-md">
 
         {/* Corrected lg:px-30 to lg:px-8 or standard container usage */}
-        <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div className="w-full px-4 sm:px-6 lg:px-10  mx-auto">
           <div className="flex justify-between items-center h-9">
 
             {/* --- DESKTOP: Left Menu Items --- */}
