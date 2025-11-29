@@ -82,7 +82,7 @@ const Navbar = () => {
                                 {/* Secondary Logo (Fabricator) - Desktop Only */}
                                 <Link href={'/'} className="shrink-0 hidden lg:block">
                                     <Image
-                                        src={'/logo fabricator.jfif'}
+                                        src={'/logo fabricator.jpeg'}
                                         alt='Fabricator'
                                         height={80}
                                         width={80}
@@ -95,9 +95,9 @@ const Navbar = () => {
                                     {/* Logo 1: Mega */}
                                     <Image src={'/Mega-foundries-logo.PNG'} alt='Mega' width={60} height={60} className="object-contain h-12 w-12" />
                                     {/* Logo 2: Fabricator */}
-                                    <Image src={'/logo fabricator.jfif'} alt='Fabricator' width={60} height={60} className="object-contain h-12 w-12" />
+                                    <Image src={'/logo fabricator.jpeg'} alt='Fabricator' width={60} height={60} className="object-contain h-12 w-12" />
                                     {/* Logo 3: Forge */}
-                                    <Image src={'/logo forge.jfif'} alt='Forge' width={60} height={60} className="object-contain h-12 w-12" />
+                                    <Image src={'/logo forge.jpeg'} alt='Forge' width={60} height={60} className="object-contain h-12 w-12" />
                                     {/* Logo 4: Canada */}
                                     <Image src={'/Canada-foundries-logo1.PNG'} alt='Canada' width={60} height={60} className="object-contain h-12 w-12" />
                                 </div>
@@ -184,7 +184,7 @@ const Navbar = () => {
                             {/* Desktop Right Logos */}
                             <div className="flex items-center gap-3">
                                 <Link href={'/'} className="shrink-0">
-                                    <Image src={'/logo forge.jfif'} alt='Forge Shop' height={80} width={80} className="object-contain h-14 w-14 lg:h-20 lg:w-20" />
+                                    <Image src={'/logo forge.jpeg'} alt='Forge Shop' height={80} width={80} className="object-contain h-14 w-14 lg:h-20 lg:w-20" />
                                 </Link>
                                 <Link href={'/'} className="shrink-0">
                                     <Image src={'/Canada-foundries-logo1.PNG'} alt='Canada Foundries' height={80} width={80} className="object-contain h-14 w-14 lg:h-20 lg:w-20" />
@@ -242,9 +242,9 @@ const Navbar = () => {
                                 {/* Logo 1: Mega */}
                                 <Image src={'/Mega-foundries-logo.PNG'} alt='Mega' width={60} height={60} className="object-contain h-12 w-12" />
                                 {/* Logo 2: Fabricator */}
-                                <Image src={'/logo fabricator.jfif'} alt='Fabricator' width={60} height={60} className="object-contain h-12 w-12" />
+                                <Image src={'/logo fabricator.jpeg'} alt='Fabricator' width={60} height={60} className="object-contain h-12 w-12" />
                                 {/* Logo 3: Forge */}
-                                <Image src={'/logo forge.jfif'} alt='Forge' width={60} height={60} className="object-contain h-12 w-12" />
+                                <Image src={'/logo forge.jpeg'} alt='Forge' width={60} height={60} className="object-contain h-12 w-12" />
                                 {/* Logo 4: Canada */}
                                 <Image src={'/Canada-foundries-logo1.PNG'} alt='Canada' width={60} height={60} className="object-contain h-12 w-12" />
                             </div>
