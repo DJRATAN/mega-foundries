@@ -60,7 +60,7 @@ const Navbar = () => {
             <header className="bg-white shadow-md sticky top-0">
 
                 {/* === MAIN HEADER SECTION === */}
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
+                <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
                     <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
 
                         {/* ================= LEFT SIDE: LOGOS & MOBILE TOGGLE ================= */}

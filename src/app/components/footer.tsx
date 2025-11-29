@@ -161,6 +161,9 @@ const Footer = () => {
             <div className="mb-2 bg-white w-[70%] h-36 flex">
               <Link href={'/'}><Image src={'/Mega-foundries-logo.PNG'} alt='Logo' height={150} width={150} /></Link>
             </div>
+            <div className="mb-2 bg-white w-[70%] h-36 flex">
+              <Link href={'/'}><Image src={'/logo fabricator.jpeg'} alt='Logo' height={150} width={150} /></Link>
+            </div>
             <p className="transition-colors text-[11px] leading-relaxed max-w-xs">
               105 MAXES ROAD
             </p>
@@ -223,6 +226,9 @@ const Footer = () => {
 
             <div className="mb-2 bg-white w-[70%] h-36 flex">
               <Link href={'/'}><Image src={'/Canada-foundries-logo1.PNG'} alt='Logo' height={150} width={150} /></Link>
+            </div>
+            <div className="mb-2 bg-white w-[70%] h-36 flex">
+              <Link href={'/'}><Image src={'/logo forge.jpeg'} alt='Logo' height={150} width={150} /></Link>
             </div>
             <p className="transition-colors text-[11px] leading-relaxed max-w-xs">
               ONE YOUNGE STREET
