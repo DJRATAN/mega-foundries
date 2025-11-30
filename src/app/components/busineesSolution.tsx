@@ -16,7 +16,7 @@ const BusinessSolutions = () => {
         },
         {
             icon: Amphora,
-            title: "Oil, Gas & Petrochemicals",
+            title: "Steel & Metal Supplies",
             description: "Mega Foundries supports the oil, gas, and petrochemical sectors with equipment, pipelines, valves, and safety systems, ensuring industries meet operational standards and project demands with trusted suppliers.",
         },
         {
@@ -33,7 +33,7 @@ const BusinessSolutions = () => {
             <h2 className="text-xl  font-extrabold text-neutral-800 text-center mb-12 mx-auto">
                 Connecting Businesses Worldwide Through B2B Solutions
             </h2>
-            <div className="mx-auto px-4 sm:px-6 lg:px-26 flex flex-col md:flex-row items-center justify-between md:space-y-0">
+            <div className="w-full px-4 sm:px-6 lg:px-10 py-3">
                 {/* Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {services.map((service, index) => (
@@ -44,15 +44,15 @@ const BusinessSolutions = () => {
                                     <div className="w-8 h-8 text-[#cc2221]"><service.icon size={32} /></div>
                                 </div>
                             </div>
-                            <h3 className="text-[11px] font-bold text-neutral-800 mb-3">{service.title}</h3>
-                            <p className="text-[11px] text-neutral-600 mb-4 h-20 overflow-hidden">
+                            <h3 className="text-sm font-bold text-neutral-800 mb-3">{service.title}</h3>
+                            <p className="text-sm text-neutral-600 mb-4 h-20 overflow-hidden">
                                 {service.description}
                             </p>
 
                             <Link
                                 href="#"
                                 // onClick={() => console.log(`Learn More about ${service.title}`)}
-                                className="inline-flex text-[11px] items-center  font-semibold hover:text-[#cc2221] transition-colors group"
+                                className="inline-flex text-sm items-center  font-semibold hover:text-[#cc2221] transition-colors group"
                             >
                                 Learn More
                                 <ChevronsRight className='h-3 w-3 ml-3' />

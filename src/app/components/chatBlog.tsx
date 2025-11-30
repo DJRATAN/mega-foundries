@@ -16,14 +16,14 @@ const chatBlogContent = [
   {
     icon: MessageCircle,
     title: 'Seamless Integration',
-    description: 'Our live chat integrates with Power Cozmos CRM, ensuring all interactions are logged and easily accessible for future follow-up.'
+    description: 'Our live chat integrates with Mega Foundriess CRM, ensuring all interactions are logged and easily accessible for future follow-up.'
   },
 ]
 
 const ChatBlog = () => {
   return (
     // Outer container: Apply standard padding and max width
-    <section className='mx-auto px-4 sm:px-6 lg:px-30 flex flex-col md:flex-row items-center justify-between md:space-y-0'>
+    <section className='w-full px-4 sm:px-6 lg:px-10 py-3'>
 
       {/* Grid Container: Stacks columns on mobile, uses a 2-column grid on medium screens and up */}
       <div className='grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center'>
@@ -34,8 +34,8 @@ const ChatBlog = () => {
             <h2 className='text-[22px]   font-extrabold text-gray-900 leading-tight'>
               Live Chat: Resolve up to 80% of cases
             </h2>
-            <p className='mt-3 text-[11px]'>
-              Power Cozmo’s Live Chat enables real-time support, allowing businesses to resolve up to 80% of inquiries instantly and efficiently.
+            <p className='mt-3 text-sm'>
+              Mega Foundries’s Live Chat enables real-time support, allowing businesses to resolve up to 80% of inquiries instantly and efficiently.
             </p>
           </div>
 
@@ -53,7 +53,7 @@ const ChatBlog = () => {
                   <h3 className='text-[14px] font-bold text-gray-900'>
                     {item.title}
                   </h3>
-                  <p className='mt-1 text-[11px] '>
+                  <p className='mt-1 text-sm '>
                     {item.description}
                   </p>
                 </div>

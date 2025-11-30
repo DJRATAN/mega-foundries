@@ -10,7 +10,7 @@ const topMenuItems = [
   { label: 'HOME', href: '/' },
   { label: 'HISTORY', href: '/history' },
   { label: 'TRANSFORMATION', href: '/transformation' },
-  { label: 'INNOVATIONS', href: '/innovations' },
+  { label: 'INNOVATIONS', href: '/products' },
   { label: 'MAKING HISTORY', href: '/making-history' },
   { label: 'ALWAYS FIRST', href: '/always-first' },
   { label: 'CONTACT', href: '/contact' },
@@ -47,7 +47,7 @@ const TopNavbar = () => {
             <div className="hidden lg:flex space-x-1 gap-6 items-center">
               {topMenuItems.map((item) => (
                 <Link
-                  className='text-[11px] hover:text-[#cc2221] transition-colors whitespace-nowrap'
+                  className='text-xs hover:text-[#cc2221] transition-colors whitespace-nowrap'
                   key={item.label}
                   href={item.href}
                 >
@@ -73,9 +73,9 @@ const TopNavbar = () => {
 
               {/* --- LANGUAGE DROPDOWN --- */}
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center justify-center gap-1.5 text-[11px] hover:text-[#cc2221] transition-colors outline-none">
+                <DropdownMenuTrigger className="flex items-center justify-center gap-1.5 text-xs hover:text-[#cc2221] transition-colors outline-none">
                   {/* Shows the SELECTED flag and label */}
-                  <span className="text-sm">{selectedLang.flag}</span>
+                  <span className="text-xs">{selectedLang.flag}</span>
                   {selectedLang.label}
                   <ChevronDown className="w-3 h-3 opacity-50" />
                 </DropdownMenuTrigger>
@@ -87,7 +87,7 @@ const TopNavbar = () => {
                       onClick={() => setSelectedLang(option)}
                       className="text-xs cursor-pointer gap-2"
                     >
-                      <span className="text-sm">{option.flag}</span> {option.label}
+                      <span className="text-xs">{option.flag}</span> {option.label}
                     </DropdownMenuItem>
                   ))}
                 </DropdownMenuContent>
@@ -95,8 +95,8 @@ const TopNavbar = () => {
 
               {/* --- COUNTRY DROPDOWN --- */}
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center justify-center gap-1.5 text-[11px] hover:text-[#cc2221] transition-colors outline-none">
-                  <span className="text-sm">{selectedCountry.flag}</span>
+                <DropdownMenuTrigger className="flex items-center justify-center gap-1.5 text-xs hover:text-[#cc2221] transition-colors outline-none">
+                  <span className="text-xs">{selectedCountry.flag}</span>
                   {selectedCountry.label}
                   <ChevronDown className="w-3 h-3 opacity-50" />
                 </DropdownMenuTrigger>
@@ -108,7 +108,7 @@ const TopNavbar = () => {
                       onClick={() => setSelectedCountry(option)}
                       className="text-xs cursor-pointer gap-2"
                     >
-                      <span className="text-sm">{option.flag}</span> {option.label}
+                      <span className="text-xs">{option.flag}</span> {option.label}
                     </DropdownMenuItem>
                   ))}
                 </DropdownMenuContent>

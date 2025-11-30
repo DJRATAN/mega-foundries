@@ -60,7 +60,7 @@
 //         </h1>
 
 //         {/* Tagline */}
-//         <p className="text-[16px] md:text-[22px] font-medium   italic">
+//         <p className="text-xl md:text-[22px] font-medium   italic">
 //           "Think Fast + Succeed Faster"
 //         </p>
 
@@ -212,7 +212,7 @@ const ContactUs = () => {
           MEGA FOUNDRIES | the best industry services
         </p>
         <div className="relative z-10 container mx-auto px-4 text-center">
-    
+
           <h1 className="text-[30px] lg:text-[40px] font-bold leading-tight tracking-tight">
             The World's Largest and Advanced <br />
             Consortium of
@@ -225,7 +225,7 @@ const ContactUs = () => {
           </h1>
 
           {/* Tagline */}
-          <p className="text-[16px] md:text-[22px] font-medium   italic">
+          <p className="text-xl md:text-[22px] font-medium   italic">
             "Think Fast + Succeed Faster"
           </p>
 

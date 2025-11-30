@@ -36,7 +36,7 @@ const steps = [
 export default function HowItWorks() {
   return (
     <section className="py-20 md:py-32 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-6 lg:px-10 py-3">
          
         <div className="text-center mb-24">
           <span className="text-[#cc2221] font-bold text-xs uppercase tracking-widest">
@@ -49,7 +49,7 @@ export default function HowItWorks() {
  
         <div className="hidden lg:block relative h-[500px] w-full max-w-6xl mx-auto">
            
-          <svg 
+          {/* <svg 
             className="absolute top-0 left-0 w-full h-full pointer-events-none z-0" 
             viewBox="0 0 1200 500" 
             preserveAspectRatio="none"
@@ -76,12 +76,12 @@ export default function HowItWorks() {
                 L 1250,400
               "
               fill="none"
-              stroke="#e5e7eb" /* Gray-200 */
+              stroke="#e5e7eb"  
               strokeWidth="40"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
-          </svg>
+          </svg> */}
  
           <div className="grid grid-cols-4 h-full w-full relative z-10">
             {steps.map((step) => (
@@ -89,15 +89,15 @@ export default function HowItWorks() {
                  
                 {step.position === 'top' ? (
                   <> 
-                    <div className="absolute top-[60px] text-[40px] font-black text-[#cc2221] bg-white/80 px-4 rounded-xl backdrop-blur-sm z-20">
+                    <div className="absolute top-[60px] text-7xl font-black text-[#cc2221] bg-white/80 px-4 rounded-xl backdrop-blur-sm z-20">
                       {step.id}
                     </div>
                      
                     <div className="absolute top-[280px] px-4 text-center max-w-[280px]">
-                      <h3 className="text-[16px] font-bold text-gray-900 mb-3">
+                      <h3 className="text-xl font-bold text-gray-900 mb-3">
                         <span className="text-[#cc2221]">{step.highlight}</span> {step.title.replace(step.highlight, "")}
                       </h3>
-                      <p className="text-[11px] text-gray-600 leading-relaxed font-medium">
+                      <p className="text-sm text-gray-600 leading-relaxed font-medium">
                         {step.description}
                       </p>
                     </div>
@@ -105,16 +105,16 @@ export default function HowItWorks() {
                 ) : ( 
                   <> 
                     <div className="absolute top-0 px-4 text-center max-w-[280px]">
-                      <h3 className="text-[16px] font-bold text-gray-900 mb-3">
+                      <h3 className="text-xl font-bold text-gray-900 mb-3">
                         <span className="text-[#cc2221]">{step.highlight}</span> {step.title.replace(step.highlight, "")}
                       </h3>
-                      <p className="text-[11px] text-gray-600 leading-relaxed font-medium">
+                      <p className="text-sm text-gray-600 leading-relaxed font-medium">
                         {step.description}
                       </p>
                     </div>
 
                     {/* Number sits INSIDE the bottom bend */}
-                    <div className="absolute top-[320px] text-8xl font-black text-gray-900 bg-white/80 px-4 rounded-xl backdrop-blur-sm z-20">
+                    <div className="absolute top-[320px] text-7xl font-black text-gray-900 bg-white/80 px-4 rounded-xl backdrop-blur-sm z-20">
                       {step.id}
                     </div>
                   </>

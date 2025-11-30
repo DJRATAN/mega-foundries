@@ -67,7 +67,7 @@ const AboutSection = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="text-center px-6 pb-10">
-                <p className="text-[11px] text-justify text-gray-600 leading-relaxed">
+                <p className="text-sm text-justify text-gray-600 leading-relaxed">
                   {feature.description}
                 </p>
               </CardContent>

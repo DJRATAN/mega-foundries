@@ -6,19 +6,26 @@ import { Anvil, Globe2, BarChart3, Factory } from 'lucide-react';
 import AnimatedCounter from '@/components/ui/animated-counter';
 import SellerTools from './SellerTools';
 import HowItWorks from './HowItWorks';
+import ProductCalculator from './ProductCalculator';
+import EngagementAnalytics from './EngagementAnalytics';
+import CommonQuestions from './CommonQuestions';
+import SellerHeroSection from './RealTimeSupport';
+import RealTimeSupport from './RealTimeSupport';
+import VideoHero from '../transformation/VideoHero';
+import PrivateStats from '../transformation/PrivateStats';
 
 export default function PartnerProgramPage() {
   return (
     <div className="min-h-screen bg-white">
 
-      <section className="relative w-full bg-slate-50 overflow-hidden ">
+      <section className="w-full px-4 sm:px-6 lg:px-10 py-3">
         <div className="grid grid-cols-1 md:grid-cols-2 min-h-[600px]">
 
-          <div className="flex flex-col justify-center px-6 py-16 md:px-16 lg:px-24 z-10">
-            <span className="text-neutral-500 font-bold tracking-widest uppercase text-[11px]">
+          <div className="flex flex-col justify-center  py-16   z-10">
+            <span className="text-neutral-500 font-bold tracking-widest uppercase text-sm">
               MEGA FOUNDRIES PARTNER PROGRAM
             </span>
-            <span className="text-[#cc2221] font-bold tracking-widest uppercase text-[11px] mb-4">
+            <span className="text-[#cc2221] font-bold tracking-widest uppercase text-sm mb-4">
               Generations ahead with the next generation active
             </span>
             <h1 className="text-[30px] md:text-[32px] lg:text-[40px] font-extrabold text-neutral-900 mb-6 leading-tight">
@@ -26,7 +33,7 @@ export default function PartnerProgramPage() {
               <span className="text-[#cc2221]">Manufacturing Reach</span> <br />
               Globally
             </h1>
-            <p className="text-neutral-600 text-[16px] mb-8 max-w-lg leading-relaxed">
+            <p className="text-neutral-600 text-xl mb-8 max-w-lg leading-relaxed">
               Join our integrated supply chain network. Leverage our advanced digital infrastructure to distribute high-grade castings to infrastructure projects across continents.
             </p>
             <div className="flex gap-4">
@@ -55,7 +62,7 @@ export default function PartnerProgramPage() {
       </section>
 
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-10 py-3">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
 
             <div className="flex flex-col items-center space-y-2 group">
@@ -65,7 +72,7 @@ export default function PartnerProgramPage() {
               <h3 className="text-[30px] font-extrabold text-neutral-900">
                 <AnimatedCounter end={2500} suffix="+" />
               </h3>
-              <p className="text-neutral-500 font-medium text-[11px] uppercase tracking-wide">Alloy Grades</p>
+              <p className="text-neutral-500 font-medium text-sm uppercase tracking-wide">Alloy Grades</p>
             </div>
 
             <div className="flex flex-col items-center space-y-2 group">
@@ -75,7 +82,7 @@ export default function PartnerProgramPage() {
               <h3 className="text-[30px] font-extrabold text-neutral-900">
                 <AnimatedCounter end={850} />
               </h3>
-              <p className="text-neutral-500 font-medium text-[11px] uppercase tracking-wide">Partner Foundries</p>
+              <p className="text-neutral-500 font-medium text-sm uppercase tracking-wide">Partner Foundries</p>
             </div>
 
             <div className="flex flex-col items-center space-y-2 group">
@@ -85,7 +92,7 @@ export default function PartnerProgramPage() {
               <h3 className="text-[30px] font-extrabold text-neutral-900">
                 <AnimatedCounter end={12} suffix="M+" />
               </h3>
-              <p className="text-neutral-500 font-medium text-[11px] uppercase tracking-wide">Tons Shipped</p>
+              <p className="text-neutral-500 font-medium text-sm uppercase tracking-wide">Tons Shipped</p>
             </div>
 
             <div className="flex flex-col items-center space-y-2 group">
@@ -95,7 +102,7 @@ export default function PartnerProgramPage() {
               <h3 className="text-[30px] font-extrabold text-neutral-900">
                 <AnimatedCounter end={45} />
               </h3>
-              <p className="text-neutral-500 font-medium text-[11px] uppercase tracking-wide">Export Countries</p>
+              <p className="text-neutral-500 font-medium text-sm uppercase tracking-wide">Export Countries</p>
             </div>
 
           </div>
@@ -105,13 +112,13 @@ export default function PartnerProgramPage() {
       <section className="py-20 pb-32 bg-neutral-50 border-t border-neutral-100">
         <div className="max-w-6xl mx-auto px-4 text-center">
 
-          <h4 className="text-[#cc2221] font-bold text-[11px] uppercase tracking-wider mb-3">
+          <h4 className="text-[#cc2221] font-bold text-sm uppercase tracking-wider mb-3">
             Mega Foundries Digital Portal
           </h4>
           <h2 className="text-[30px] md:text-[40px] font-bold text-neutral-900 mb-6">
             Digitize Your Inventory & Streamline Procurement
           </h2>
-          <p className="text-neutral-500 mb-16 max-w-2xl mx-auto text-[16px]">
+          <p className="text-neutral-500 mb-16 max-w-2xl mx-auto text-xl">
             Manage multiple alloy specifications, track CAD revisions, and monitor global shipments in real-time with our integrated foundry management tool.
           </p>
 
@@ -148,6 +155,10 @@ export default function PartnerProgramPage() {
       </section>
       <SellerTools />
       <HowItWorks />
+      <ProductCalculator />
+      <EngagementAnalytics />
+      <CommonQuestions />
+      <RealTimeSupport />
     </div>
   );
 }

@@ -22,7 +22,7 @@ const cosmoBlogContent = [
 
 const CosmoBlog = () => {
   return (
-    <section className='py-16 mx-auto px-4 sm:px-6 lg:px-30 flex flex-col md:flex-row items-center justify-between md:space-y-0'>
+    <section className='w-full px-4 sm:px-6 lg:px-10 py-3'>
 
       <div className='grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center'>
 
@@ -42,10 +42,10 @@ const CosmoBlog = () => {
         <div className='order-first md:order-last'>
           <div className='mb-8'>
             <h2 className='text-[22px] font-extrabold text-gray-900 leading-tight'>
-              What is Power cozmo CRM?
+              What is Mega Foundries CRM?
             </h2>
-            <p className='mt-3 text-[11px]'>
-              Power Cozmo's CRM is a custom-built solution designed to simplify and enhance business interactions. Tailored for B2B companies in the energy, power generation, oil & gas, and water management sectors, our CRM empowers you to efficiently manage leads, track customer engagement, and build stronger relationships. With intuitive features like real-time analytics, automated workflows, and seamless integration into our platform, businesses can streamline their sales cycles and maximize growth. Power Cozmo CRM ensures that every client interaction is organized, insightful, and actionable, allowing you to stay ahead in today's competitive market.
+            <p className='mt-3 text-sm'>
+              Mega Foundries's CRM is a custom-built solution designed to simplify and enhance business interactions. Tailored for B2B companies in the energy, power generation, oil & gas, and water management sectors, our CRM empowers you to efficiently manage leads, track customer engagement, and build stronger relationships. With intuitive features like real-time analytics, automated workflows, and seamless integration into our platform, businesses can streamline their sales cycles and maximize growth. Mega Foundries CRM ensures that every client interaction is organized, insightful, and actionable, allowing you to stay ahead in today's competitive market.
             </p>
           </div>
 
@@ -57,10 +57,10 @@ const CosmoBlog = () => {
                 </div>
 
                 <div>
-                  <h3 className='text-[11px] font-bold text-gray-900'>
+                  <h3 className='text-sm font-bold text-gray-900'>
                     {item.title}
                   </h3>
-                  <p className='mt-1 text-[11px] '>
+                  <p className='mt-1 text-sm '>
                     {item.description}
                   </p>
                 </div>

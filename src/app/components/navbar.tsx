@@ -7,17 +7,21 @@ import {
     DropdownMenuItem,
     DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
+import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, MenubarShortcut, MenubarSub, MenubarSubContent, MenubarSubTrigger, MenubarTrigger } from '@/components/ui/menubar';
+import { menuData } from '@/lib/menuData';
 import {
     BookAIcon,
     ChevronDown,
     ChevronRight,
+    Factory,
     FireExtinguisherIcon,
     Menu,
     Power,
     Search,
     User,
     UserCheck2Icon,
-    X
+    X,
+    Zap
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -59,15 +63,11 @@ const Navbar = () => {
         <div className="w-full relative z-40">
             <header className="bg-white shadow-md sticky top-0">
 
-                {/* === MAIN HEADER SECTION === */}
-                {/* Changed max-w to w-full for full width. Added larger horizontal padding (px-8) */}
                 <div className="w-full px-4 sm:px-6 lg:px-10 py-3">
                     <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
 
-                        {/* ================= LEFT SECTION: LOGOS ================= */}
-                        {/* 'shrink-0' prevents this section from getting squished */}
                         <div className="w-full lg:w-auto flex justify-between item-start gap-6 shrink-0">
-                            
+
                             <div className="flex items-center gap-4">
                                 <Link href={'/'} className="shrink-0 hidden sm:block">
                                     <Image
@@ -78,7 +78,7 @@ const Navbar = () => {
                                         className="object-contain h-12 w-12 sm:h-16 sm:w-16 lg:h-20 lg:w-20"
                                     />
                                 </Link>
-                                
+
                                 <Link href={'/'} className="shrink-0 hidden sm:block">
                                     <Image
                                         src={'/logo fabricator.jpeg'}
@@ -89,7 +89,7 @@ const Navbar = () => {
                                     />
                                 </Link>
                             </div>
-                             <div className="pt-2 sm:block lg:hidden">
+                            <div className="pt-2 sm:block lg:hidden">
                                 <div className="grid grid-cols-4 gap-4 items-center justify-items-center">
                                     {/* Logo 1: Mega */}
                                     <Image src={'/Mega-foundries-logo.PNG'} alt='Mega' width={60} height={60} className="object-contain h-12 w-12" />
@@ -134,7 +134,7 @@ const Navbar = () => {
                         {/* ================= RIGHT SECTION: LINKS & LOGOS ================= */}
                         {/* shrink-0 fixes it to the right side */}
                         <div className="hidden lg:flex shrink-0 items-center space-x-6">
-                            
+
                             {/* Utility Links */}
                             <div className="flex items-center space-x-6">
                                 {topMenuItems.map((item) => {
@@ -146,7 +146,7 @@ const Navbar = () => {
                                                         <item.icon size={28} strokeWidth={1.5} />
                                                     </div>
                                                     <div className="flex flex-col justify-center text-left">
-                                                        <p className='text-[10px] text-neutral-500 leading-tight'>{item.label}</p>
+                                                        <p className='text-sm text-neutral-500 leading-tight'>{item.label}</p>
                                                         <p className='text-xs font-bold text-neutral-800 group-hover:text-[#cc2221] transition-colors'>{item.content}</p>
                                                     </div>
                                                 </DropdownMenuTrigger>
@@ -169,7 +169,7 @@ const Navbar = () => {
                                                 <item.icon size={28} strokeWidth={1.5} />
                                             </div>
                                             <div className="flex flex-col justify-center">
-                                                <p className='text-[10px] text-neutral-500 leading-tight'>{item.label}</p>
+                                                <p className='text-sm text-neutral-500 leading-tight'>{item.label}</p>
                                                 <p className='text-xs font-bold text-neutral-800 group-hover:text-[#cc2221] transition-colors'>{item.content}</p>
                                             </div>
                                         </Link>
@@ -245,16 +245,44 @@ const Navbar = () => {
                 {/* === SUB-HEADER (FULL WIDTH) === */}
                 <div className="border-t border-neutral-100 bg-neutral-50/50">
                     <div className="w-full px-4 sm:px-6 lg:px-10 py-2 flex flex-col md:flex-row items-start md:items-center justify-between gap-2 md:gap-0">
-                        <div className='flex flex-wrap gap-4 text-xs text-neutral-600 font-medium'>
-                            <div className='flex items-center gap-2 hover:text-[#cc2221] cursor-pointer transition-colors'>
-                                <FireExtinguisherIcon className='h-3.5 w-3.5 text-[#cc2221]' /> Energy
-                            </div>
-                            <div className='flex items-center gap-2 hover:text-[#cc2221] cursor-pointer transition-colors'>
-                                <Power className='h-3.5 w-3.5 text-[#cc2221]' /> Power Generation
-                            </div>
-                        </div>
+                        <Menubar className="border-none bg-transparent shadow-none">
+                            {/* Loop through Main Keys (Energy, PowerGen) */}
+                            {Object.values(menuData).map((section) => (
+                                <MenubarMenu key={section.id}>
+
+                                    <MenubarTrigger className="flex items-center gap-2 hover:text-[#cc2221] cursor-pointer transition-colors text-[#cc2221] data-[state=open]:bg-transparent focus:bg-transparent text-sm">
+                                        <section.icon className="h-3.5 w-3.5 text-[#cc2221]" />
+                                        {section.label}
+                                    </MenubarTrigger>
+
+                                    <MenubarContent>
+                                        {section.categories.map((category, index) => (
+                                            <MenubarSub key={index}>
+                                                <MenubarSubTrigger className="cursor-pointer hover:text-[#cc2221]">
+                                                    {category.name}
+                                                </MenubarSubTrigger>
+
+                                                <MenubarSubContent className="max-h-[300px] overflow-y-auto bg-white border border-gray-100 shadow-lg">
+                                                    {category.items.map((item, i) => (
+                                                        <MenubarItem key={i} asChild>
+                                                            {/* Generates slug: "Solar Panel" -> "/products/solar-panel" */}
+                                                            <Link
+                                                                href={`/products/${item.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`}
+                                                                className="cursor-pointer hover:text-[#cc2221]"
+                                                            >
+                                                                {item}
+                                                            </Link>
+                                                        </MenubarItem>
+                                                    ))}
+                                                </MenubarSubContent>
+                                            </MenubarSub>
+                                        ))}
+                                    </MenubarContent>
+                                </MenubarMenu>
+                            ))}
+                        </Menubar>
                         <div className="flex items-center">
-                            <Link href="#" className='text-xs font-semibold text-neutral-700 flex items-center gap-2 hover:text-[#cc2221] transition-colors'>
+                            <Link href="/category" className='text-xs font-semibold text-neutral-700 flex items-center gap-2 hover:text-[#cc2221] transition-colors'>
                                 <Menu className='h-3.5 w-3.5' /> View All Categories
                             </Link>
                         </div>

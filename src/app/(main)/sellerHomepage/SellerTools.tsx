@@ -10,7 +10,7 @@ const tools = [
     number: "01",
     title: "Digital Foundry Profile",
     description: "Showcase your casting capabilities, certifications (ISO/AS9100), and furnace capacities. Let OEMs filter you by casting method—Sand, Investment, or Die Casting.",
-    image: "/assets/dashboard-store.jpg" 
+    image: "/assets/dashboard-store.jpg"
   },
   {
     id: 2,
@@ -47,28 +47,28 @@ export default function SellerTools() {
 
   return (
     <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-         
+      <div className="w-full px-4 sm:px-6 lg:px-10 py-3">
+
         <div className="text-center mb-16 space-y-4">
-          <span className="text-[#cc2221] font-bold text-[11px] uppercase tracking-widest">
+          <span className="text-[#cc2221] font-bold text-sm uppercase tracking-widest">
             Mega Foundries | PARTNER SUITE
           </span>
           <h2 className="text-[30px] md:text-[40px] font-bold text-gray-900">
             Engineered for <span className="text-[#cc2221]">Modern Foundries</span>
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto text-[16px]">
-            Transition from traditional job-work to a digitally integrated manufacturing hub. 
+          <p className="text-gray-500 max-w-2xl mx-auto text-xl">
+            Transition from traditional job-work to a digitally integrated manufacturing hub.
             Utilize our specialized tools to optimize your production workflow.
           </p>
         </div>
- 
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-           
+
           <div className="lg:col-span-4 flex flex-col space-y-2">
             {tools.map((tool, index) => {
               const isActive = index === activeTab;
               return (
-                <div 
+                <div
                   key={tool.id}
                   onClick={() => setActiveTab(index)}
                   className={`
@@ -76,17 +76,17 @@ export default function SellerTools() {
                     ${isActive ? 'border-[#cc2221] bg-red-50/30 rounded-r-lg' : 'border-transparent hover:border-red-100'}
                   `}
                 >
-                  <h3 className={`text-[16px] font-bold transition-colors ${isActive ? 'text-[#cc2221]' : 'text-gray-600 group-hover:text-gray-900'}`}>
+                  <h3 className={`text-xl font-bold transition-colors ${isActive ? 'text-[#cc2221]' : 'text-gray-600 group-hover:text-gray-900'}`}>
                     {tool.number} {tool.title}
                   </h3>
-                   
-                  <div 
+
+                  <div
                     className={`
                       overflow-hidden transition-all duration-500 ease-in-out
                       ${isActive ? 'max-h-40 opacity-100 mt-3' : 'max-h-0 opacity-0'}
                     `}
                   >
-                    <p className="text-[11px] text-gray-500 leading-relaxed">
+                    <p className="text-sm text-gray-500 leading-relaxed">
                       {tool.description}
                     </p>
                   </div>
@@ -94,19 +94,19 @@ export default function SellerTools() {
               );
             })}
           </div>
- 
+
           <div className="lg:col-span-8">
             <div className="relative bg-gray-900 rounded-xl overflow-hidden shadow-2xl border border-gray-800 aspect-[16/10]">
-        
+
               <div className="absolute top-0 left-0 right-0 h-8 bg-gray-800 flex items-center px-4 space-x-2 z-10 border-b border-gray-700">
                 <div className="w-3 h-3 rounded-full bg-red-500"></div>
                 <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                 <div className="w-3 h-3 rounded-full bg-green-500"></div>
               </div>
- 
-              <div className="relative w-full h-full pt-8 bg-white"> 
-                 <Image
-                  src={tools[activeTab].image} 
+
+              <div className="relative w-full h-full pt-8 bg-white">
+                <Image
+                  src={tools[activeTab].image}
                   alt={tools[activeTab].title}
                   fill
                   className="object-cover object-top transition-opacity duration-500"

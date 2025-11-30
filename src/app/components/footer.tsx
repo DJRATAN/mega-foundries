@@ -1,10 +1,11 @@
+'use client'
+
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Facebook, Instagram, Linkedin, MessageCircle, Twitter } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react'
-
+import React from 'react';
 
 const Footer = () => {
   const products = [
@@ -151,195 +152,220 @@ const Footer = () => {
     { label: 'Glossary', href: "/" },
     { label: 'Design Resources', href: "/" }
   ]
-  return (
-    // <footer className="bg-neutral-200 relative">
-    <footer className="bg-neutral-800 text-white relative">
-      <div className="w-full px-4 sm:px-6 lg:px-10 pt-12 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
 
-          <div className='flex flex-col'>
-            <div className="mb-2 bg-white w-[70%] h-36 flex">
-              <Link href={'/'}><Image src={'/Mega-foundries-logo.PNG'} alt='Logo' height={150} width={150} /></Link>
+  return (
+    <footer className="bg-[#1a1a1a] text-gray-300 border-t border-gray-800 font-sans">
+
+      {/* === TOP SECTION: MAIN BRANDS & CORE NAVIGATION === */}
+      <div className="w-full px-4 sm:px-6 lg:px-10 py-3 pt-16 pb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 xl:gap-16 border-b border-gray-800 pb-12">
+
+          {/* --- COL 1: USA OPERATIONS (Logos + Info) --- */}
+          <div className="flex flex-col space-y-6">
+            <h3 className="text-[#cc2221] font-bold uppercase tracking-wider text-sm border-b border-[#cc2221]/30 pb-2 w-fit">
+              USA Operations
+            </h3>
+
+            {/* OPTIMIZED LOGO PLACEMENT: Side by Side */}
+            <div className="flex gap-4">
+              <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
+                <Link href={'/'} className="w-full h-full relative">
+                  <Image src={'/Mega-foundries-logo.PNG'} alt='Mega Foundries' fill className="object-contain" />
+                </Link>
+              </div>
+              <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
+                <Link href={'/'} className="w-full h-full relative">
+                  <Image src={'/logo fabricator.jpeg'} alt='Fabricators' fill className="object-contain" />
+                </Link>
+              </div>
             </div>
-            <div className="mb-2 bg-white w-[70%] h-36 flex">
-              <Link href={'/'}><Image src={'/logo fabricator.jpeg'} alt='Logo' height={150} width={150} /></Link>
+
+            <div className="text-sm space-y-1 text-gray-400">
+              <p>105 MAXES ROAD</p>
+              <p>MELVILLE, NY 11737, USA</p>
+              <a href="mailto:info@megafoundries.com" className="text-white hover:text-[#cc2221] transition-colors pt-2 block">
+                info@megafoundries.com
+              </a>
             </div>
-            <p className="transition-colors text-[11px] leading-relaxed max-w-xs">
-              105 MAXES ROAD
-            </p>
-            <p className="transition-colors text-[11px] leading-relaxed max-w-xs">
-              MELVILE, NY 11737
-            </p>
-            <p className="transition-colors text-[11px] leading-relaxed max-w-xs">
-              USA
-            </p>
-            <a href="mailto:info@megafoundries.com" className="text-[#cc2221] pt-3 hover:text-[#cc2221] text-[11px] font-medium transition-colors">
-              info@megafoundries.com
-            </a>
 
             {/* Social Icons */}
-
-            <div className="flex space-x-0.5 mt-2   gap-2">
-              <Link href={'/'} className='p-2 border-[#cc2221] border rounded-3xl'><Linkedin className='w-4 h-4 hover:text-[#cc2221]' /></Link>
-              <Link href={'/'} className='p-2 border-[#cc2221] border rounded-3xl'><Facebook className='w-4 h-4 hover:text-[#cc2221]' /></Link>
-              <Link href={'/'} className='p-2 border-[#cc2221] border rounded-3xl'><Instagram className='w-4 h-4 hover:text-[#cc2221]' /></Link>
-              <Link href={'/'} className='p-2 border-[#cc2221] border rounded-3xl'><Twitter className='w-4 h-4 hover:text-[#cc2221]' /></Link>
+            <div className="flex gap-3 pt-2">
+              {[Linkedin, Facebook, Instagram, Twitter].map((Icon, i) => (
+                <Link key={i} href={'/'} className='p-2 border border-gray-600 rounded-full hover:border-[#cc2221] hover:text-[#cc2221] hover:bg-[#cc2221]/10 transition-all'>
+                  <Icon className='w-4 h-4' />
+                </Link>
+              ))}
             </div>
           </div>
-          <div className='flex flex-col'>
-            <h4 className="text-xl font-semibold mb-5  relative pb-3">
-              Products
-              {/* Red underline accent */}
-              <span className="absolute left-0 bottom-0 h-0.5 w-1/4 bg-[#cc2221]"></span>
-            </h4>
-            {products.map((item, index) => (
-              <Link key={index} href={item.href} className="pb-3 hover:text-[#cc2221] transition-colors text-[11px]"> {item.label}</Link>
-            ))}
 
-          </div>
-          <div className='flex flex-col'>  <h4 className="text-xl font-semibold mb-5 relative pb-3">
-            Markets
-            {/* Red underline accent */}
-            <span className="absolute left-0 bottom-0 h-0.5 w-1/4 bg-[#cc2221]"></span>
-          </h4>
-            {market.map((item, index) => (
-              <Link key={index} href={'/'} className="pb-3 hover:text-[#cc2221] transition-colors text-[11px]"> {item.label} </Link>
-            ))}
-          </div>
-          <div className='flex flex-col'>  <h4 className="text-xl font-semibold mb-5  relative pb-3">
-            Resource Center
-            {/* Red underline accent */}
-            <span className="absolute left-0 bottom-0 h-0.5 w-1/4 bg-[#cc2221]"></span>
-          </h4>
-            {resourceCenter.map((item, index) => (
-              <Link key={index} href={'/'} className="pb-3 hover:text-[#cc2221] transition-colors text-[11px]"> {item.label} </Link>
-            ))}
-            <Link href={'/'} className="pb-3 hover:text-[#cc2221] transition-colors text-sm"> About Us </Link>
-            <Link href={'/'} className="pb-3 hover:text-[#cc2221] transition-colors text-sm"> Design Resources </Link>
-            <Link href={'/'} className="pb-3 hover:text-[#cc2221] transition-colors text-sm"> Contact Us </Link>
-            <Link href={'/'} className="pb-3 hover:text-[#cc2221] transition-colors text-sm"> Where to Buy </Link>
-            <Link href={'/'} className="pb-3 hover:text-[#cc2221] transition-colors text-sm"> California Supply Chain Act </Link>
-            <Link href={'/'} className="pb-3 hover:text-[#cc2221] transition-colors text-sm"> European Accessibility Notice </Link>
-            <Link href={'/'} className="pb-3 hover:text-[#cc2221] transition-colors text-sm"> Sitemap </Link>
-          </div>
+          {/* --- COL 2: PRODUCTS --- */}
           <div>
+            <h4 className="text-white font-bold text-lg mb-6">Products</h4>
+            <ul className="space-y-2.5">
+              {products.map((item, index) => (
+                <li key={index}>
+                  <Link href={item.href} className="text-sm hover:text-[#cc2221] hover:translate-x-1 transition-all inline-block">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-            <div className="mb-2 bg-white w-[70%] h-36 flex">
-              <Link href={'/'}><Image src={'/Canada-foundries-logo1.PNG'} alt='Logo' height={150} width={150} /></Link>
-            </div>
-            <div className="mb-2 bg-white w-[70%] h-36 flex">
-              <Link href={'/'}><Image src={'/logo forge.jpeg'} alt='Logo' height={150} width={150} /></Link>
-            </div>
-            <p className="transition-colors text-[11px] leading-relaxed max-w-xs">
-              ONE YOUNGE STREET
-            </p>
-            <p className="transition-colors text-[11px] leading-relaxed max-w-xs">
-              TORONTO, ONTARIO M5E 1R4
-            </p>
-            <p className="transition-colors text-[11px] leading-relaxed max-w-xs">
-              CANADA
-            </p>
-            <h4 className="text-xl font-semibold mb-5 relative pt-3 pb-3">
-              Subscribe
-              {/* Red underline accent */}
-              <span className="absolute left-0 bottom-0 h-0.5 w-1/4 bg-[#cc2221]"></span>
-            </h4>
+          {/* --- COL 3: MARKETS --- */}
+          <div>
+            <h4 className="text-white font-bold text-lg mb-6">Markets</h4>
+            <ul className="space-y-2.5">
+              {market.map((item, index) => (
+                <li key={index}>
+                  <Link href={item.href} className="text-sm hover:text-[#cc2221] hover:translate-x-1 transition-all inline-block">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-            <div className="flex w-full">
+          {/* --- COL 4: RESOURCES --- */}
+          <div>
+            <h4 className="text-white font-bold text-lg mb-6">Resources</h4>
+            <ul className="space-y-2.5">
+              {resourceCenter.map((item, index) => (
+                <li key={index}>
+                  <Link href={item.href} className="text-sm hover:text-[#cc2221] hover:translate-x-1 transition-all inline-block">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
+          {/* --- COL 5: CANADA OPERATIONS (Logos + Info + Subscribe) --- */}
+          <div className="flex flex-col space-y-6">
+            <h3 className="text-[#cc2221] font-bold uppercase tracking-wider text-sm border-b border-[#cc2221]/30 pb-2 w-fit">
+              Canada Operations
+            </h3>
+
+            {/* OPTIMIZED LOGO PLACEMENT: Side by Side */}
+            <div className="flex gap-4">
+              <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
+                <Link href={'/'} className="w-full h-full relative">
+                  <Image src={'/Canada-foundries-logo1.PNG'} alt='Canada Foundries' fill className="object-contain" />
+                </Link>
+              </div>
+              <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
+                <Link href={'/'} className="w-full h-full relative">
+                  <Image src={'/logo forge.jpeg'} alt='Mega Forge' fill className="object-contain" />
+                </Link>
+              </div>
             </div>
-            {/* Using mock Input component */}
-            <Input
-              type="email"
-              placeholder="Enter Email"
-              // value={email}
-              // onChange={(e) => setEmail(e.target.value)}
-              className="rounded-r-none border-[#cc2221]  text-neutral-800 w-2/3"
-            />
-            {/* Reusing mock Button component */}
-            <Button
-              variant="outline"
-              // onClick={handleSubscribe}
-              className="rounded-l-none text-base border-[#cc2221] text-[#cc2221] hover:bg-red-50 hover:text-[#cc2221] font-semibold transition-colors w-1/3"
-            >
-              Submit
-            </Button>
+
+            <div className="text-sm space-y-1 text-gray-400">
+              <p>ONE YOUNGE STREET</p>
+              <p>TORONTO, ONTARIO M5E 1R4</p>
+              <p>CANADA</p>
+            </div>
+
+            {/* Subscribe Form */}
+            <div className="pt-4">
+              <h4 className="text-white font-semibold mb-3">Subscribe to Newsletter</h4>
+              <div className="flex w-full">
+                <Input
+                  type="email"
+                  placeholder="Enter Email"
+                  className="rounded-r-none border-gray-600 bg-gray-800 text-white focus:border-[#cc2221] h-10"
+                />
+                <Button className="rounded-l-none bg-[#cc2221] hover:bg-red-700 text-white font-bold h-10 px-4">
+                  Submit
+                </Button>
+              </div>
+            </div>
           </div>
 
         </div>
       </div>
-      <div className="w-full px-4 sm:px-6 lg:px-10 pt-12 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10">
-          <div className='flex flex-col'>  <h4 className="text-xl font-semibold mb-5 relative pb-3">
-            CORPORATE
-            {/* Red underline accent */}
-            <span className="absolute left-0 bottom-0 h-0.5 w-1/4 bg-[#cc2221]"></span>
-          </h4>
-            {corporateLinks.map((item, index) => (
-              <Link key={index} href={'/'} className="pb-3 hover:text-[#cc2221] transition-colors text-[11px]"> {item.label} </Link>
-            ))}
-          </div>
-          <div className='flex flex-col'>  <h4 className="text-xl font-semibold mb-5 relative pb-3">
-            POLICIES
-            {/* Red underline accent */}
-            <span className="absolute left-0 bottom-0 h-0.5 w-1/4 bg-[#cc2221]"></span>
-          </h4>
-            {policiesLinks.map((item, index) => (
-              <Link key={index} href={'/'} className="pb-3 hover:text-[#cc2221] transition-colors text-[11px]"> {item.label} </Link>
-            ))}
-          </div>
-          <div className='flex flex-col'>  <h4 className="text-xl font-semibold mb-5 relative pb-3">
-            SALES
-            {/* Red underline accent */}
-            <span className="absolute left-0 bottom-0 h-0.5 w-1/4 bg-[#cc2221]"></span>
-          </h4>
-            {salesLinks.map((item, index) => (
-              <Link key={index} href={'/'} className="pb-3 hover:text-[#cc2221] transition-colors text-[11px]"> {item.label} </Link>
-            ))}
-          </div>
-          <div className='flex flex-col'>  <h4 className="text-xl font-semibold mb-5 relative pb-3">
-            PRODUCT
-            {/* Red underline accent */}
-            <span className="absolute left-0 bottom-0 h-0.5 w-1/4 bg-[#cc2221]"></span>
-          </h4>
-            {productsLinks.map((item, index) => (
-              <Link key={index} href={'/'} className="pb-3 hover:text-[#cc2221] transition-colors text-[11px]"> {item.label} </Link>
-            ))}
-          </div>
-          <div className='flex flex-col'>  <h4 className="text-xl font-semibold mb-5 relative pb-3">
-            ENGINEERING
-            {/* Red underline accent */}
-            <span className="absolute left-0 bottom-0 h-0.5 w-1/4 bg-[#cc2221]"></span>
-          </h4>
-            {engineeringLinks.map((item, index) => (
-              <Link key={index} href={'/'} className="pb-3 hover:text-[#cc2221] transition-colors text-[11px]"> {item.label} </Link>
-            ))}
-          </div>
-          <div className='flex flex-col'>  <h4 className="text-xl font-semibold mb-5 relative pb-3">
-            MARKETS
-            {/* Red underline accent */}
-            <span className="absolute left-0 bottom-0 h-0.5 w-1/4 bg-[#cc2221]"></span>
-          </h4>
-            {market.map((item, index) => (
-              <Link key={index} href={'/'} className="pb-3 hover:text-[#cc2221] transition-colors text-[11px]"> {item.label} </Link>
-            ))}
+
+      {/* === SECONDARY SECTION: ADDITIONAL LINKS === */}
+      <div className="bg-[#121212] py-12">
+        <div className="w-full px-4 sm:px-6 lg:px-10 py-3">
+          <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
+
+            {/* Corporate */}
+            <div>
+              <h5 className="text-white font-semibold mb-4 uppercase text-xs tracking-wider text-opacity-70">Corporate</h5>
+              <ul className="space-y-2">
+                {corporateLinks.map((item, i) => (
+                  <li key={i}><Link href={item.href} className="text-xs text-gray-500 hover:text-[#cc2221] transition-colors">{item.label}</Link></li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Sales */}
+            <div>
+              <h5 className="text-white font-semibold mb-4 uppercase text-xs tracking-wider text-opacity-70">Sales</h5>
+              <ul className="space-y-2">
+                {salesLinks.map((item, i) => (
+                  <li key={i}><Link href={item.href} className="text-xs text-gray-500 hover:text-[#cc2221] transition-colors">{item.label}</Link></li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Engineering */}
+            <div>
+              <h5 className="text-white font-semibold mb-4 uppercase text-xs tracking-wider text-opacity-70">Engineering</h5>
+              <ul className="space-y-2">
+                {engineeringLinks.map((item, i) => (
+                  <li key={i}><Link href={item.href} className="text-xs text-gray-500 hover:text-[#cc2221] transition-colors">{item.label}</Link></li>
+                ))}
+              </ul>
+            </div>
+            {/* Engineering */}
+            <div>
+              <h5 className="text-white font-semibold mb-4 uppercase text-xs tracking-wider text-opacity-70">Market</h5>
+              <ul className="space-y-2">
+                {market.map((item, i) => (
+                  <li key={i}><Link href={item.href} className="text-xs text-gray-500 hover:text-[#cc2221] transition-colors">{item.label}</Link></li>
+                ))}
+              </ul>
+            </div>
+            {/* Product */}
+            <div>
+              <h5 className="text-white font-semibold mb-4 uppercase text-xs tracking-wider text-opacity-70">Product</h5>
+              <ul className="space-y-2">
+                {productsLinks.map((item, i) => (
+                  <li key={i}><Link href={item.href} className="text-xs text-gray-500 hover:text-[#cc2221] transition-colors">{item.label}</Link></li>
+                ))}
+              </ul>
+            </div>
+            {/* Policies */}
+            <div>
+              <h5 className="text-white font-semibold mb-4 uppercase text-xs tracking-wider text-opacity-70">Policies</h5>
+              <ul className="space-y-2">
+                {policiesLinks.map((item, i) => (
+                  <li key={i}><Link href={item.href} className="text-xs text-gray-500 hover:text-[#cc2221] transition-colors">{item.label}</Link></li>
+                ))}
+              </ul>
+            </div>
+
           </div>
         </div>
       </div>
-      {/* Copyright Bar */}
-      <div className="border-t py-4">
-        <div className="container mx-auto px-4 flex justify-center items-center text-center">
-          <p className="text-sm">
+
+      {/* === COPYRIGHT === */}
+      <div className="border-t border-gray-800 py-6 bg-[#0f0f0f]">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+          <p className="text-xs text-gray-600">
             © 2025 Mega Foundries — All rights reserved.
           </p>
+          <div className="flex gap-4 mt-2 md:mt-0">
+            <Link href="/" className="text-xs text-gray-600 hover:text-white">Privacy Policy</Link>
+            <Link href="/" className="text-xs text-gray-600 hover:text-white">Terms of Service</Link>
+          </div>
         </div>
       </div>
-
 
     </footer>
   );
 };
 
-
-
-export default Footer
+export default Footer;
