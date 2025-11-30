@@ -30,13 +30,11 @@ export default function Home() {
               Under One Universe
             </span>
           </h1>
-
-          {/* Tagline */}
+ 
           <p className="text-xl md:text-[22px] font-medium   italic">
             "Think Fast + Succeed Faster"
           </p>
-
-          {/* CTA Buttons */}
+ 
           <div className="flex flex-col py-5 sm:flex-row items-center justify-center gap-4 mt-8">
             <Button className="bg-[#cc2221] hover:bg-red-700 text-white px-10 py-7 text-xl rounded-md font-bold shadow-[0_0_20px_rgba(204,34,33,0.4)] transition-all transform hover:scale-105">
               Explore Capabilities
