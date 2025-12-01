@@ -122,5 +122,20 @@ export const menuData = {
                 ]
             }
         ]
+    },
+    irrigation: {
+        id: 'irrigation products',
+        label: 'Irrigation Products',
+        icon: Zap,
+        categories: [
+            {
+                name: "Biomass Energy",
+                items: ["Biomass Boilers",
+                    "Biomass Power Plant Components",
+                    "Feedstock Handling Systems",
+                    "Gasification Equipment",
+                    "Wood-Fired Boilers"]
+            }
+        ]
     }
 };

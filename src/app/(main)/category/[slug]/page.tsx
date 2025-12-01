@@ -4,31 +4,35 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronRight, ArrowLeft } from 'lucide-react';
 import { menuData } from '@/lib/menuData2';
- 
+import RelatedSearch from '../RelatedSearch';
+import CategoryProductLinks from '../CategoryProductLinks';
+import HotProductVideos from '../HotProductVideos';
+import IndustryNews from '../../news/IndustryNews';
+
 function getMainCategory(slug: string) {
   return Object.values(menuData).find((cat) => cat.id === slug);
 }
- 
+
 function getSubCategory(slug: string) {
   for (const key in menuData) {
-    const mainCat = menuData[key as keyof typeof menuData]; 
+    const mainCat = menuData[key as keyof typeof menuData];
     const subCat = mainCat.categories.find((c) => c.slug === slug);
 
     if (subCat) {
       return {
         type: 'subcategory',
         title: subCat.name,
-        description: subCat.description,  
+        description: subCat.description,
         parent: mainCat.label,
         parentId: mainCat.id,
-        items: subCat.items, 
+        items: subCat.items,
         image: subCat.image
       };
     }
   }
   return null;
 }
- 
+
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -37,13 +41,13 @@ interface PageProps {
 export default async function CategoryDetailPage({ params }: PageProps) {
   const resolvedParams = await params;
   const slug = resolvedParams.slug;
- 
+
   const mainCategory = getMainCategory(slug);
 
   if (mainCategory) {
     return (
       <div className="min-h-screen bg-white w-full px-4 sm:px-6 lg:px-10 py-3">
- 
+
         <div className="relative h-[300px] w-full">
           <Image
             src={mainCategory.bannerImage}
@@ -67,7 +71,7 @@ export default async function CategoryDetailPage({ params }: PageProps) {
         <div className='text-center pt-4'>
           <h2 className='text-xl font-bold'>We are the nucleus of the metal world with the world of metals</h2>
           <p className='text-sm pt-4 '>Elastic energy is a form of potential energy stored in an object when it is stretched, compressed, or deformed, and returns to its original shape when the force is removed. Common examples include a stretched rubber band, a compressed spring, or a bent diving board. The energy is stored due to the material's elasticity, and it is released when the object returns to its natural shape. Elastic energy plays an important role in various applications, from mechanical systems and toys to biological functions and sports equipment.</p>
-        </div> 
+        </div>
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {mainCategory.categories.map((sub, index) => (
@@ -106,14 +110,14 @@ export default async function CategoryDetailPage({ params }: PageProps) {
       </div>
     );
   }
- 
+
   const subCategoryData = getSubCategory(slug);
 
   if (subCategoryData) {
     return (
       <div className="min-h-screen bg-gray-50 py-12">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
- 
+
           <div className="mb-8">
             <Link href={`/category/${subCategoryData.parentId}`} className="inline-flex items-center text-sm text-gray-500 hover:text-[#cc2221] mb-4">
               <ArrowLeft className="w-4 h-4 mr-1" /> Back to {subCategoryData.parent}
@@ -123,22 +127,22 @@ export default async function CategoryDetailPage({ params }: PageProps) {
             </h1>
             <p className="text-gray-500 mt-2 max-w-3xl text-lg">{subCategoryData.description}</p>
           </div>
- 
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {subCategoryData.items && subCategoryData.items.length > 0 ? (
               subCategoryData.items.map((item, index) => (
                 <Link
-                  key={index} 
+                  key={index}
                   href={`/products/${item.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`}
                   className="bg-white p-6 rounded-xl border border-gray-200 hover:border-[#cc2221] hover:shadow-md transition-all group flex flex-col justify-between"
                 >
                   <div className='flex justify-evenly'>
                     <div>
-                      <div className="w-12 h-12 bg-red-50 rounded-lg mb-4 text-[#cc2221]"> 
+                      <div className="w-12 h-12 bg-red-50 rounded-lg mb-4 text-[#cc2221]">
                         <ChevronRight />
                       </div>
                       <h3 className="font-bold text-lg text-gray-800 group-hover:text-[#cc2221] mb-2">
-                        {item} 
+                        {item}
                       </h3>
                     </div>
                     <Image
@@ -160,10 +164,14 @@ export default async function CategoryDetailPage({ params }: PageProps) {
               </div>
             )}
           </div>
-
+          {/* === 2. USE THE NEW COMPONENT HERE === */}
+          {/* This renders the compact list of tags at the bottom */}
+          <CategoryProductLinks items={subCategoryData.items} />
+          <HotProductVideos />
+          <IndustryNews />
         </div>
       </div>
     );
-  } 
+  }
   return notFound();
 }

@@ -250,8 +250,8 @@ const Navbar = () => {
                             {Object.values(menuData).map((section) => (
                                 <MenubarMenu key={section.id}>
 
-                                    <MenubarTrigger className="flex items-center gap-2 hover:text-[#cc2221] cursor-pointer transition-colors text-[#cc2221] data-[state=open]:bg-transparent focus:bg-transparent text-sm">
-                                        <section.icon className="h-3.5 w-3.5 text-[#cc2221]" />
+                                    <MenubarTrigger className="flex items-center gap-2 hover:text-[#cc2221] cursor-pointer transition-colors text-black data-[state=open]:bg-transparent focus:bg-transparent text-sm">
+                                        <section.icon className="h-3.5 w-3.5 hover:text-[#cc2221]" />
                                         {section.label}
                                     </MenubarTrigger>
 

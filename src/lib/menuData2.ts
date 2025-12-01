@@ -15,10 +15,10 @@ export const menuData = {
         image: '/assets/image1.jpeg',
         description: 'Systems and solutions that generate power from organic materials such as wood, agricultural crops, or wastes.',
         items: [
-          "Biomass Boilers", 
-          "Biomass Power Plant Components", 
-          "Feedstock Handling Systems", 
-          "Gasification Equipment", 
+          "Biomass Boilers",
+          "Biomass Power Plant Components",
+          "Feedstock Handling Systems",
+          "Gasification Equipment",
           "Wood-Fired Boilers"
         ]
       },
@@ -35,11 +35,11 @@ export const menuData = {
         image: '/assets/image3.jpeg',
         description: 'Comprehensive electrical energy grids, transmission towers, and high voltage infrastructure solutions.',
         items: [
-          "Cable Lugs Connectors", 
-          "Cables", 
-          "Electrical Wire", 
-          "Power Distribution", 
-          "Switch Gears", 
+          "Cable Lugs Connectors",
+          "Cables",
+          "Electrical Wire",
+          "Power Distribution",
+          "Switch Gears",
           "Turbine"
         ]
       },
@@ -49,9 +49,9 @@ export const menuData = {
         image: '/assets/image4.jpg',
         description: 'Equipment for generating power from the energy of falling or fast-running water.',
         items: [
-          "Fish Passages And Ladders", 
-          "Hydro Power Control Systems", 
-          "Reservoir Management Systems", 
+          "Fish Passages And Ladders",
+          "Hydro Power Control Systems",
+          "Reservoir Management Systems",
           "Turbines And Generators"
         ]
       },
@@ -82,12 +82,12 @@ export const menuData = {
         image: '/assets/image8.jpg',
         description: 'Explore Solar Energy Solutions On Mega Foundries, Your Platform For Sourcing Top-Tier Solar Products.',
         items: [
-          "Inverters", 
-          "Mounting Structure", 
-          "Solar Accessories", 
-          "Solar Batteries", 
-          "Solar Charge Controllers", 
-          "Solar Monitoring Systems", 
+          "Inverters",
+          "Mounting Structure",
+          "Solar Accessories",
+          "Solar Batteries",
+          "Solar Charge Controllers",
+          "Solar Monitoring Systems",
           "Solar Panel"
         ]
       },
@@ -104,11 +104,11 @@ export const menuData = {
         image: '/assets/image1.jpeg', // Reusing placeholder
         description: 'Harnessing the power of wind for electricity generation.',
         items: [
-          "Blades & Rotors", 
-          "Pitch Systems", 
-          "Power Plant", 
-          "Tower Structure", 
-          "Wind Farm Management Systems", 
+          "Blades & Rotors",
+          "Pitch Systems",
+          "Power Plant",
+          "Tower Structure",
+          "Wind Farm Management Systems",
           "Wind Generators"
         ]
       }
@@ -134,11 +134,11 @@ export const menuData = {
         image: '/assets/image10.jpeg',
         description: 'Comprehensive Solutions For Energy Distribution, Control, And Automation.',
         items: [
-          "Big Power Supply", 
-          "Cables", 
-          "Electrical Equipment", 
-          "Power And Generating Sets", 
-          "Power Cables", 
+          "Big Power Supply",
+          "Cables",
+          "Electrical Equipment",
+          "Power And Generating Sets",
+          "Power Cables",
           "Vortex Flow Meter"
         ]
       },
@@ -148,9 +148,9 @@ export const menuData = {
         image: '/assets/image11.jpg',
         description: 'Advanced Machinery For Cutting, Bending, Shaping, And Assembling Materials.',
         items: [
-          "Fiber Laser Cutting Machine", 
-          "Laser Cutting Machines", 
-          "CNC Routers", 
+          "Fiber Laser Cutting Machine",
+          "Laser Cutting Machines",
+          "CNC Routers",
           "Welding Stations"
         ]
       },
@@ -167,10 +167,10 @@ export const menuData = {
         image: '/assets/image13.jpg',
         description: 'Essential Machinery And Systems Used In Manufacturing Plants And Industrial Setups.',
         items: [
-          "Dust Collection Plants", 
-          "Galvanized Threaded Rods And Accessories", 
-          "Industrial Equipment", 
-          "Safety And Security Infrastructure", 
+          "Dust Collection Plants",
+          "Galvanized Threaded Rods And Accessories",
+          "Industrial Equipment",
+          "Safety And Security Infrastructure",
           "Plit Pipe Clamp"
         ]
       },
@@ -195,6 +195,81 @@ export const menuData = {
         description: 'In The Power Generation Sector, Reliable Pumps Are The Backbone Of Efficient Operations.',
         items: ["Centrifugal Pumps", "Submersible Pumps", "Vacuum Pumps", "Diaphragm Pumps"]
       },
+    ]
+  },
+  irrigation: {
+    id: 'irrigation products',
+    label: 'Irrigation Products',
+    icon: Zap,
+    categories: [
+      {
+        name: "Biomass Energy",
+        items: ["Biomass Boilers",
+          "Biomass Power Plant Components",
+          "Feedstock Handling Systems",
+          "Gasification Equipment",
+          "Wood-Fired Boilers"]
+      }
+    ]
+  },
+  earth_moving: {
+    id: 'earth_moving',
+    label: 'Earth Moving',
+    icon: Zap,
+    categories: [
+      {
+        name: "Biomass Energy",
+        items: ["Biomass Boilers",
+          "Biomass Power Plant Components",
+          "Feedstock Handling Systems",
+          "Gasification Equipment",
+          "Wood-Fired Boilers"]
+      }
+    ]
+  },
+  cathodic_protection: {
+    id: 'cathodic_protection',
+    label: 'Cathodic Protection',
+    icon: Zap,
+    categories: [
+      {
+        name: "Biomass Energy",
+        items: ["Biomass Boilers",
+          "Biomass Power Plant Components",
+          "Feedstock Handling Systems",
+          "Gasification Equipment",
+          "Wood-Fired Boilers"]
+      }
+    ]
+  },
+  precast_molds: {
+    id: 'precast_molds',
+    label: 'Precast Molds',
+    icon: Zap,
+    categories: [
+      {
+        name: "Biomass Energy",
+        items: ["Biomass Boilers",
+          "Biomass Power Plant Components",
+          "Feedstock Handling Systems",
+          "Gasification Equipment",
+          "Wood-Fired Boilers"]
+      }
+    ]
+  },
+  precast_parts: {
+    id: 'precast_parts',
+    label: 'Precast Parts',
+    icon: Zap,
+    categories: [
+      {
+        name: "Biomass Energy",
+        items: ["Biomass Boilers",
+          "Biomass Power Plant Components",
+          "Feedstock Handling Systems",
+          "Gasification Equipment",
+          "Wood-Fired Boilers"]
+      }
     ]
   }
 };
