@@ -249,8 +249,8 @@ const Navbar = () => {
                         <Menubar className="border-none bg-transparent shadow-none p-0 h-auto">
                             {Object.values(menuData).map((section) => (
                                 <MenubarMenu key={section.id}>
- 
-                    */}
+
+
                                     <MenubarTrigger className="
                         flex items-center gap-2 cursor-pointer transition-colors text-sm font-semibold px-3 py-1.5 rounded-md text-neutral-700
                         hover:text-[#cc2221] hover:bg-red-50
@@ -265,7 +265,7 @@ const Navbar = () => {
                                         {section.categories.map((category, index) => (
                                             <MenubarSub key={index}>
 
-                                       
+
                                                 <MenubarSubTrigger className="
                                     cursor-pointer text-sm py-2 px-3 rounded-sm text-gray-700
                                     hover:text-[#cc2221] hover:bg-red-50
