@@ -245,44 +245,63 @@ const Navbar = () => {
                 {/* === SUB-HEADER (FULL WIDTH) === */}
                 <div className="border-t border-neutral-100 bg-neutral-50/50">
                     <div className="w-full px-4 sm:px-6 lg:px-10 py-2 flex flex-col md:flex-row items-start md:items-center justify-between gap-2 md:gap-0">
-                        <Menubar className="border-none bg-transparent shadow-none">
-                            {/* Loop through Main Keys (Energy, PowerGen) */}
+
+                        <Menubar className="border-none bg-transparent shadow-none p-0 h-auto">
                             {Object.values(menuData).map((section) => (
                                 <MenubarMenu key={section.id}>
-
-                                    <MenubarTrigger className="flex items-center gap-2 hover:text-[#cc2221] cursor-pointer transition-colors text-black data-[state=open]:bg-transparent focus:bg-transparent text-sm">
-                                        <section.icon className="h-3.5 w-3.5 hover:text-[#cc2221]" />
+ 
+                    */}
+                                    <MenubarTrigger className="
+                        flex items-center gap-2 cursor-pointer transition-colors text-sm font-semibold px-3 py-1.5 rounded-md text-neutral-700
+                        hover:text-[#cc2221] hover:bg-red-50
+                        focus:bg-red-50 focus:text-[#cc2221]
+                        data-[state=open]:bg-red-50 data-[state=open]:text-[#cc2221]
+                    ">
+                                        <section.icon className="h-3.5 w-3.5" />
                                         {section.label}
                                     </MenubarTrigger>
 
-                                    <MenubarContent>
+                                    <MenubarContent className="bg-white border border-gray-100 shadow-xl rounded-md min-w-[220px] p-1">
                                         {section.categories.map((category, index) => (
                                             <MenubarSub key={index}>
-                                                <MenubarSubTrigger className="cursor-pointer hover:text-[#cc2221]">
+
+                                       
+                                                <MenubarSubTrigger className="
+                                    cursor-pointer text-sm py-2 px-3 rounded-sm text-gray-700
+                                    hover:text-[#cc2221] hover:bg-red-50
+                                    focus:bg-red-50 focus:text-[#cc2221]
+                                    data-[state=open]:text-[#cc2221] data-[state=open]:bg-red-50
+                                ">
                                                     {category.name}
                                                 </MenubarSubTrigger>
 
-                                                <MenubarSubContent className="max-h-[300px] overflow-y-auto bg-white border border-gray-100 shadow-lg">
+                                                <MenubarSubContent className="max-h-[400px] overflow-y-auto bg-white border border-gray-100 shadow-lg min-w-[200px] p-1 ml-1">
                                                     {category.items.map((item, i) => (
                                                         <MenubarItem key={i} asChild>
-                                                            {/* Generates slug: "Solar Panel" -> "/products/solar-panel" */}
                                                             <Link
                                                                 href={`/products/${item.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`}
-                                                                className="cursor-pointer hover:text-[#cc2221]"
+                                                                className="
+                                                    cursor-pointer text-sm py-1.5 px-2 block w-full rounded-sm outline-none text-gray-600
+                                                    hover:text-[#cc2221] hover:bg-red-50 
+                                                    focus:bg-red-50 focus:text-[#cc2221]
+                                                "
                                                             >
                                                                 {item}
                                                             </Link>
                                                         </MenubarItem>
                                                     ))}
                                                 </MenubarSubContent>
+
                                             </MenubarSub>
                                         ))}
                                     </MenubarContent>
                                 </MenubarMenu>
                             ))}
                         </Menubar>
-                        <div className="flex items-center">
-                            <Link href="/category" className='text-xs font-semibold text-neutral-700 flex items-center gap-2 hover:text-[#cc2221] transition-colors'>
+
+                        {/* View All Button */}
+                        <div className="flex items-center pl-2">
+                            <Link href="/category/list" className='text-xs font-semibold text-neutral-700 flex items-center gap-2 hover:text-[#cc2221] transition-colors'>
                                 <Menu className='h-3.5 w-3.5' /> View All Categories
                             </Link>
                         </div>
