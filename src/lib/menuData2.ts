@@ -201,29 +201,31 @@ export const menuData = {
     id: 'irrigation products',
     label: 'Irrigation Products',
     icon: Zap,
+    bannerImage: '/assets/image10.jpeg',
+    color: 'bg-orange-100 text-orange-900',
     categories: [
       {
-        name: "Biomass Energy",
-        items: ["Biomass Boilers",
-          "Biomass Power Plant Components",
-          "Feedstock Handling Systems",
-          "Gasification Equipment",
-          "Wood-Fired Boilers"]
-      }
+        name: "Machinery",
+        slug: "machinery",
+        image: '/assets/image5.jpeg',
+        description: 'Mechanical devices or assemblies designed to perform specific tasks, often involving movement.',
+        items: ["Industrial Tools", "Heavy Machinery", "Automation Robotics"]
+      },
     ]
   },
   earth_moving: {
     id: 'earth_moving',
     label: 'Earth Moving',
     icon: Zap,
+    bannerImage: '/assets/image10.jpeg',
+    color: 'bg-orange-100 text-orange-900',
     categories: [
       {
-        name: "Biomass Energy",
-        items: ["Biomass Boilers",
-          "Biomass Power Plant Components",
-          "Feedstock Handling Systems",
-          "Gasification Equipment",
-          "Wood-Fired Boilers"]
+        name: "Machinery",
+        slug: "machinery",
+        image: '/assets/image5.jpeg',
+        description: 'Mechanical devices or assemblies designed to perform specific tasks, often involving movement.',
+        items: ["Industrial Tools", "Heavy Machinery", "Automation Robotics"]
       }
     ]
   },
@@ -231,14 +233,15 @@ export const menuData = {
     id: 'cathodic_protection',
     label: 'Cathodic Protection',
     icon: Zap,
+    bannerImage: '/assets/image10.jpeg',
+    color: 'bg-orange-100 text-orange-900',
     categories: [
       {
-        name: "Biomass Energy",
-        items: ["Biomass Boilers",
-          "Biomass Power Plant Components",
-          "Feedstock Handling Systems",
-          "Gasification Equipment",
-          "Wood-Fired Boilers"]
+        name: "Machinery",
+        slug: "machinery",
+        image: '/assets/image5.jpeg',
+        description: 'Mechanical devices or assemblies designed to perform specific tasks, often involving movement.',
+        items: ["Industrial Tools", "Heavy Machinery", "Automation Robotics"]
       }
     ]
   },
@@ -246,14 +249,15 @@ export const menuData = {
     id: 'precast_molds',
     label: 'Precast Molds',
     icon: Zap,
+    bannerImage: '/assets/image10.jpeg',
+    color: 'bg-orange-100 text-orange-900',
     categories: [
       {
-        name: "Biomass Energy",
-        items: ["Biomass Boilers",
-          "Biomass Power Plant Components",
-          "Feedstock Handling Systems",
-          "Gasification Equipment",
-          "Wood-Fired Boilers"]
+        name: "Machinery",
+        slug: "machinery",
+        image: '/assets/image5.jpeg',
+        description: 'Mechanical devices or assemblies designed to perform specific tasks, often involving movement.',
+        items: ["Industrial Tools", "Heavy Machinery", "Automation Robotics"]
       }
     ]
   },
@@ -261,15 +265,16 @@ export const menuData = {
     id: 'precast_parts',
     label: 'Precast Parts',
     icon: Zap,
+    bannerImage: '/assets/image10.jpeg',
+    color: 'bg-orange-100 text-orange-900',
     categories: [
       {
-        name: "Biomass Energy",
-        items: ["Biomass Boilers",
-          "Biomass Power Plant Components",
-          "Feedstock Handling Systems",
-          "Gasification Equipment",
-          "Wood-Fired Boilers"]
-      }
+        name: "Machinery",
+        slug: "machinery",
+        image: '/assets/image5.jpeg',
+        description: 'Mechanical devices or assemblies designed to perform specific tasks, often involving movement.',
+        items: ["Industrial Tools", "Heavy Machinery", "Automation Robotics"]
+      },
     ]
   }
 };

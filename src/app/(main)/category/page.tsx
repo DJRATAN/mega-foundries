@@ -13,6 +13,7 @@ import { menuData } from '@/lib/menuData2';
 export default function CategoryList() {
  
     const categories = Object.values(menuData);
+    console.log('Categories:-wise', categories);
 
     return (
         <div className="min-h-screen bg-white py-8">
