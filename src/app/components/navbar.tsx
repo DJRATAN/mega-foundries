@@ -8,7 +8,7 @@ import {
     DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
 import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, MenubarShortcut, MenubarSub, MenubarSubContent, MenubarSubTrigger, MenubarTrigger } from '@/components/ui/menubar';
-import { menuData } from '@/lib/menuData';
+import { menuData } from '@/lib/menuData2';
 import {
     BookAIcon,
     ChevronDown,
@@ -68,8 +68,8 @@ const Navbar = () => {
 
                         <div className="w-full lg:w-auto flex justify-between item-start gap-6 shrink-0">
 
-                            <div className="flex items-center gap-4">
-                                <Link href={'/'} className="shrink-0 hidden sm:block">
+                            <div className="items-center gap-4 hidden lg:flex">
+                                <Link href={'/'} className="shrink-0">
                                     <Image
                                         src={'/Mega-foundries-logo.PNG'}
                                         alt='Mega Foundries'
@@ -79,7 +79,7 @@ const Navbar = () => {
                                     />
                                 </Link>
 
-                                <Link href={'/'} className="shrink-0 hidden sm:block">
+                                <Link href={'/'} className="shrink-0 ">
                                     <Image
                                         src={'/logo fabricator.jpeg'}
                                         alt='Fabricator'
@@ -89,7 +89,7 @@ const Navbar = () => {
                                     />
                                 </Link>
                             </div>
-                            <div className="pt-2 sm:block lg:hidden">
+                            <div className="pt-2 lg:hidden">
                                 <div className="grid grid-cols-4 gap-4 items-center justify-items-center">
                                     {/* Logo 1: Mega */}
                                     <Image src={'/Mega-foundries-logo.PNG'} alt='Mega' width={60} height={60} className="object-contain h-12 w-12" />
@@ -180,7 +180,7 @@ const Navbar = () => {
                             <div className="h-12 w-[1px] bg-gray-200"></div>
 
                             {/* Right Logos Group */}
-                            <div className="flex items-center gap-4">
+                            <div className="hidden lg:flex items-center gap-4">
                                 <Link href={'/'} className="shrink-0">
                                     <Image src={'/logo forge.jpeg'} alt='Forge Shop' height={80} width={80} className="object-contain h-14 w-14 lg:h-20 lg:w-20" />
                                 </Link>
@@ -229,7 +229,7 @@ const Navbar = () => {
                                 )}
                             </div>
                         ))}
-                        <div className="h-[1px] w-full bg-gray-200 my-4"></div>
+                        {/* <div className="h-[1px] w-full bg-gray-200 my-4"></div>
                         <div className="pt-2">
                             <p className="text-center text-xs text-neutral-400 font-bold mb-3 uppercase tracking-wider">Our Partners</p>
                             <div className="grid grid-cols-4 gap-4 items-center justify-items-center">
@@ -238,7 +238,7 @@ const Navbar = () => {
                                 <Image src={'/logo forge.jpeg'} alt='Forge' width={60} height={60} className="object-contain h-12 w-12" />
                                 <Image src={'/Canada-foundries-logo1.PNG'} alt='Canada' width={60} height={60} className="object-contain h-12 w-12" />
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 )}
 
