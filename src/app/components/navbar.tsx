@@ -252,7 +252,7 @@ const Navbar = () => {
 
 
                                     <MenubarTrigger className="
-                        flex items-center gap-2 cursor-pointer transition-colors text-sm font-semibold px-3 py-1.5 rounded-md text-neutral-700
+                        flex items-center gap-2 text-[#cc2221] cursor-pointer transition-colors text-sm font-semibold px-3 py-1.5 rounded-md  
                         hover:text-[#cc2221] hover:bg-red-50
                         focus:bg-red-50 focus:text-[#cc2221]
                         data-[state=open]:bg-red-50 data-[state=open]:text-[#cc2221]
