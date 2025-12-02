@@ -3,7 +3,7 @@ import { Zap, Factory, Settings, ShieldCheck, Leaf, Sun, Droplets, Gauge } from 
 
 export const menuData = {
   irrigation: {
-    id: 'irrigation products',
+    id: 'irrigation_products',
     label: 'Irrigation Products',
     icon: Zap,
     bannerImage: '/assets/image10.jpeg',

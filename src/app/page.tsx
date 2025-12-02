@@ -10,6 +10,8 @@ import FloatingQuoteBtn from "./components/FloatingQuoteBtn";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import EngagementAnalytics from "./components/EngagementAnalytics";
+import IndustryNews from "./(main)/news/IndustryNews";
 
 export default function Home() {
   return (
@@ -30,11 +32,11 @@ export default function Home() {
               Under One Universe
             </span>
           </h1>
- 
+
           <p className="text-xl md:text-[22px] font-medium   italic">
             "Think Fast + Succeed Faster"
           </p>
- 
+
           <div className="flex flex-col py-5 sm:flex-row items-center justify-center gap-4 mt-8">
             <Button className="bg-[#cc2221] hover:bg-red-700 text-white px-10 py-7 text-xl rounded-md font-bold shadow-[0_0_20px_rgba(204,34,33,0.4)] transition-all transform hover:scale-105">
               Explore Capabilities
@@ -55,6 +57,8 @@ export default function Home() {
       <ProductCarousel />
       <Taglines />
       <SourcingRequest />
+      <EngagementAnalytics />
+      <IndustryNews />
       <FloatingQuoteBtn />
     </div>
   );
