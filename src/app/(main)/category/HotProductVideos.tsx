@@ -7,7 +7,7 @@ const videos = [
   {
     id: 1,
     title: "Cross Sectional / CORE LV CABLES",
-    videoUrl: "/video/video27.mp4",  
+    videoUrl: "/video/video32.mp4",  
   },
   {
     id: 2,

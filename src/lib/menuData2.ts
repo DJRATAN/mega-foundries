@@ -276,5 +276,37 @@ export const menuData = {
         items: ["Industrial Tools", "Heavy Machinery", "Automation Robotics"]
       },
     ]
+  },
+  mining: {
+    id: 'mining',
+    label: 'Mining ',
+    icon: Zap,
+    bannerImage: '/assets/image10.jpeg',
+    color: 'bg-orange-100 text-orange-900',
+    categories: [
+      {
+        name: "Machinery",
+        slug: "machinery",
+        image: '/assets/image5.jpeg',
+        description: 'Mechanical devices or assemblies designed to perform specific tasks, often involving movement.',
+        items: ["Industrial Tools", "Heavy Machinery", "Automation Robotics"]
+      },
+    ]
+  },
+  Metals: {
+    id: 'metals',
+    label: 'Metals ',
+    icon: Zap,
+    bannerImage: '/assets/image10.jpeg',
+    color: 'bg-orange-100 text-orange-900',
+    categories: [
+      {
+        name: "Machinery",
+        slug: "machinery",
+        image: '/assets/image5.jpeg',
+        description: 'Mechanical devices or assemblies designed to perform specific tasks, often involving movement.',
+        items: ["Industrial Tools", "Heavy Machinery", "Automation Robotics"]
+      },
+    ]
   }
 };
