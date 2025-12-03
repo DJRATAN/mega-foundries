@@ -225,7 +225,7 @@ const ContactUs = () => {
           </h1>
 
           {/* Tagline */}
-          <p className="text-xl md:text-[22px] font-medium   italic">
+          <p className="text-xl text-[#cc2221] md:text-[22px] font-medium   italic">
             "Think Fast + Succeed Faster"
           </p>
 

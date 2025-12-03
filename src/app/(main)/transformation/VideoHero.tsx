@@ -34,7 +34,7 @@ export default function VideoHero() {
           <span className="text-[#cc2221]">Foundries & Fabricators</span>
         </h1>
 
-        <p className="text-xl text-gray-200 font-light max-w-2xl mx-auto">
+        <p className="text-xl text-[#cc2221] font-light max-w-2xl mx-auto">
           "Think Fast + Succeed Faster"
         </p>
  

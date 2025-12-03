@@ -1743,86 +1743,86 @@ export const menuData = {
       }
     ]
   },
-  // fabrication: {
-  //     id: 'fabrication',
-  //     label: 'FABRICATION',
-  //     icon: Wrench,
-  //     bannerImage: '/assets/image10.jpeg',
-  //     color: 'bg-orange-100 text-orange-900',
-  //     categories: []
-  // },
+  fabrication: {
+      id: 'fabrication',
+      label: 'FABRICATION',
+      icon: Wrench,
+      bannerImage: '/assets/image10.jpeg',
+      color: 'bg-orange-100 text-orange-900',
+      categories: []
+  },
 
-  // foundry_equipments: {
-  //     id: 'foundry_equipments',
-  //     label: 'FOUNDRY EQUIPMENTS',
-  //     icon: Factory,
-  //     bannerImage: '/assets/image10.jpeg',
-  //     color: 'bg-orange-100 text-orange-900',
-  //     categories: []
-  // },
+  foundry_equipments: {
+      id: 'foundry_equipments',
+      label: 'FOUNDRY EQUIPMENTS',
+      icon: Factory,
+      bannerImage: '/assets/image10.jpeg',
+      color: 'bg-orange-100 text-orange-900',
+      categories: []
+  },
 
-  // oil_gas_industries_products: {
-  //     id: 'oil_gas_industries_products',
-  //     label: 'OIL & GAS INDUSTRIES PRODUCTS',
-  //     icon: Flame,
-  //     bannerImage: '/assets/image10.jpeg',
-  //     color: 'bg-orange-100 text-orange-900',
-  //     categories: []
-  // },
+  oil_gas_industries_products: {
+      id: 'oil_gas_industries_products',
+      label: 'OIL & GAS INDUSTRIES PRODUCTS',
+      icon: Flame,
+      bannerImage: '/assets/image10.jpeg',
+      color: 'bg-orange-100 text-orange-900',
+      categories: []
+  },
 
-  // construction_infrastructure: {
-  //     id: 'construction_infrastructure',
-  //     label: 'CONSTRUCTION & INFRASTRUCTURE',
-  //     icon: Building,
-  //     bannerImage: '/assets/image10.jpeg',
-  //     color: 'bg-orange-100 text-orange-900',
-  //     categories: []
-  // },
+  construction_infrastructure: {
+      id: 'construction_infrastructure',
+      label: 'CONSTRUCTION & INFRASTRUCTURE',
+      icon: Building,
+      bannerImage: '/assets/image10.jpeg',
+      color: 'bg-orange-100 text-orange-900',
+      categories: []
+  },
 
-  // utility_power_energy: {
-  //     id: 'utility_power_energy',
-  //     label: 'UTILITY & POWER ENERGY',
-  //     icon: Bolt,
-  //     bannerImage: '/assets/image10.jpeg',
-  //     color: 'bg-orange-100 text-orange-900',
-  //     categories: []
-  // },
+  utility_power_energy: {
+      id: 'utility_power_energy',
+      label: 'UTILITY & POWER ENERGY',
+      icon: Bolt,
+      bannerImage: '/assets/image10.jpeg',
+      color: 'bg-orange-100 text-orange-900',
+      categories: []
+  },
 
-  // defence_aerospace: {
-  //     id: 'defence_aerospace',
-  //     label: 'DEFENCE & AEROSPACE',
-  //     icon: Shield,
-  //     bannerImage: '/assets/image10.jpeg',
-  //     color: 'bg-orange-100 text-orange-900',
-  //     categories: []
-  // },
+  defence_aerospace: {
+      id: 'defence_aerospace',
+      label: 'DEFENCE & AEROSPACE',
+      icon: Shield,
+      bannerImage: '/assets/image10.jpeg',
+      color: 'bg-orange-100 text-orange-900',
+      categories: []
+  },
 
-  // custom_manufacturing: {
-  //     id: 'custom_manufacturing',
-  //     label: 'CUSTOM MANUFACTURING',
-  //     icon: Hammer,
-  //     bannerImage: '/assets/image10.jpeg',
-  //     color: 'bg-orange-100 text-orange-900',
-  //     categories: []
-  // },
+  custom_manufacturing: {
+      id: 'custom_manufacturing',
+      label: 'CUSTOM MANUFACTURING',
+      icon: Hammer,
+      bannerImage: '/assets/image10.jpeg',
+      color: 'bg-orange-100 text-orange-900',
+      categories: []
+  },
 
-  // forge_shop_products: {
-  //     id: 'forge_shop_products',
-  //     label: 'FORGE SHOP PRODUCTS',
-  //     icon: Anvil,
-  //     bannerImage: '/assets/image10.jpeg',
-  //     color: 'bg-orange-100 text-orange-900',
-  //     categories: []
-  // },
+  forge_shop_products: {
+      id: 'forge_shop_products',
+      label: 'FORGE SHOP PRODUCTS',
+      icon: Anvil,
+      bannerImage: '/assets/image10.jpeg',
+      color: 'bg-orange-100 text-orange-900',
+      categories: []
+  },
 
-  // industrial_machinery: {
-  //     id: 'industrial_machinery',
-  //     label: 'INDUSTRIAL MACHINERY',
-  //     icon: Cog,
-  //     bannerImage: '/assets/image10.jpeg',
-  //     color: 'bg-orange-100 text-orange-900',
-  //     categories: []
-  // }
+  industrial_machinery: {
+      id: 'industrial_machinery',
+      label: 'INDUSTRIAL MACHINERY',
+      icon: Cog,
+      bannerImage: '/assets/image10.jpeg',
+      color: 'bg-orange-100 text-orange-900',
+      categories: []
+  }
 
 };
 export const footerColumns = [
