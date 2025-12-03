@@ -1,6 +1,3 @@
-// app/products/[slug]/page.tsx
-
-import React from 'react';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -16,10 +13,8 @@ export default async function ProductDetailPage({ params }: PageProps) {
     const resolvedParams = await params;
     const slug = resolvedParams.slug;
 
-    // Use the helper which includes the fallback logic
     const product = getProductBySlug(resolvedParams.slug);
     console.log(product.image)
-    // 4. Handle 404 if product doesn't exist
     if (!product) {
         return notFound();
     }

@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { footerColumns } from '@/lib/menuData2';
 import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -42,99 +43,7 @@ const Footer = () => {
     { label: 'Utilities & Power', href: "/" },
     { label: 'Water & Wastewater', href: "/" },
   ]
-  const corporateLinks = [
-    { label: 'Customer Service', href: "/" },
-    { label: 'Accounts', href: "/" },
-    { label: 'Awards', href: "/" },
-    { label: 'Achievements', href: "/" },
-    { label: 'Current Events', href: "/" },
-    { label: 'Executive Committee', href: "/" },
-    { label: 'Our Foundation', href: "/" },
-    { label: 'Human Resources', href: "/" },
-    { label: 'Media Management', href: "/" },
-    { label: 'Mission & Vision', href: "/" },
-    { label: 'Monthly Raffle', href: "/" },
-    { label: 'Organizational Structure', href: "/" },
-    { label: 'Scholarships', href: "/" },
-    { label: 'Testimonials', href: "/" },
-    { label: 'Our Milestones', href: "/" },
-    { label: 'Industry News', href: "/" },
-  ];
 
-  const policiesLinks = [
-    { label: 'Warranties', href: "/" },
-    { label: 'Return Policy', href: "/" },
-    { label: 'Product Liability', href: "/" },
-    { label: 'Promotions', href: "/" },
-    { label: 'Confidentiality', href: "/" },
-    { label: 'Sustainability', href: "/" },
-    { label: 'Government Policy', href: "/" },
-    { label: 'Corporate Social Responsibility', href: "/" },
-    { label: 'Credit Application', href: "/" },
-    { label: 'Terms & Conditions', href: "/" },
-    { label: 'Security & Maintenance', href: "/" },
-    { label: 'Non Disclosure Agreement', href: "/" },
-    { label: 'Insurances', href: "/" },
-    { label: 'Complaints', href: "/" },
-    { label: 'Privacy Policy', href: "/" },
-    { label: 'Patents', href: "/" },
-  ];
-
-  const salesLinks = [
-    { label: 'Pricing', href: "/" },
-    { label: 'Exports', href: "/" },
-    { label: 'Videos', href: "/" },
-    { label: 'Trade Shows', href: "/" },
-    { label: 'Sales Team', href: "/" },
-    { label: 'Library', href: "/" },
-    { label: 'Locations', href: "/" },
-    { label: 'On going projects', href: "/" },
-    { label: 'Interactive Catalogs', href: "/" },
-    { label: 'Valuable sales tools', href: "/" },
-    { label: 'Follow your order', href: "/" },
-    { label: 'Request a Delivery', href: "/" },
-    { label: 'Request for quote', href: "/" },
-    { label: 'Digital Marketing', href: "/" },
-    { label: 'Logistics', href: "/" },
-    { label: 'Webinars', href: "/" },
-  ];
-
-  const productsLinks = [
-    { label: 'Behive Grates', href: "/" },
-    { label: 'Catch Basin Traps', href: "/" },
-    { label: 'Cleanouts', href: "/" },
-    { label: 'Curb Boxes', href: "/" },
-    { label: 'Curb Inlets', href: "/" },
-    { label: 'Frames & Covers', href: "/" },
-    { label: 'Frames & Grates', href: "/" },
-    { label: 'Manhole Covers', href: "/" },
-    { label: 'Manhole Grates', href: "/" },
-    { label: 'Paving Products', href: "/" },
-    { label: 'Specialty Products', href: "/" },
-    { label: 'Tree Grates', href: "/" },
-    { label: 'Trench Grates', href: "/" },
-    { label: 'Utility Castings', href: "/" },
-    { label: 'Valve Boxes', href: "/" },
-    { label: 'Water Works Products', href: "/" },
-  ];
-
-  const engineeringLinks = [
-    { label: 'Submittals', href: "/" },
-    { label: 'Data Sheets', href: "/" },
-    { label: 'Engineers & Architects', href: "/" },
-    { label: 'Customization', href: "/" },
-    { label: 'Design Team', href: "/" },
-    { label: 'Certifications', href: "/" },
-    { label: 'Specifications', href: "/" },
-    { label: 'Standards', href: "/" },
-    { label: 'Get Digital with USF', href: "/" },
-    { label: 'IT Department', href: "/" },
-    { label: 'Case Studies', href: "/" },
-    { label: 'Design & Innovations', href: "/" },
-    { label: 'Product Approvals', href: "/" },
-    { label: 'Quality Control', href: "/" },
-    { label: 'Shop Drawings', href: "/" },
-  ];
   const resourceCenter = [
     { label: 'Product Brochures', href: "/" },
     { label: 'Market Overviews', href: "/" },
@@ -155,12 +64,9 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#1a1a1a] text-gray-300 border-t border-gray-800 font-sans">
-
-      {/* === TOP SECTION: MAIN BRANDS & CORE NAVIGATION === */}
-      <div className="w-full px-4 sm:px-6 lg:px-10 py-3 pt-16 pb-12">
+      <div className="w-full px-4 sm:px-6 lg:px-10 py-3 pt-16 ">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 xl:gap-16 border-b border-gray-800 pb-12">
 
-          {/* --- COL 1: USA OPERATIONS (Logos + Info) --- */}
           <div className="flex flex-col space-y-6">
             <h3 className="text-[#cc2221] font-bold uppercase tracking-wider text-sm border-b border-[#cc2221]/30 pb-2 w-fit">
               USA Operations
@@ -188,7 +94,6 @@ const Footer = () => {
               </a>
             </div>
 
-            {/* Social Icons */}
             <div className="flex gap-3 pt-2">
               {[Linkedin, Facebook, Instagram, Twitter].map((Icon, i) => (
                 <Link key={i} href={'/'} className='p-2 border border-gray-600 rounded-full hover:border-[#cc2221] hover:text-[#cc2221] hover:bg-[#cc2221]/10 transition-all'>
@@ -284,75 +189,66 @@ const Footer = () => {
 
         </div>
       </div>
+      <div className="w-full px-4 sm:px-6 lg:px-10 py-3  pb-12">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
+          {footerColumns.map((col) => (
+            <div key={col.id}>
+              {/* normal columns */}
+              {!col.columns && (
+                <>
+                  <h5 className="text-white font-semibold mb-4 uppercase text-xs tracking-wider text-opacity-70">
+                    {col.title}
+                  </h5>
+                  <ul className="space-y-2">
+                    {col.links.map((link, i) => (
+                      <li key={i}>
+                        <Link
+                          href={link.href}
+                          className="text-xs text-gray-400 hover:text-[#cc2221] transition-colors"
+                        >
+                          {link.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
 
-      {/* === SECONDARY SECTION: ADDITIONAL LINKS === */}
-      <div className="bg-[#121212] py-12">
-        <div className="w-full px-4 sm:px-6 lg:px-10 py-3">
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
+              {/* special merged column (support + compliance) */}
+              {col.columns && (
+                <>
+                  {col.columns.map((sec, index) => (
+                    <div key={index} className="mb-4">
+                      <h5 className="text-white font-semibold mb-3 uppercase text-xs tracking-wider text-opacity-70">
+                        {sec.sectionTitle}
+                      </h5>
 
-            {/* Corporate */}
-            <div>
-              <h5 className="text-white font-semibold mb-4 uppercase text-xs tracking-wider text-opacity-70">Corporate</h5>
-              <ul className="space-y-2">
-                {corporateLinks.map((item, i) => (
-                  <li key={i}><Link href={item.href} className="text-xs text-gray-500 hover:text-[#cc2221] transition-colors">{item.label}</Link></li>
-                ))}
-              </ul>
-            </div>
+                      <ul className="space-y-2">
+                        {sec.links.map((link, i) => (
+                          <li key={i}>
+                            <Link
+                              href={link.href}
+                              className="text-xs text-gray-400 hover:text-[#cc2221] transition-colors"
+                            >
+                              {link.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
 
-            {/* Sales */}
-            <div>
-              <h5 className="text-white font-semibold mb-4 uppercase text-xs tracking-wider text-opacity-70">Sales</h5>
-              <ul className="space-y-2">
-                {salesLinks.map((item, i) => (
-                  <li key={i}><Link href={item.href} className="text-xs text-gray-500 hover:text-[#cc2221] transition-colors">{item.label}</Link></li>
-                ))}
-              </ul>
+                      {/* divider line between both sections */}
+                      {index === 0 && (
+                        <hr className="border-t border-gray-600 opacity-40 my-3" />
+                      )}
+                    </div>
+                  ))}
+                </>
+              )}
             </div>
-
-            {/* Engineering */}
-            <div>
-              <h5 className="text-white font-semibold mb-4 uppercase text-xs tracking-wider text-opacity-70">Engineering</h5>
-              <ul className="space-y-2">
-                {engineeringLinks.map((item, i) => (
-                  <li key={i}><Link href={item.href} className="text-xs text-gray-500 hover:text-[#cc2221] transition-colors">{item.label}</Link></li>
-                ))}
-              </ul>
-            </div>
-            {/* Engineering */}
-            <div>
-              <h5 className="text-white font-semibold mb-4 uppercase text-xs tracking-wider text-opacity-70">Market</h5>
-              <ul className="space-y-2">
-                {market.map((item, i) => (
-                  <li key={i}><Link href={item.href} className="text-xs text-gray-500 hover:text-[#cc2221] transition-colors">{item.label}</Link></li>
-                ))}
-              </ul>
-            </div>
-            {/* Product */}
-            <div>
-              <h5 className="text-white font-semibold mb-4 uppercase text-xs tracking-wider text-opacity-70">Product</h5>
-              <ul className="space-y-2">
-                {productsLinks.map((item, i) => (
-                  <li key={i}><Link href={item.href} className="text-xs text-gray-500 hover:text-[#cc2221] transition-colors">{item.label}</Link></li>
-                ))}
-              </ul>
-            </div>
-            {/* Policies */}
-            <div>
-              <h5 className="text-white font-semibold mb-4 uppercase text-xs tracking-wider text-opacity-70">Policies</h5>
-              <ul className="space-y-2">
-                {policiesLinks.map((item, i) => (
-                  <li key={i}><Link href={item.href} className="text-xs text-gray-500 hover:text-[#cc2221] transition-colors">{item.label}</Link></li>
-                ))}
-              </ul>
-            </div>
-
-          </div>
+          ))}
         </div>
       </div>
-
-      {/* === COPYRIGHT === */}
-      <div className="border-t border-gray-800 py-6 bg-[#0f0f0f]">
+      <div className="border-t border-gray-800 w-full px-4 sm:px-6 lg:px-10 py-6 pb-24 bg-[#0f0f0f]">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
           <p className="text-xs text-gray-600">
             © 2025 Mega Foundries — All rights reserved.
@@ -363,7 +259,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
     </footer>
   );
 };

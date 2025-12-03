@@ -249,8 +249,6 @@ const Navbar = () => {
                         <Menubar className="border-none bg-transparent shadow-none p-0 h-auto">
                             {Object.values(menuData).map((section) => (
                                 <MenubarMenu key={section.id}>
-
-
                                     <MenubarTrigger className="
                         flex items-center gap-2 text-[#cc2221] cursor-pointer transition-colors text-sm font-semibold px-3 py-1.5 rounded-md  
                         hover:text-[#cc2221] hover:bg-red-50
