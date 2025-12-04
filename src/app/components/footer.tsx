@@ -189,63 +189,44 @@ const Footer = () => {
 
         </div>
       </div>
-      <div className="w-full px-4 sm:px-6 lg:px-10 py-3  pb-12">
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
+      <div className="w-full px-4 sm:px-6 lg:px-10 py-3 pb-12  ">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-8 items-start">
+ 
           {footerColumns.map((col) => (
-            <div key={col.id}>
-              {/* normal columns */}
-              {!col.columns && (
-                <>
+            <div key={col.id} className="flex flex-col gap-6">
+
+              {/* Loop through Sections inside a Column */}
+              {col.sections.map((section, index) => (
+                <div key={section.title}>
+
+                  {/* Section Title */}
                   <h5 className="text-white font-semibold mb-4 uppercase text-xs tracking-wider text-opacity-70">
-                    {col.title}
+                    {section.title}
                   </h5>
+
+                  {/* Links List */}
                   <ul className="space-y-2">
-                    {col.links.map((link, i) => (
-                      <li key={i}>
+                    {section.links.map((link) => (
+                      <li key={link.href}>
                         <Link
                           href={link.href}
-                          className="text-xs text-gray-400 hover:text-[#cc2221] transition-colors"
+                          className="text-xs text-gray-400 hover:text-[#cc2221] transition-colors block"
                         >
                           {link.label}
                         </Link>
                       </li>
                     ))}
                   </ul>
-                </>
-              )}
 
-              {/* special merged column (support + compliance) */}
-              {col.columns && (
-                <>
-                  {col.columns.map((sec, index) => (
-                    <div key={index} className="mb-4">
-                      <h5 className="text-white font-semibold mb-3 uppercase text-xs tracking-wider text-opacity-70">
-                        {sec.sectionTitle}
-                      </h5>
-
-                      <ul className="space-y-2">
-                        {sec.links.map((link, i) => (
-                          <li key={i}>
-                            <Link
-                              href={link.href}
-                              className="text-xs text-gray-400 hover:text-[#cc2221] transition-colors"
-                            >
-                              {link.label}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-
-                      {/* divider line between both sections */}
-                      {index === 0 && (
-                        <hr className="border-t border-gray-600 opacity-40 my-3" />
-                      )}
-                    </div>
-                  ))}
-                </>
-              )}
+                  {/* Optional Divider if a column has multiple sections (like Support & Quality) */}
+                  {index < col.sections.length - 1 && (
+                    <hr className="border-t border-gray-700 opacity-50 mt-6 mb-2" />
+                  )}
+                </div>
+              ))}
             </div>
           ))}
+
         </div>
       </div>
       <div className="border-t border-gray-800 w-full px-4 sm:px-6 lg:px-10 py-6 pb-24 bg-[#0f0f0f]">

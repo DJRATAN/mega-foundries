@@ -6,10 +6,8 @@ import Link from 'next/link';
 import { ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-  
 import { menuData } from '@/lib/menuData2';
 
- 
 export default function CategoryList() {
  
     const categories = Object.values(menuData);

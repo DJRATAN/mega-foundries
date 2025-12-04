@@ -1,68 +1,37 @@
-import { notFound } from "next/navigation";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { footerColumns } from "@/lib/menuData2";
+import { notFound } from "next/navigation";
+import FooterHero from "../page";
+import StartSelling from "../StartSelling";
+import WordInTheMarket from "../WordInTheMarket";
 
-export async function generateStaticParams() {
-  const slugs: string[] = [];
+const formatTitle = (slug: string) => {
+  if (!slug) return "Page Details"; // Safety fallback
+  return slug
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+};
 
-  footerColumns.forEach((col) => {
-    if (col.links) {
-      col.links.forEach((link) => {
-        slugs.push(link.href.split("/").pop()!);
-      });
-    } else if (col.columns) {
-      col.columns.forEach((section) =>
-        section.links.forEach((link) => {
-          slugs.push(link.href.split("/").pop()!);
-        })
-      );
-    }
-  });
+export default async function FooterDynamicPage({ params }: { params: Promise<{ slug: string }> }) {
 
-  return slugs.map((slug) => ({ slug }));
-}
+  const resolvedParams = await params;
+  const { slug } = resolvedParams;
 
-export default function Page({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+  let pageData = (footerColumns as any)?.[slug];
 
-  // find page info in footerColumns
-  let currentPage: { label: string } | null = null;
-
-  footerColumns.forEach((col) => {
-    if (col.links) {
-      col.links.forEach((link) => {
-        if (link.href.endsWith(slug)) currentPage = link;
-      });
-    } else if (col.columns) {
-      col.columns.forEach((section) =>
-        section.links.forEach((link) => {
-          if (link.href.endsWith(slug)) currentPage = link;
-        })
-      );
-    }
-  });
-
-  if (!currentPage) return notFound();
+  if (!pageData) {
+    pageData = {
+      title: formatTitle(slug),
+      content: "This page is currently under construction. Please check back later for updates regarding " + formatTitle(slug) + ".",
+      lastUpdated: new Date().toLocaleDateString()
+    };
+  }
 
   return (
-    <div className="container py-10">
-      <Card className="mx-auto max-w-3xl">
-        <CardHeader>
-          <CardTitle className="text-2xl font-semibold tracking-wide">
-            {/* {currentPage.label} */}
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4 text-gray-700 text-sm leading-6">
-          <p>
-            This page will soon contain full details about{" "}
-            {/* <strong>{currentPage.label}</strong>. */}
-          </p>
-          <p>
-            Content is under preparation — if you're looking for something
-            specific, feel free to contact us.
-          </p>
-        </CardContent>
-      </Card>
+    <div className="">
+      <FooterHero title={pageData.title} />
+      <StartSelling />
+      <WordInTheMarket/>
     </div>
   );
 }
