@@ -1,4 +1,3 @@
-import Image from "next/image";
 import HeroSection from "./components/hero";
 import BusinessSolutions from "./components/busineesSolution";
 import ProductCarousel from "./components/productCarousel";
@@ -8,10 +7,11 @@ import Taglines from "./components/tagline/page";
 import SourcingRequest from "./components/SourcingRequest";
 import FloatingQuoteBtn from "./components/FloatingQuoteBtn";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import EngagementAnalytics from "./components/EngagementAnalytics";
 import IndustryNews from "./(main)/news/IndustryNews";
+import HotProductVideos from "./(main)/category/HotProductVideos";
+import { newInnovationData } from "@/lib/newsData";
 
 export default function Home() {
   return (
@@ -60,6 +60,10 @@ export default function Home() {
       <EngagementAnalytics />
       <IndustryNews />
       <FloatingQuoteBtn />
+      <HotProductVideos
+        title={newInnovationData.title}
+        videos={newInnovationData.videos}
+      />
     </div>
   );
 }

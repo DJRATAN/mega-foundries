@@ -4,10 +4,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronRight, ArrowLeft } from 'lucide-react';
 import { menuData } from '@/lib/menuData2';
-import RelatedSearch from '../RelatedSearch';
 import CategoryProductLinks from '../CategoryProductLinks';
 import HotProductVideos from '../HotProductVideos';
 import IndustryNews from '../../news/IndustryNews';
+import { hotProductsData } from '@/lib/newsData';
 
 function getMainCategory(slug: string) {
   return Object.values(menuData).find((cat) => cat.id === slug);
@@ -164,10 +164,11 @@ export default async function CategoryDetailPage({ params }: PageProps) {
               </div>
             )}
           </div>
-          {/* === 2. USE THE NEW COMPONENT HERE === */}
-          {/* This renders the compact list of tags at the bottom */}
           <CategoryProductLinks items={subCategoryData.items} />
-          <HotProductVideos />
+          <HotProductVideos
+            title={hotProductsData.title}
+            videos={hotProductsData.videos}
+          />
           <IndustryNews />
         </div>
       </div>

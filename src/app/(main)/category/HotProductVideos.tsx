@@ -2,54 +2,19 @@
 
 import React, { useRef } from 'react';
 import { Play, Maximize2 } from 'lucide-react';
+export interface VideoItem {
+  id: number;
+  title: string;
+  videoUrl: string;
+}
 
-const videos = [
-  {
-    id: 1,
-    title: "Cross Sectional / CORE LV CABLES",
-    videoUrl: "/video/video32.mp4",
-  },
-  {
-    id: 2,
-    title: "AUXILIARY CABLES (CONTROL...)",
-    videoUrl: "/video/video26.mp4",
-  },
-  {
-    id: 3,
-    title: "Prefabricated Modular Buildings...",
-    videoUrl: "/video/video27.mp4",
-  },
-  {
-    id: 4,
-    title: "Flexible Use of Mobile Internal...",
-    videoUrl: "/video/video28.mp4",
-  },
-  {
-    id: 5,
-    title: "Kysb Open Circuit Cooling...",
-    videoUrl: "/video/video29.mp4",
-  },
-  {
-    id: 6,
-    title: "1HP Stainless Steel Electric...",
-    videoUrl: "/video/video30.mp4",
-  },
-  {
-    id: 7,
-    title: "High Quality Single-Stage...",
-    videoUrl: "/video/video31.mp4",
-  }, {
-    id: 8,
-    title: "Flexible Use of Mobile Internal...",
-    videoUrl: "/video/video33.mp4",
-  }, {
-    id: 9,
-    title: "AUXILIARY CABLES (CONTROL...)",
-    videoUrl: "/video/video34.mp4",
-  },
-];
+// 1. Update Props Interface
+interface HotProductVideosProps {
+  title: string; // <--- Add title here
+  videos: VideoItem[];
+}
 
-export default function HotProductVideos() {
+export default function HotProductVideos({ title, videos }: HotProductVideosProps) {
 
   const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement>) => {
     const video = e.currentTarget.querySelector('video');
@@ -74,7 +39,7 @@ export default function HotProductVideos() {
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
 
         <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">
-          Hot Product Videos
+          {title} Videos
         </h2>
 
         {/* Horizontal Scroll Container */}
