@@ -36,7 +36,44 @@ export const newsArticles = [
     excerpt: "This technical article discusses twelve different methods for laying high voltage cables. Out of the ten, four are deemed conventional and eight are specialized."
   }
 ];
-
+export const blogPosts = [
+  {
+    id: 1,
+    title: "The Future of Metal Casting: Automation & Robotics",
+    slug: "future-of-metal-casting-automation",
+    author: "Mega Editorial Team",
+    date: "28 Nov 2025",
+    image: "/assets/image15.jpg",
+    excerpt: "How robotic arms and automated molding lines are increasing precision and safety in modern foundries."
+  },
+  {
+    id: 2,
+    title: "Understanding Ductile Iron vs. Grey Iron",
+    slug: "ductile-iron-vs-grey-iron",
+    author: "Engineering Dept",
+    date: "15 Nov 2025",
+    image: "/assets/image14.jpeg",
+    excerpt: "A technical deep dive into the metallurgical differences, tensile strengths, and best applications for each iron type."
+  },
+  {
+    id: 3,
+    title: "Supply Chain Resilience in Heavy Manufacturing",
+    slug: "supply-chain-resilience",
+    author: "Logistics Lead",
+    date: "02 Nov 2025",
+    image: "/assets/image13.jpg",
+    excerpt: "Strategies for mitigating raw material shortages and ensuring on-time delivery for large-scale infrastructure projects."
+  },
+  {
+    id: 4,
+    title: "Sustainability in Forging: Reducing Carbon Footprint",
+    slug: "sustainability-in-forging",
+    author: "Mega Admin",
+    date: "25 Oct 2025",
+    image: "/assets/image11.jpg",
+    excerpt: "Exploring new electric furnace technologies and sand reclamation processes that are making foundries greener."
+  }
+];
 export const hotProductsData = {
   title: "Hot Product Videos",
   videos: [
@@ -99,6 +136,11 @@ export const newInnovationData = {
       title: "AUXILIARY CABLES (CONTROL)",
       videoUrl: "/video/video26.mp4",
     }
-    // Add more...
+    ,
+    {
+      id: 3,
+      title: "AUXILIARY CABLES (CONTROL)",
+      videoUrl: "/video/video2.mp4",
+    }
   ]
 };

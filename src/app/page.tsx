@@ -34,7 +34,7 @@ export default function Home() {
           </h1>
 
           <p className="text-xl text-[#cc2221] md:text-[22px] font-medium   italic">
-            "Think Fast + Succeed Faster"
+            "Think Fast and Succeed Faster"
           </p>
 
           <div className="flex flex-col py-5 sm:flex-row items-center justify-center gap-4 mt-8">

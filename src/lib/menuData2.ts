@@ -814,7 +814,23 @@ export const menuData = {
     bannerImage: '/assets/image10.jpeg',
     color: 'bg-orange-100 text-orange-900',
     categories: []
-  }
+  },
+  paving_risers: {
+    id: 'paving_risers',
+    label: 'PAVING RISERS',
+    icon: Cog,
+    bannerImage: '/assets/image11.jpeg',
+    color: 'bg-orange-100 text-orange-900',
+    categories: []
+  },
+  snow_plough: {
+    id: 'snow_plough',
+    label: 'SNOW PLOUGH',
+    icon: Cog,
+    bannerImage: '/assets/image9.jpeg',
+    color: 'bg-orange-100 text-orange-900',
+    categories: []
+  },
 };
 // export const footerColumns = [
 //   {
