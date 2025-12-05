@@ -22,7 +22,7 @@ const MetricSection = () => {
         <section className="bg-gray-50 max-w-5xl mx-auto">
             <div className="w-full px-4 sm:px-6 lg:px-10 py-3">
                 <h2 className="text-[30px]   font-extrabold text-neutral-800 text-center mb-16 max-w-3xl mx-auto">
-                    Explore customized offerings designed for your business
+                    Boundless patterns and innovations
                 </h2>
 
                 {/* Metrics Grid */}
@@ -60,18 +60,12 @@ const ProductItemCard = ({ count, label }: ProductItemCardProps) => (
 
 const ProductCarousel = () => {
     const productData = [
-        { count: "200+", label: "Water Management & Big Power Supply" },
-        { count: "130+", label: "Industrial Equipments and components" },
-        { count: "150+", label: "Chemical dosing pumps" },
-        { count: "20+", label: "Pump & Vacuum Equipment" },
-        { count: "50+", label: "Industrial Equipments and components" },
-        { count: "120+", label: "Chemical dosing pumps" },
-        { count: "110+", label: "Industrial Equipments and components" },
-        { count: "180+", label: "Chemical dosing pumps" },
-        { count: "150+", label: "Water Management & Big Power Supply" },
-        { count: "600", label: "Industrial Equipments and components" },
-        { count: "10K", label: "Chemical dosing pumps" },
-        { count: "20+", label: "Pump & Vacuum Equipment" },
+        { count: "1200+", label: "Manholes Patterns" },
+        { count: "4000+", label: "Curb Intet Patterns" },
+        { count: "3000+", label: "Catch Basin Patterns" },
+        { count: "1500+", label: "Water Works Patterns" },
+        { count: "200+", label: "Cleanout Patterns" },
+        { count: "5000+", label: "Trench Patterns" },
     ];
 
     // Create an array that is duplicated so the scrolling is seamless (Infinite Marquee)

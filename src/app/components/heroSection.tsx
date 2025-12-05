@@ -35,13 +35,11 @@ const heroSection = () => {
                         Explore Capabilities
                     </Button>
                     <Button variant="outline" className="px-10 text-[#cc2221] border-2 border-[#cc2221] py-7 text-xl  hover:bg-white/10 backdrop-blur-sm">
-                        Partner With Us <ArrowRight className="ml-2 w-5 h-5" />
+                        Succeed With Us <ArrowRight className="ml-2 w-5 h-5" />
                     </Button>
                 </div>
             </div>
-            <p className="text-[18px] text-gray-700 max-w-4xl mx-auto mb-16">
-                You can talk to our online representative at any time. Please use our
-                Live Chat System on our website or fill up below instant messaging programs.
+            <p className="text-[18px] text-gray-700 max-w-4xl mx-auto mb-16">Engage with dedicated experts
             </p>
         </div>
     )

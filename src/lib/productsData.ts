@@ -1,6 +1,6 @@
- const toSlug = (text: string) => text.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
+const toSlug = (text: string) => text.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
 
- interface ProductDetail {
+interface ProductDetail {
   title: string;
   category: string;
   description: string;
@@ -9,8 +9,8 @@
   specifications: { label: string; value: string }[];
 }
 
- export const productsData: Record<string, ProductDetail> = {
-   "biomass-boilers": {
+export const productsData: Record<string, ProductDetail> = {
+  "biomass-boilers": {
     title: "Biomass Boilers",
     category: "Biomass Energy",
     description: "High-efficiency boilers designed to burn organic material for sustainable heat and power generation.",
@@ -26,7 +26,7 @@
     features: ["Syngas production", "Waste-to-energy capable", "Modular design"],
     specifications: [{ label: "Efficiency", value: ">85%" }, { label: "Output", value: "Syngas / Thermal" }]
   },
- 
+
   "cables": {
     title: "Industrial Cables",
     category: "Electrical Energy",
@@ -43,7 +43,7 @@
     features: ["Arc flash protection", "Remote monitoring", "Compact footprint"],
     specifications: [{ label: "Current Rating", value: "Up to 4000A" }, { label: "Type", value: "Air / Vacuum / SF6" }]
   },
- 
+
   "solar-panel": {
     title: "Solar Panel",
     category: "Solar Energy",
@@ -60,7 +60,7 @@
     features: ["Smart grid ready", "Hybrid capability", "Mobile app monitoring"],
     specifications: [{ label: "Phase", value: "Single / Three Phase" }, { label: "Efficiency", value: "98.6%" }]
   },
- 
+
   "laser-cutting-machines": {
     title: "Laser Cutting Machines",
     category: "Fabrication Machines",
@@ -77,7 +77,7 @@
     features: ["Zero maintenance source", "High wall-plug efficiency", "Rapid piercing"],
     specifications: [{ label: "Source", value: "IPG / Raycus" }, { label: "Axis Speed", value: "120 m/min" }]
   },
- 
+
   "diesel": {
     title: "Diesel Generators",
     category: "Generator",
@@ -86,14 +86,14 @@
     features: ["Silent enclosure", "Automatic Transfer Switch", "Fuel efficient"],
     specifications: [{ label: "Rating", value: "50kVA - 2000kVA" }, { label: "Engine", value: "Cummins / Perkins" }]
   },
- 
+
 };
- 
+
 export function getProductBySlug(slug: string) {
   const exactMatch = productsData[slug];
   if (exactMatch) return exactMatch;
 
-   const title = slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+  const title = slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
   return {
     title: title,
     category: "General Products",
@@ -103,3 +103,13 @@ export function getProductBySlug(slug: string) {
     specifications: [{ label: "Status", value: "In Stock" }, { label: "MOQ", value: "Contact for details" }]
   };
 }
+
+
+export const productData = [
+  { count: "1200+", label: "Manholes Patterns" },
+  { count: "4000+", label: "Curb Intet Patterns" },
+  { count: "3000+", label: "Catch Basin Patterns" },
+  { count: "1500+", label: "Water Works Patterns" },
+  { count: "200+", label: "Cleanout Patterns" },
+  { count: "5000+", label: "Trench Patterns" },
+];

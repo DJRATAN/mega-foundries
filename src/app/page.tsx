@@ -42,12 +42,11 @@ export default function Home() {
               Explore Capabilities
             </Button>
             <Button variant="outline" className="px-10 text-[#cc2221] border-2 border-[#cc2221] py-7 text-xl  hover:bg-white/10 backdrop-blur-sm">
-              <Link href={'/sellerHomepage'}>Partner With Us</Link>            </Button>
+              <Link href={'/sellerHomepage'}>Succeed With Us</Link>            </Button>
           </div>
         </div>
         <p className="text-[18px] text-gray-700 max-w-4xl mx-auto mb-16">
-          You can talk to our online representative at any time. Please use our
-          Live Chat System on our website or fill up below instant messaging programs.
+         Engage with dedicated experts
         </p>
       </div>
       <HeroSection />

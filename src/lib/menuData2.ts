@@ -819,9 +819,62 @@ export const menuData = {
     id: 'paving_risers',
     label: 'PAVING RISERS',
     icon: Cog,
-    bannerImage: '/assets/image11.jpeg',
+    bannerImage: '/assets/PAVING-RISERS/paving riser 1.5200.png',
     color: 'bg-orange-100 text-orange-900',
-    categories: []
+    categories: [
+      {
+        name: "ADJUSTABLE PAVING RISERS",
+        slug: "adjustable-paving-risers",
+        image: "/assets/PAVING-RISERS/paving riser 1.5201.png",
+        description: "Height-adjustable pedestal risers for outdoor paving applications, ensuring precise leveling and strong load-bearing support.",
+        items: [
+          "Standard adjustable risers",
+          "Heavy-duty pedestal risers",
+          "Self-levelling risers",
+          "Slope-compensation risers",
+          "Acoustic & shock absorber pads"
+        ]
+      },
+      {
+        name: "FIXED HEIGHT RISERS",
+        slug: "fixed-height-risers",
+        image: "/assets/PAVING-RISERS/paving riser 1.5203.png",
+        description: "Fixed-height pedestal systems suitable for balconies, terraces, swimming pool decks and light-weight flooring installations.",
+        items: [
+          "15 mm risers",
+          "25 mm risers",
+          "35 mm risers",
+          "50 mm risers",
+          "Load-bearing pads"
+        ]
+      },
+      {
+        name: "TILE & PAVER SUPPORT ACCESSORIES",
+        slug: "tile-and-paver-support-accessories",
+        image: "/assets/PAVING-RISERS/paving riser 1.5204.png",
+        description: "Accessories for installation accuracy, anti-slip finish and vibration control during paving projects.",
+        items: [
+          "Spacer tabs",
+          "Edge finish supports",
+          "Anti-slip rubber base pads",
+          "Height extension shims",
+          "Noise-reduction gaskets"
+        ]
+      },
+      {
+        name: "DECKING & OUTDOOR FLOORING SOLUTIONS",
+        slug: "decking-and-outdoor-flooring-solutions",
+        image: "/assets/PAVING-RISERS/paving riser 1.5205.png",
+        description: "Pedestal support systems compatible with composite decking, ceramic outdoor tiles, stone slabs and raised exterior flooring.",
+        items: [
+          "Composite deck pedestal systems",
+          "Porcelain & ceramic tile pedestal systems",
+          "Natural stone slab support systems",
+          "Raised garden walkway supports",
+          "Swimming pool platform supports"
+        ]
+      }
+    ]
   },
   snow_plough: {
     id: 'snow_plough',

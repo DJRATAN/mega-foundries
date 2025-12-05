@@ -1,89 +1,4 @@
-
-// import { liveChatData } from "@/app/(main)/our-values/content";
-// import { FeatureBlockItem } from "@/app/components/FeatureBlock";
-// import { Button } from "@/components/ui/button";
-// import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-// import { Star, Users, Globe, ArrowRight } from "lucide-react";
-// import Image from "next/image";
-// const allFeatureBlocks = [
-//   liveChatData[0],
-// ];
-// const features = [
-//   {
-//     icon: Star,
-//     title: "Global Engineering Excellence",
-//     description:
-//       "Mega Foundries stands at the forefront of precision manufacturing, delivering high-strength metal solutions engineered to global standards. With decades of expertise, we combine advanced metallurgy, cutting-edge machining, and modern production systems to create products that power industries worldwide.",
-//   },
-//   {
-//     icon: Users,
-//     title: "Innovation-Driven Manufacturing",
-//     description:
-//       "Our commitment to continuous innovation is reflected in every process we execute. From automated foundry operations to AI-supported quality control, Mega Foundries integrates new-age technologies to ensure consistency, reliability, and unmatched performance across all product lines.",
-//   },
-//   {
-//     icon: Globe,
-//     title: "Worldwide Infrastructure & Partnerships",
-//     description:
-//       "With a globally connected network and strong partnerships across government, commercial, and industrial sectors, Mega Foundries delivers end-to-end foundry, fabrication, and engineering solutions. We supply, manufacture, and support our clients at scale, ensuring seamless delivery from raw material sourcing to final deployment.",
-//   },
-// ];
-// const AboutSection = () => {
-//   return (
-//     <section className="relative w-full py-16 sm:py-24 bg-white">
-//       <div className="absolute inset-0 z-0 h-[225px] w-full">
-//         <Image
-//           src={'/assets/image9.jpeg'}
-//           alt="Industrial background image"
-//           layout="fill"
-//           objectFit="cover"
-//           priority
-//         />
-//         <div className="absolute inset-0 bg-black/60"></div>
-//       </div>
-//       <div className="relative z-10 container mx-auto px-4 text-center">
-//         <h2 className="text-[40px] pb-12 font-extrabold tracking-tight text-white mb-8">
-//           Contact Us
-//         </h2>
-//         <p className="text-[20px] py-5 font-semibold uppercase tracking-widest text-[#cc2221] mb-2">
-//           MEGA FOUNDRIES - FOR THE INDUSTRY
-//         </p> 
-//         <h1 className="text-[30px] lg:text-[40px] font-bold leading-tight tracking-tight">
-//           The World's Largest and Advanced <br />
-//           Consortium of
-//           <span className="block mt-2 text-[#cc2221] uppercase tracking-wide drop-shadow-lg">
-//             Foundries, Forge Shops & Fabricators
-//           </span>
-//           <span className="block mt-2 text-2xl  md:text-4xl font-light ">
-//             Under One Universe
-//           </span>
-//         </h1>
-
-//         {/* Tagline */}
-//         <p className="text-xl md:text-[22px] font-medium   italic">
-//           "Think Fast and Succeed Faster"
-//         </p>
-
-//         {/* CTA Buttons */}
-//         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-//           <Button className="bg-[#cc2221] hover:bg-red-700 text-white px-10 py-7 text-xl rounded-md font-bold shadow-[0_0_20px_rgba(204,34,33,0.4)] transition-all transform hover:scale-105">
-//             Explore Capabilities
-//           </Button>
-//           <Button variant="outline" className="px-10 text-[#cc2221] border-2 border-[#cc2221] py-7 text-xl  hover:bg-white/10 backdrop-blur-sm">
-//             Partner With Us <ArrowRight className="ml-2 w-5 h-5" />
-//           </Button>
-//         </div>
-//       </div>
-
-//     </section>
-//   );
-// }
-
-
-
-// export default AboutSection
-
-
+ 
 import Image from "next/image";
 // Combine all blocks into a single array
 import { MapPin, Phone, Mail, ArrowRight } from 'lucide-react';
@@ -235,13 +150,12 @@ const ContactUs = () => {
               Explore Capabilities
             </Button>
             <Button variant="outline" className="px-10 text-[#cc2221] border-2 border-[#cc2221] py-7 text-xl  hover:bg-white/10 backdrop-blur-sm">
-              Partner With Us <ArrowRight className="ml-2 w-5 h-5" />
+              Succeed With Us <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </div>
         </div>
         <p className="text-[18px] text-gray-700 max-w-4xl mx-auto mb-16">
-          You can talk to our online representative at any time. Please use our
-          Live Chat System on our website or fill up below instant messaging programs.
+          Engage with dedicated experts
         </p>
       </div>
       <div className="bg-gray-50 min-h-screen px-4 sm:px-6 lg:px-8">
