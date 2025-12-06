@@ -134,13 +134,17 @@ export const newInnovationData = {
     {
       id: 2,
       title: "AUXILIARY CABLES (CONTROL)",
-      videoUrl: "/video/video26.mp4",
+      videoUrl: "/video/newInnovation/video2.mp4",
     }
     ,
     {
       id: 3,
       title: "AUXILIARY CABLES (CONTROL)",
-      videoUrl: "/video/video2.mp4",
-    }
+      videoUrl: "/video/newInnovation/video3.mp4",
+    }, {
+      id: 4,
+      title: "Cross Sectional / CORE LV CABLES",
+      videoUrl: "/video/newInnovation/video4.mp4",
+    },
   ]
 };

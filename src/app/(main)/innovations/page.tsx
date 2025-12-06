@@ -4,6 +4,8 @@ import { FeatureBlockItem } from "@/app/components/FeatureBlock";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Star, Users, Globe } from "lucide-react";
 import Image from "next/image";
+import HotProductVideos from "../category/HotProductVideos";
+import { newInnovationData } from "@/lib/newsData";
 const allFeatureBlocks = [
   liveChatData[0],
 ];
@@ -51,38 +53,10 @@ const AboutSection = () => {
           Streamline your entire material procurement process with intelligent AI automation
         </h3>
       </div>
-      <div className="relative z-10  mx-auto px-10">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
-          {features.map((feature, index) => (
-            <Card
-              key={index}
-              className="border-2 border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/95"
-            >
-              <CardHeader className="flex flex-col items-center pt-10 pb-4">
-                <div className="w-12 h-12 rounded-full border-2 border-red-300 bg-red-50 flex items-center justify-center mb-4">
-                  <feature.icon className="w-8 h-8 text-[#cc2221]" />
-                </div>
-                <CardTitle className="text-[20px] font-semibold text-gray-900">
-                  {feature.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="text-center px-6 pb-10">
-                <p className="text-sm text-justify text-gray-600 leading-relaxed">
-                  {feature.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
-
-      {liveChatData.map((block, index) => (
-        <FeatureBlockItem
-          key={block.id}
-          data={block}
-          imageOnLeft={index % 2 !== 0}
-        />
-      ))}
+      <HotProductVideos
+        title={newInnovationData.title}
+        videos={newInnovationData.videos}
+      />
     </section>
   );
 }

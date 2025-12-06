@@ -49,7 +49,7 @@ export default function SourcingRequest() {
                                 SEND US A MESSAGE
                             </span>
                             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mt-1">
-                                Want To <span className="text-[#cc2221]">Get Quotations?</span>
+                                Let’s commence <span className="text-[#cc2221]">your projects</span>
                             </h3>
                         </div>
 
@@ -109,7 +109,7 @@ export default function SourcingRequest() {
                     <div className="text-white space-y-8">
                         <div>
                             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                                Hassle-Free Sourcing
+                                Seamless and smart production on your own terms
                             </h2>
                             <p className="text-gray-300 text-lg">
                                 Easily submit your sourcing inquiries and receive competitive quotes.

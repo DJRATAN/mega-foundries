@@ -5,7 +5,7 @@ export const menuData = {
     label: 'IRRIGATION PRODUCTS',
     icon: Zap,
     bannerImage: '/assets/image10.jpeg',
-    color: 'bg-orange-100 text-orange-900',
+    color: 'bg-[#cc2221] text-white',
     categories: [
       {
         name: "WATER CONTROL",
@@ -107,7 +107,7 @@ export const menuData = {
     label: 'EARTH MOVING EQUIPMENTS',
     icon: Zap,
     bannerImage: '/assets/image10.jpeg',
-    color: 'bg-orange-100 text-orange-900',
+    color: 'bg-[#cc2221] text-white',
     categories: [
       {
         name: "BUCKET TEETH & ADAPTORS",
@@ -221,7 +221,7 @@ export const menuData = {
     label: 'CATHODIC PROTECTION',
     icon: Settings,
     bannerImage: '/assets/image10.jpeg',
-    color: 'bg-orange-100 text-orange-900',
+    color: 'bg-[#cc2221] text-white',
     categories: [
       {
         name: "ZINC & ALUMINIUM CAST ANODES",
@@ -322,7 +322,7 @@ export const menuData = {
     label: 'PRECAST & MOLDS',
     icon: Cuboid,
     bannerImage: '/assets/image10.jpeg',
-    color: 'bg-orange-100 text-orange-900',
+    color: 'bg-[#cc2221] text-white',
     categories: [
       {
         name: "PRECAST CONCRETE MOLDS",
@@ -475,7 +475,7 @@ export const menuData = {
     label: 'MINING PRODUCTS',
     icon: Sun,
     bannerImage: '/assets/image10.jpeg',
-    color: 'bg-orange-100 text-orange-900',
+    color: 'bg-[#cc2221] text-white',
     categories: [
       {
         name: "MINING PRODUCTS",
@@ -591,7 +591,7 @@ export const menuData = {
     label: 'METALS & ALLOYS',
     icon: Droplets,
     bannerImage: '/assets/image10.jpeg',
-    color: 'bg-orange-100 text-orange-900',
+    color: 'bg-[#cc2221] text-white',
     categories: [
       {
         name: "METALS & ALLOYS",
@@ -748,7 +748,7 @@ export const menuData = {
     label: 'FABRICATION',
     icon: Wrench,
     bannerImage: '/assets/image10.jpeg',
-    color: 'bg-orange-100 text-orange-900',
+    color: 'bg-[#cc2221] text-white',
     categories: []
   },
   foundry_equipments: {
@@ -756,7 +756,7 @@ export const menuData = {
     label: 'FOUNDRY EQUIPMENTS',
     icon: Factory,
     bannerImage: '/assets/image10.jpeg',
-    color: 'bg-orange-100 text-orange-900',
+    color: 'bg-[#cc2221] text-white',
     categories: []
   },
   oil_gas_industries_products: {
@@ -764,7 +764,7 @@ export const menuData = {
     label: 'OIL & GAS INDUSTRIES PRODUCTS',
     icon: Flame,
     bannerImage: '/assets/image10.jpeg',
-    color: 'bg-orange-100 text-orange-900',
+    color: 'bg-[#cc2221] text-white',
     categories: []
   },
   construction_infrastructure: {
@@ -772,7 +772,7 @@ export const menuData = {
     label: 'CONSTRUCTION & INFRASTRUCTURE',
     icon: Building,
     bannerImage: '/assets/image10.jpeg',
-    color: 'bg-orange-100 text-orange-900',
+    color: 'bg-[#cc2221] text-white',
     categories: []
   },
   utility_power_energy: {
@@ -780,7 +780,7 @@ export const menuData = {
     label: 'UTILITY & POWER ENERGY',
     icon: Bolt,
     bannerImage: '/assets/image10.jpeg',
-    color: 'bg-orange-100 text-orange-900',
+    color: 'bg-[#cc2221] text-white',
     categories: []
   },
   defence_aerospace: {
@@ -788,7 +788,7 @@ export const menuData = {
     label: 'DEFENCE & AEROSPACE',
     icon: Shield,
     bannerImage: '/assets/image10.jpeg',
-    color: 'bg-orange-100 text-orange-900',
+    color: 'bg-[#cc2221] text-white',
     categories: []
   },
   custom_manufacturing: {
@@ -796,7 +796,7 @@ export const menuData = {
     label: 'CUSTOM MANUFACTURING',
     icon: Hammer,
     bannerImage: '/assets/image10.jpeg',
-    color: 'bg-orange-100 text-orange-900',
+    color: 'bg-[#cc2221] text-white',
     categories: []
   },
   forge_shop_products: {
@@ -804,7 +804,7 @@ export const menuData = {
     label: 'FORGE SHOP PRODUCTS',
     icon: Anvil,
     bannerImage: '/assets/image10.jpeg',
-    color: 'bg-orange-100 text-orange-900',
+    color: 'bg-[#cc2221] text-white',
     categories: []
   },
   industrial_machinery: {
@@ -812,7 +812,7 @@ export const menuData = {
     label: 'INDUSTRIAL MACHINERY',
     icon: Cog,
     bannerImage: '/assets/image10.jpeg',
-    color: 'bg-orange-100 text-orange-900',
+    color: 'bg-[#cc2221] text-white',
     categories: []
   },
   paving_risers: {
@@ -820,7 +820,7 @@ export const menuData = {
     label: 'PAVING RISERS',
     icon: Cog,
     bannerImage: '/assets/PAVING-RISERS/paving riser 1.5200.png',
-    color: 'bg-orange-100 text-orange-900',
+    color: 'bg-[#cc2221] text-white',
     categories: [
       {
         name: "ADJUSTABLE PAVING RISERS",
@@ -881,7 +881,7 @@ export const menuData = {
     label: 'SNOW PLOUGH',
     icon: Cog,
     bannerImage: '/assets/image9.jpeg',
-    color: 'bg-orange-100 text-orange-900',
+    color: 'bg-[#cc2221] text-white',
     categories: []
   },
 };

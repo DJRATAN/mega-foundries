@@ -6,22 +6,22 @@ const BusinessSolutions = () => {
     const services = [
         {
             icon: TowerControl,
-            title: "Metals & Foundry",
+            title: "METALS & FOUNDRY",
             description: "Mega Foundries connects businesses with premium foundry metals, castings, and alloy products. Our platform enables seamless sourcing for automotive, construction, engineering, and large-scale industrial manufacturing.",
         },
         {
             icon: Factory,
-            title: "Industrial Machinery",
+            title: "INDUSTRIAL MACHINERY",
             description: "We provide access to high-performance industrial machinery—from heavy equipment and CNC machines to material handling systems—helping industries scale operations with reliable and quality-certified products.",
         },
         {
             icon: Amphora,
-            title: "Steel & Metal Supplies",
+            title: "STEEL & METAL SUPPLIES",
             description: "Mega Foundries supports the oil, gas, and petrochemical sectors with equipment, pipelines, valves, and safety systems, ensuring industries meet operational standards and project demands with trusted suppliers.",
         },
         {
             icon: Droplets,
-            title: "Water & Infrastructure",
+            title: "WATER & INFRASTRUCTURE",
             description: "Our platform connects industries with advanced water management, treatment, and infrastructure solutions—supporting sustainable operations for manufacturing plants, municipalities, and engineering projects.",
         },
     ];
@@ -44,7 +44,7 @@ const BusinessSolutions = () => {
                                     <div className="w-8 h-8 text-[#cc2221]"><service.icon size={32} /></div>
                                 </div>
                             </div>
-                            <h3 className="text-sm font-bold text-neutral-800 mb-3">{service.title}</h3>
+                            <h3 className="text-sm font-bold text-[#cc2221] mb-3">{service.title}</h3>
                             <p className="text-sm text-neutral-600 mb-4 h-20 overflow-hidden">
                                 {service.description}
                             </p>

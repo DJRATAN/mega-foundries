@@ -17,11 +17,10 @@ const MetricSection = () => {
         { icon: Radar, value: "12000", label: "Product Categories" },
         { icon: MapPinIcon, value: "4000", label: "countries and regions" },
     ];
-
     return (
-        <section className="bg-gray-50 max-w-5xl mx-auto">
+        <section className="  max-w-5xl mx-auto">
             <div className="w-full px-4 sm:px-6 lg:px-10 py-3">
-                <h2 className="text-[30px]   font-extrabold text-neutral-800 text-center mb-16 max-w-3xl mx-auto">
+                <h2 className="text-[30px] text-white font-extrabold text-center mb-16 max-w-3xl mx-auto">
                     Boundless patterns and innovations
                 </h2>
 
@@ -93,7 +92,7 @@ const ProductCarousel = () => {
     );
 
     return (
-        <section className="py-10 bg-gray-50 ">
+        <section className="py-10 bg-[#cc2221] ">
             <MetricSection />
             <div className="space-y-4">
                 <div

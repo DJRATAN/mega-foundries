@@ -10,7 +10,7 @@ const topMenuItems = [
   { label: 'HOME', href: '/' },
   { label: 'HISTORY', href: '/materials' },
   { label: 'TRANSFORMATION', href: '/transformation' },
-  { label: 'INNOVATIONS', href: '/products' },
+  { label: 'INNOVATIONS', href: '/innovations' },
   { label: 'MAKING HISTORY', href: '/making-history' },
   { label: 'ALWAYS FIRST', href: '/always-first' },
   { label: 'CONTACT', href: '/contact' },

@@ -14,8 +14,7 @@ const HeroSection = () => {
                 // Mimic the image's rounded bottom edge if possible, otherwise use a subtle curve effect
                 clipPath: 'polygon(0 0, 100% 0, 100% 95%, 0 100%)',
             }}
-        >
-            {/* Dark Overlay for Text Contrast */}
+        > 
             <div className="absolute inset-0 bg-neutral-900/40 backdrop-blur-[1px]"></div>
             <div className="relative z-10 text-center max-w-4xl px-4">
 
@@ -24,7 +23,7 @@ const HeroSection = () => {
                 </p>
                 <h1 className="text-[30px]  font-extrabold text-white leading-tight mb-6 drop-shadow-lg">
 
-                    The Largest group of Foundries & Forge Shop
+                    The Largest group of Foundries & Forge Shops
                 </h1>
                 <p className="text-sm   text-white/90 leading-relaxed font-light mx-auto max-w-3xl">
                     Mega Foundries delivers a comprehensive portfolio of products, including turbines, oil & gas equipment, water management technologies, and power generation systems. We also enable seamless access to FPC services, empowering businesses to execute large-scale industrial projects with confidence.

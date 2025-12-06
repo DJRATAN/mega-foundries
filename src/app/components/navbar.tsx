@@ -7,37 +7,44 @@ import {
     DropdownMenuItem,
     DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
-import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, MenubarShortcut, MenubarSub, MenubarSubContent, MenubarSubTrigger, MenubarTrigger } from '@/components/ui/menubar';
+import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSub, MenubarSubContent, MenubarSubTrigger, MenubarTrigger } from '@/components/ui/menubar';
 import { menuData } from '@/lib/menuData2';
 import {
     BookAIcon,
-    ChevronDown,
     ChevronRight,
-    Factory,
-    FireExtinguisherIcon,
     Menu,
-    Power,
     Search,
     User,
     UserCheck2Icon,
     X,
-    Zap
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 
-// 1. LOGIN OPTIONS
 const loginOptions = [
-    { label: "Team Mega Login", href: "/login/team" },
-    { label: "Engineers/Architect Login", href: "/login/engineer" },
-    { label: "Customer Login", href: "/login/customer" },
-    { label: "Logistics Login", href: "/login/logistics" },
-    { label: "Foundries Login", href: "/login/foundry" },
-    { label: "Forge Shops Login", href: "/login/forge" },
-    { label: "Fabricators Login", href: "/login/fabricator" },
-    { label: "Other Vendors Login", href: "/login/vendor" },
-]
+    {
+        id: 1,
+        title: "Corporate & Operations",
+        links: [
+            { label: "Team Mega Login", href: "/login/team" },
+            { label: "Customer Login", href: "/login/customer" },
+            { label: "Logistics Login", href: "/login/logistics" },
+            { label: "Foundries Login", href: "/login/foundry" },
+            { label: "Forge Shops Login", href: "/login/forge" },
+            { label: "Fabricators Login", href: "/login/fabricator" },
+            { label: "Other Vendors Login", href: "/login/vendor" }
+        ]
+    },
+    {
+        id: 2,
+        title: "Professionals",
+        links: [
+            { label: "Engineers / Architects Login", href: "/login/engineer" }
+        ]
+    }
+];
+
 
 // 2. MENU ITEMS
 const topMenuItems = [
@@ -58,6 +65,7 @@ const countryOptions = [
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [selectedCountry, setSelectedCountry] = useState(countryOptions[0])
+
 
     return (
         <div className="w-full relative z-40">
@@ -150,16 +158,37 @@ const Navbar = () => {
                                                         <p className='text-xs font-bold text-neutral-800 group-hover:text-[#cc2221] transition-colors'>{item.content}</p>
                                                     </div>
                                                 </DropdownMenuTrigger>
-                                                <DropdownMenuContent align="end" className="w-56 p-2 bg-white border border-gray-100 shadow-lg rounded-md">
-                                                    {loginOptions.map((opt) => (
-                                                        <DropdownMenuItem key={opt.label} asChild>
-                                                            <Link href={opt.href} className="cursor-pointer flex items-center gap-2 py-2 hover:bg-red-50 rounded px-2 group">
-                                                                <ChevronRight className="w-4 h-4 text-[#cc2221] opacity-0 group-hover:opacity-100 transition-opacity" />
-                                                                <span className="font-medium text-sm text-gray-700 group-hover:text-[#cc2221]">{opt.label}</span>
-                                                            </Link>
-                                                        </DropdownMenuItem>
-                                                    ))}
+                                                <DropdownMenuContent
+                                                    align="end"
+                                                    className="w-[420px] p-3 bg-white border border-gray-100 shadow-lg rounded-md"
+                                                >
+                                                    <div className="grid grid-cols-2 gap-2">
+                                                        {loginOptions.map((group) => (
+                                                            <div key={group.id} className="space-y-1">
+                                                                {/* Group Title */}
+                                                                <h4 className="text-[13px] font-semibold text-gray-500 px-2">
+                                                                    {group.title}
+                                                                </h4>
+
+                                                                {/* Group Items */}
+                                                                {group.links.map((item) => (
+                                                                    <DropdownMenuItem key={item.href} asChild>
+                                                                        <Link
+                                                                            href={item.href}
+                                                                            className="cursor-pointer flex items-center gap-2 py-2 hover:bg-red-50 rounded px-2 group"
+                                                                        >
+                                                                            <ChevronRight className="w-4 h-4 text-[#cc2221] opacity-0 group-hover:opacity-100 transition-opacity" />
+                                                                            <span className="font-medium text-[13px] text-gray-700 group-hover:text-[#cc2221]">
+                                                                                {item.label}
+                                                                            </span>
+                                                                        </Link>
+                                                                    </DropdownMenuItem>
+                                                                ))}
+                                                            </div>
+                                                        ))}
+                                                    </div>
                                                 </DropdownMenuContent>
+
                                             </DropdownMenu>
                                         )
                                     }
@@ -175,6 +204,7 @@ const Navbar = () => {
                                         </Link>
                                     )
                                 })}
+
                             </div>
 
                             <div className="h-12 w-[1px] bg-gray-200"></div>
@@ -199,25 +229,44 @@ const Navbar = () => {
                         {topMenuItems.map((item) => (
                             <div key={item.label}>
                                 {item.isLogin ? (
-                                    <div className="space-y-2 bg-white p-2 rounded border border-gray-100">
-                                        <div className='flex items-center gap-4 text-[#cc2221] mb-2'>
+                                    <div className="space-y-2 bg-white p-3 rounded-lg border border-gray-100">
+                                        {/* Heading Row */}
+                                        <div className='flex items-center gap-4 text-[#cc2221] mb-3'>
                                             <item.icon size={24} />
                                             <div>
                                                 <p className='text-xs text-neutral-500'>{item.label}</p>
-                                                <p className='text-sm font-bold'>Select Login Type:</p>
+                                                <p className='text-sm font-bold'>Select Login Type</p>
                                             </div>
                                         </div>
-                                        <div className="pl-2 space-y-1">
-                                            {loginOptions.map(opt => (
-                                                <Link key={opt.label} href={opt.href} className="flex items-center gap-2 p-2 text-sm text-neutral-600 hover:text-[#cc2221] hover:bg-red-50 rounded">
-                                                    <ChevronRight className="w-3 h-3" />
-                                                    {opt.label}
-                                                </Link>
+
+                                        {/* Two Columns Login Grid */}
+                                        <div className="grid grid-cols-2 gap-3 px-1">
+                                            {loginOptions.map((group) => (
+                                                <div key={group.id} className="space-y-1">
+                                                    {/* Group Title */}
+                                                    <h4 className="text-[12px] font-semibold text-gray-500 pl-1">
+                                                        {group.title}
+                                                    </h4>
+                                                    {/* Group Items */}
+                                                    {group.links.map((link) => (
+                                                        <Link
+                                                            key={link.href}
+                                                            href={link.href}
+                                                            className="flex items-center gap-2 p-2 rounded text-[13px] text-neutral-600 hover:bg-red-50 hover:text-[#cc2221]"
+                                                        >
+                                                            <ChevronRight className="w-3 h-3" />
+                                                            {link.label}
+                                                        </Link>
+                                                    ))}
+                                                </div>
                                             ))}
                                         </div>
                                     </div>
                                 ) : (
-                                    <Link className='flex items-center gap-4 p-2 rounded-lg hover:bg-white hover:shadow-sm transition-all' href={item.href}>
+                                    <Link
+                                        className='flex items-center gap-4 p-2 rounded-lg hover:bg-white hover:shadow-sm transition-all'
+                                        href={item.href}
+                                    >
                                         <div className='text-[#cc2221]'>
                                             <item.icon size={24} />
                                         </div>
@@ -229,20 +278,10 @@ const Navbar = () => {
                                 )}
                             </div>
                         ))}
-                        {/* <div className="h-[1px] w-full bg-gray-200 my-4"></div>
-                        <div className="pt-2">
-                            <p className="text-center text-xs text-neutral-400 font-bold mb-3 uppercase tracking-wider">Our Partners</p>
-                            <div className="grid grid-cols-4 gap-4 items-center justify-items-center">
-                                <Image src={'/Mega-foundries-logo.PNG'} alt='Mega' width={60} height={60} className="object-contain h-12 w-12" />
-                                <Image src={'/logo fabricator.jpeg'} alt='Fabricator' width={60} height={60} className="object-contain h-12 w-12" />
-                                <Image src={'/logo forge.jpeg'} alt='Forge' width={60} height={60} className="object-contain h-12 w-12" />
-                                <Image src={'/Canada-foundries-logo1.PNG'} alt='Canada' width={60} height={60} className="object-contain h-12 w-12" />
-                            </div>
-                        </div> */}
                     </div>
                 )}
 
-                {/* === SUB-HEADER (FULL WIDTH) === */}
+
                 <div className="border-t border-neutral-100 bg-neutral-50/50">
                     <div className="w-full px-4 sm:px-6 lg:px-10 py-2 flex flex-col md:flex-row items-start md:items-center justify-between gap-2 md:gap-0">
 
